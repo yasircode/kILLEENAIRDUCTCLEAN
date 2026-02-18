@@ -1,0 +1,89 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Navbar.css';
+
+const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [showService, setShowService] = useState(false);
+  const [showLocation, setShowLocation] = useState(false);
+
+  const closeMenu = () => {
+    setIsMobile(false);
+    setShowService(false);
+    setShowLocation(false);
+  };
+
+  return (
+    <nav className="nav-fixed-wrapper">
+      <div className="top-black-bar">
+        <div className="top-bar-inner">
+          <div className="info-item">📍 Killeen, TX</div>
+        </div>
+      </div>
+
+      <div className="main-nav-white">
+        <div className="nav-left">
+          <Link to="/" onClick={closeMenu}>
+            <img src="/profile2.jpeg" alt="Logo" className="site-logo" />
+          </Link>
+        </div>
+
+        <div className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
+          {isMobile ? '✖' : '☰'}
+        </div>
+
+        <div className={`nav-center ${isMobile ? 'nav-center-mobile' : ''}`}>
+          <ul className="nav-menu-list">
+            <li><Link to="/" onClick={closeMenu} className="nav-link-item">HOME</Link></li>
+            
+            {/* SERVICE SECTION */}
+            <li className={`dropdown ${showService ? 'open' : ''}`}>
+              <div className="nav-link-item" onClick={() => setShowService(!showService)}>
+                SERVICE <span className="arrow">▾</span>
+              </div>
+              <ul className="dropdown-menu">
+                <li><Link to="/airDuctCleaning" onClick={closeMenu}>Residential Air Duct Cleaning</Link></li>
+                <li><Link to="/commerciacleaning" onClick={closeMenu}>Commercial Air Cleaning</Link></li>
+                <li><Link to="/dryerventcleaning" onClick={closeMenu}>Dryer Vent Cleaning</Link></li>
+                <li><Link to="/ductservice" onClick={closeMenu}>Air Duct Repair & Replacement</Link></li>
+                <li><Link to="/hvcleaning" onClick={closeMenu}>HVAC Installation Service</Link></li>
+                <li><Link to="/chimneycleaning" onClick={closeMenu}>Chimney Cleaning</Link></li>
+                <li><Link to="/atticinsulation" onClick={closeMenu}>Attic Insulation and Repair</Link></li>
+                <li><Link to="/accleaning" onClick={closeMenu}>AC Cleaning Service</Link></li>
+                <li><Link to="/uvlightinstallation" onClick={closeMenu}>UV Light System Installation</Link></li>
+              </ul>
+            </li>
+
+            {/* LOCATION SECTION */}
+            <li className={`dropdown ${showLocation ? 'open' : ''}`}>
+              <div className="nav-link-item" onClick={() => setShowLocation(!showLocation)}>
+                LOCATION <span className="arrow">▾</span>
+              </div>
+              <ul className="dropdown-menu scrollable-menu">
+                <li><Link to="/location/killeen" onClick={closeMenu}>Killeen, Texas</Link></li>
+                <li><Link to="/location/harkerheights" onClick={closeMenu}>Harker Heights, Texas</Link></li>
+                <li><Link to="/location/copperascove" onClick={closeMenu}>Copperas Cove, TX</Link></li>
+                <li><Link to="/location/nolanville" onClick={closeMenu}>Nolanville, TX</Link></li>
+                <li><Link to="/location/fortcavazos" onClick={closeMenu}>Fort Cavazos, TX</Link></li>
+                <li><Link to="/location/belton" onClick={closeMenu}>Belton, TX</Link></li>
+                <li><Link to="/location/temple" onClick={closeMenu}>Temple, TX</Link></li>
+                <li><Link to="/location/salado" onClick={closeMenu}>Salado, TX</Link></li>
+              </ul>
+            </li>
+            
+            <li><Link to="/About" onClick={closeMenu} className="nav-link-item">ABOUT</Link></li>
+            <li><Link to="/Contact" onClick={closeMenu} className="nav-link-item">CONTACT</Link></li>
+          </ul>
+        </div>
+
+        <div className="nav-right desktop-only-call">
+          <a href="tel:(254) 998-3484" className="call-now-btn">
+            CALL US: (254) 998-3484
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

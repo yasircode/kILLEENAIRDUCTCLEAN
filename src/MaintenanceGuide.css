@@ -1,0 +1,109 @@
+.maintenance-section {
+  background-color: #f1f1f1;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.maintenance-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+}
+
+.image-box { flex: 1; }
+.image-box img { width: 100%; height: auto; border-radius: 4px; }
+
+.content-box { flex: 1.2; }
+
+.main-title {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.tab-layout {
+  display: flex;
+  margin-top: 20px;
+  min-height: 200px;
+}
+
+.tab-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-btn {
+  padding: 15px;
+  border: none;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- COLORS --- */
+
+/* When CLICKED: Always Bright Red */
+.active-red {
+  background-color: #0d47a1 !important; 
+}
+
+/* When NOT clicked: Keep original colors */
+.red-static { background-color: #ca1d1d; }
+.red-dark-static { background-color: #ca1d1d; }
+.blue-static { background-color: #ca1d1d; }
+
+/* The Arrow pointing to text box */
+.active-red .arrow-right {
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0; height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #555; /* Dark arrow from pic */
+  z-index: 5;
+}
+
+.tab-content {
+  flex: 1.5;
+  background-color: #e0e0e0;
+  padding: 25px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.estimate-btn {
+  background-color: #a52a2a;
+  color: white;
+  padding: 12px 35px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 850px) {
+  .maintenance-container, .tab-layout {
+    flex-direction: column;
+  }
+  .active-red .arrow-right {
+    display: none;
+  }
+}

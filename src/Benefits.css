@@ -1,0 +1,118 @@
+/* src/Benefits.css */
+
+.benefits-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.benefits-main-title {
+    font-weight: 800;
+    color: #a81d23; /* Dark Blue */
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.text-blue {
+    color: #0d47a1;
+}
+
+/* 5 Column Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    max-width: 1300px;
+    margin: 0 auto 40px;
+}
+
+.benefit-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-img-container {
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+}
+
+.benefit-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.benefit-text-container {
+    padding: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    font-weight: 600;
+}
+
+/* The Green Button */
+.process-btn {
+    background-color: #1c6b12; /* Forest Green */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.process-btn:hover {
+    background-color: #14520d;
+}
+
+/* Modal Styling */
+.process-overlay {
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+}
+
+.process-modal {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    text-align: left;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 2rem;
+    border: none; background: none; cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1100px) {
+    .benefits-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .benefits-grid { grid-template-columns: 1fr; }
+}

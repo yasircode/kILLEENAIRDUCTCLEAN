@@ -1,0 +1,169 @@
+/* Container & Background */
+.service-area-section {
+  padding: 60px 20px;
+  background-color: #f8fafc; /* Professional light background */
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.area-badge {
+  background: rgba(211, 47, 47, 0.1);
+  color: #d32f2f; /* Red */
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.area-title {
+  color: #0d47a1; /* Deep Blue */
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Fluid typography */
+  font-weight: 800;
+  margin: 15px 0 10px;
+}
+
+.accent-line {
+  width: 50px;
+  height: 4px;
+  background: #d32f2f;
+  margin: 0 auto 15px;
+}
+
+.area-desc {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* GRID SYSTEM */
+.cities-grid {
+  display: grid;
+  /* Mobile: 2 columns */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 12px;
+}
+
+/* Base Card Style */
+.city-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+/* Standard Card (Blue Accent) */
+.standard-card {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 3px solid #0d47a1; /* Blue Line */
+}
+
+/* Hub Card (Killeen - Red Accent) */
+.hub-card {
+  grid-column: 1 / -1; /* Full width on Mobile */
+  flex-direction: column;
+  background: #0d47a1;
+  color: white;
+  border: none;
+  padding: 30px;
+  border-bottom: 5px solid #d32f2f; /* Red Line */
+}
+
+.hub-tag {
+  background: #d32f2f;
+  font-size: 0.7rem;
+  padding: 4px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.city-label {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.status-indicator {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.9;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #4ade80; /* Green dot */
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* CALL TO ACTION */
+.cta-box {
+  margin-top: 35px;
+  text-align: center;
+}
+
+.area-call-button {
+  display: inline-block;
+  width: 100%; /* Full width on mobile */
+  max-width: 350px;
+  background: #d32f2f;
+  color: white;
+  padding: 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+/* --- VIEWPORT ADJUSTMENTS --- */
+
+/* Tablet View (600px and up) */
+@media (min-width: 600px) {
+  .cities-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hub-card {
+    grid-column: span 1; /* Hub becomes a normal size card */
+  }
+}
+
+/* Desktop View (1024px and up) */
+@media (min-width: 1024px) {
+  .cities-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .city-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    background-color: #fff;
+  }
+  
+  .area-call-button {
+    width: auto;
+    padding: 15px 45px;
+  }
+}

@@ -1,0 +1,192 @@
+/* Container for page centering */
+.yahoo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 20px;
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Card Main Styling */
+.yahoo-card {
+  max-width: 400px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.yahoo-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(37, 99, 235, 0.15);
+}
+
+/* Image Section */
+.yahoo-image-box {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.yahoo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.yahoo-card:hover .yahoo-img {
+  transform: scale(1.1);
+}
+
+/* Before/After Labels */
+.yahoo-labels {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 240px;
+}
+
+.label-red, .label-blue {
+  padding: 5px 14px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 30px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.label-red { background: rgba(220, 38, 38, 0.85); backdrop-filter: blur(4px); }
+.label-blue { background: rgba(37, 99, 235, 0.85); backdrop-filter: blur(4px); }
+
+.yahoo-tag {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: white;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #1e293b;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Body Content */
+.yahoo-content {
+  padding: 24px;
+}
+
+.yahoo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.yahoo-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.yahoo-stars {
+  color: #fbbf24;
+  font-size: 14px;
+}
+
+.yahoo-text {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Stats section */
+.yahoo-stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.stat-dot {
+  width: 6px;
+  height: 6px;
+  background: #2563eb;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+/* Button */
+.yahoo-btn {
+  width: 100%;
+  background: #1e293b;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.yahoo-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.yahoo-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.yahoo-btn:hover .yahoo-icon {
+  transform: translateX(5px);
+}
+
+.yahoo-footer {
+  text-align: center;
+  padding: 15px;
+  background: #f8fafc;
+  font-size: 10px;
+  color: #94a3b8;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  .yahoo-card {
+    border-radius: 20px;
+  }
+  .yahoo-image-box {
+    height: 220px;
+  }
+  .yahoo-title {
+    font-size: 19px;
+  }
+}

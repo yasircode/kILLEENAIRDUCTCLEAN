@@ -1,0 +1,256 @@
+/* General Resets */
+.main-wrapper { 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  background: #f7f7f7; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CTA Section */
+.cta-section { 
+  padding: 60px 20px; 
+  text-align: center; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cta-section h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 25px; }
+.cta-text p { font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 20px; font-weight: 300; }
+.cta-button {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(13, 71, 161, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(13, 71, 161, 0.3);
+}
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(13, 71, 161, 0.25);
+}
+
+/* Reviews Section */
+.reviews-section { background: #f9f9f9; padding: 50px 20px; text-align: center; }
+.reviews-section h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 40px; color: #0d47a1; }
+.reviews-container { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.review-item { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 300px; text-align: left; }
+.review-stars { color: #ffd700; font-size: 1.2rem; margin-bottom: 10px; }
+.review-text { font-size: 1rem; line-height: 1.5; color: #555; margin-bottom: 15px; }
+.review-author { font-weight: bold; color: #0d47a1; font-size: 0.9rem; }
+
+/* Footer Area */
+.footer-area { 
+  background: #002251; 
+  color: #ffffff; 
+  padding: 5px 0 20px 0; 
+  font-size: 0.10rem;
+}
+
+.footer-top { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: minmax(260px, 1.4fr) minmax(260px, 1.2fr) minmax(260px, 1.1fr);
+  gap: 30px; 
+  padding: 0 24px; 
+  align-items: flex-start;
+}
+
+.footer-col { 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.contact-col h3,
+.contact-col h4,
+.contact-col h2 {
+  margin: 3px 0;
+}
+
+.yellow-text { 
+  color: #ffe000; 
+  margin: 3px 0; 
+  font-weight: 900; 
+}
+
+.email-link { 
+  font-weight: 600; 
+  margin-top: 10px; 
+}
+
+.payment-icons { 
+  display: flex; 
+  gap: 6px; 
+  margin-top: 18px; 
+}
+
+.payment-icons div { 
+  background: #ffffff; 
+  color: #0d47a1; 
+  font-size: 10px; 
+  font-weight: 700; 
+  padding: 4px 10px; 
+  border-radius: 3px; 
+}
+
+.social-col { 
+  align-items: center; 
+  text-align: center; 
+}
+
+.policy-links { 
+  margin-bottom: 18px; 
+  font-size: 0.95rem; 
+}
+
+.terms-trigger { 
+  cursor: pointer; 
+  text-decoration: underline; 
+}
+
+.social-row { 
+  display: flex; 
+  justify-content: center; 
+  gap: 10px; 
+  flex-wrap: wrap; 
+}
+
+.s-icon { 
+  width: 34px; 
+  height: 34px; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background: #1e3558; 
+  font-weight: bold; 
+  font-size: 0.9rem;
+}
+.fb { background: #3b5998; } .tw { background: #0d47a1; } .yt { background: #ff0000; }
+
+.map-wrapper {
+  width: 100%;
+  max-width: 400px; /* Aap apni screen ke hisab se adjust kar sakte hain */
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.footer-bottom { 
+  border-top: 1px solid rgba(255,255,255,0.18); 
+  margin-top: 36px; 
+  padding-top: 16px; 
+  text-align: center; 
+  font-size: 0.9rem; 
+}
+
+/* Modal Styles */
+.modal-overlay { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: white; color: #333; padding: 40px; border-radius: 8px; position: relative; max-width: 500px; width: 90%; }
+.close-btn { position: absolute; right: 15px; top: 10px; font-size: 30px; border: none; background: none; cursor: pointer; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cta-section { 
+    padding: 50px 18px;
+  }
+  .cta-section h1 { 
+    font-size: 1.8rem; 
+  }
+  .cta-text p {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-col {
+    align-items: center;
+  }
+
+  .payment-icons {
+    justify-content: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 320px;
+  }
+  .reviews-container { flex-direction: column; align-items: center; }
+  .review-item { max-width: 100%; }
+  .footer-top { flex-direction: column; text-align: center; }
+  .social-row { justify-content: center; }
+  .payment-icons { justify-content: center; }
+  .faq-question { font-size: 1rem; }
+}
+
+/* Tablet and Small Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .cta-section { padding: 40px 15px; }
+  .cta-section h1 { font-size: 1.5rem; margin-bottom: 20px; }
+  .cta-text p { font-size: 1rem; line-height: 1.5; margin-bottom: 15px; }
+  .faq-section { padding: 40px 15px; }
+  .faq-section h2 { font-size: 1.6rem; margin-bottom: 30px; }
+  .faq-item { margin-bottom: 8px; }
+  .faq-header { padding: 12px 15px; }
+  .faq-icon { width: 20px; height: 20px; font-size: 12px; }
+  .faq-question { font-size: 0.95rem; }
+  .faq-answer { padding: 0 15px 15px 45px; font-size: 0.9rem; }
+  .footer-top { padding: 0 15px; gap: 18px; }
+  .footer-col { min-width: 0; }
+  .yellow-text { font-size: 1.1rem; }
+  .email-link { font-size: 0.9rem; }
+  .payment-icons { gap: 3px; }
+  .payment-icons div { font-size: 8px; padding: 3px 6px; }
+  .social-row { gap: 6px; }
+  .s-icon { width: 30px; height: 30px; font-size: 0.8rem; }
+  .modal-content { padding: 30px; max-width: 90%; }
+}
+
+/* Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .cta-section { padding: 30px 10px; }
+  .cta-section h1 { font-size: 1.3rem; margin-bottom: 15px; }
+  .cta-text p { font-size: 0.95rem; margin-bottom: 12px; }
+  .faq-section { padding: 30px 10px; }
+  .faq-section h2 { font-size: 1.4rem; margin-bottom: 25px; }
+  .faq-container { max-width: 100%; }
+  .faq-item { margin-bottom: 6px; }
+  .faq-header { padding: 10px 12px; }
+  .faq-icon { width: 18px; height: 18px; font-size: 10px; }
+  .faq-question { font-size: 0.9rem; }
+  .faq-toggle { font-size: 1.2rem; }
+  .faq-answer { padding: 0 12px 12px 40px; font-size: 0.85rem; }
+  .footer-top { padding: 0 10px; gap: 14px; }
+  .footer-col { min-width: 0; }
+  .yellow-text { font-size: 1rem; }
+  .email-link { font-size: 0.85rem; }
+  .payment-icons { gap: 2px; justify-content: center; flex-wrap: wrap; }
+  .payment-icons div { font-size: 7px; padding: 2px 4px; }
+  .social-row { gap: 4px; flex-wrap: wrap; }
+  .s-icon { width: 28px; height: 28px; font-size: 0.7rem; }
+  .footer-bottom { font-size: 0.8rem; padding-top: 15px; }
+  .modal-content { padding: 20px; max-width: 95%; }
+  .close-btn { font-size: 25px; top: 5px; right: 10px; }
+}

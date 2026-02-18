@@ -1,0 +1,78 @@
+/* Container styling */
+.unique-container {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+.unique-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Image Grid - Desktop pe 2 images side by side */
+.unique-image-grid {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.unique-card {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.unique-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text Styling */
+.unique-content {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.unique-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.unique-description, .unique-thanks {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.unique-highlight {
+  color: #d93025; /* Red color from your prompt */
+  font-weight: bold;
+  border-bottom: 2px solid #d93025;
+  cursor: pointer;
+}
+
+/* --- MOBILE VIEW BEST ADJUSTMENT --- */
+@media (max-width: 768px) {
+  .unique-image-grid {
+    flex-direction: column; /* Mobile pe images ek ke neeche ek aayengi */
+  }
+
+  .unique-img {
+    height: 250px; /* Mobile pe height thodi kam */
+  }
+
+  .unique-title {
+    font-size: 22px; /* Choti screen pe heading size adjust */
+  }
+
+  .unique-description {
+    text-align: justify; /* Reading asaan karne ke liye */
+  }
+}

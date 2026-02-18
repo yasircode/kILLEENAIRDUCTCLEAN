@@ -1,0 +1,88 @@
+/* src/IntroCard.css */
+
+.intro-section {
+  background-color: #f4f4f4; 
+  /* Padding top zero kar di taake gap na rahe */
+  padding: 0 20px 40px 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.intro-card {
+  background: white;
+  max-width: 1200px; 
+  width: 100%;
+  padding: 25px 40px;
+  
+  /* --- CARD KO UPER LAY JANE KE LIYE --- */
+  /* Negative margin card ko Hero section ke uper push karega */
+  margin-top: -90px; 
+  position: relative; 
+  z-index: 10; /* Taake card background ke uper nazar aaye */
+  
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15); /* Shadow thodi gehri ki taake depth nazar aaye */
+  border-radius: 8px;
+  text-align: center;
+}
+
+.intro-title {
+  color: #a10606; 
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 12px; /* Gap mazeed kam */
+  text-transform: uppercase;
+}
+
+.intro-title span {
+  color: #0d47a1; 
+}
+
+.intro-text {
+  color: #444;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin-bottom: 10px; /* Space kam ki */
+}
+
+.intro-italic {
+  font-style: italic;
+  font-weight: 700;
+  color: #333;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Badge Layout */
+.badge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px; /* Gap kam kiya */
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.trust-badge {
+  height: 60px; /* Thoda aur chota kiya taake card compact rahe */
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(20%); /* Professional look */
+  transition: transform 0.3s;
+}
+
+.trust-badge:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .intro-card { 
+    margin-top: -30px; /* Mobile par thoda kam uper jayega */
+    padding: 20px 15px; 
+  }
+  .badge-container { gap: 15px; }
+  .intro-title { font-size: 1.3rem; }
+  .trust-badge { height: 50px; }
+}

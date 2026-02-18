@@ -1,0 +1,163 @@
+/* src/GoogleReviews.css */
+
+.reviews-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.reviews-main-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.reviews-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Sidebar Styling */
+.business-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.business-logo img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.business-info h3 {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+  line-height: 1.2;
+}
+
+.business-info .stars {
+  color: #fbba00;
+  font-size: 20px;
+}
+
+.business-info p {
+  color: #666;
+  font-size: 14px;
+  margin: 5px 0 15px 0;
+}
+
+.write-review-btn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Slider & Card Styling */
+.slider-wrapper {
+  flex-grow: 1;
+  position: relative;
+  min-width: 0; /* Fix for Swiper inside Flexbox */
+}
+
+.review-card {
+  background: #f1f1f1; /* Light grey from screenshot */
+  padding: 25px;
+  border-radius: 12px;
+  min-height: 200px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-initial, .user-profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  object-fit: cover;
+}
+
+.user-details h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.user-details span {
+  font-size: 13px;
+  color: #777;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.review-stars {
+  color: #fbba00;
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.verified-check {
+  background: #0d47a1;
+  color: white;
+  font-size: 10px;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.review-text {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Custom Swiper Arrows */
+.swiper-button-next, .swiper-button-prev {
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #000 !important;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 18px !important;
+}
+
+@media (max-width: 900px) {
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .user-profile { text-align: left; }
+}

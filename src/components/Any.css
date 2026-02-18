@@ -1,0 +1,148 @@
+/* --- SECTION WRAPPER --- */
+.any-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+.any-container {
+  max-width: 1200px;
+  width: 90%;
+}
+
+.any-title {
+  text-align: center;
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 900;
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  margin-bottom: 40px;
+  color: #000;
+}
+
+/* --- GRID SYSTEM --- */
+.any-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Desktop: 3 Boxes */
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.any-box {
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid #eee; 
+  transition: 0.3s;
+}
+
+.any-box:hover {
+  background-color: #fcfcfc;
+}
+
+/* --- ICONS & SPLASH --- */
+.any-icon-container {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.any-splash {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0.08); 
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: 1;
+  transform: rotate(-15deg);
+}
+
+.any-box:nth-child(odd) .any-splash {
+  background-color: rgba(0, 0, 255, 0.05); 
+}
+
+.svg-icon {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  z-index: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.blue-icon { stroke: #0d47a1; } 
+.red-icon { stroke: #b22222; }  
+
+.any-box-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #000;
+  text-align: center;
+  margin: 0;
+  max-width: 180px;
+}
+
+/* --- RESPONSIVE DESIGN (MOBILE FIX) --- */
+
+@media (max-width: 1024px) {
+  .any-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 Boxes */
+  }
+}
+
+@media (max-width: 600px) {
+  .any-section {
+    padding: 30px 0; 
+  }
+
+  .any-container {
+    width: 100%; /* Side gaps khatam karne ke liye */
+    padding: 0;
+  }
+
+  .any-grid {
+    grid-template-columns: repeat(2, 1fr); /* Mobile: Ek line mein 2 boxes */
+    border-left: none;
+    border-right: none;
+  }
+  
+  .any-box {
+    padding: 30px 10px; /* Length kam karne ke liye padding kam ki */
+    border: 0.5px solid #eee;
+  }
+
+  .any-box-text {
+    font-size: 0.9rem; /* 2 boxes fit karne ke liye text adjust kiya */
+    max-width: 100%;
+    padding: 0 5px;
+  }
+
+  .any-icon-container {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .any-splash {
+    width: 35px;
+    height: 35px;
+  }
+
+  .svg-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .any-title {
+    padding: 0 15px;
+    font-size: 1.5rem;
+  }
+}
