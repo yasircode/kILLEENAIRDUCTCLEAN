@@ -18,12 +18,12 @@ const DuctLandingPage = () => {
 
   return (
     <div className="main-wrapper">
-      {/* CALL TO ACTION SECTION */}
-      <section className="cta-section">
-        <h1>Expert Air Duct Cleaning Services in Killeen, TX</h1>
+      {/* CTA SECTION (Iska height kam karne ke liye padding adjust ki hai) */}
+      <section className="cta-section" style={{ padding: '20px 10px', minHeight: 'auto' }}>
+        <h1 style={{ fontSize: '1.8rem', marginBottom: '10px' }}>Expert Air Duct Cleaning Services in Killeen, TX</h1>
         <div className="cta-text">
-          <p>Enhance your indoor air quality and HVAC system performance with our certified air duct cleaning professionals. Serving Killeen and surrounding areas with over a decade of trusted expertise.</p>
-          <button className="cta-button">Request a Free Estimate</button>
+          <p>Enhance your indoor air quality and HVAC system performance with our certified air duct cleaning professionals.</p>
+          <button className="cta-button" style={{ marginTop: '10px' }}>Request a Free Estimate</button>
         </div>
       </section>
 
@@ -33,12 +33,12 @@ const DuctLandingPage = () => {
         <div className="reviews-container">
           <div className="review-item">
             <div className="review-stars">★★★★★</div>
-            <p className="review-text">"Killeen Air Duct Cleaners did an excellent job cleaning our ducts. The team was professional, punctual, and the air quality in our home has noticeably improved. Highly recommend!"</p>
+            <p className="review-text">"Killeen Air Duct Cleaners did an excellent job cleaning our ducts. The team was professional, punctual, and the air quality in our home has noticeably improved."</p>
             <p className="review-author">- Sarah M., Killeen, TX</p>
           </div>
           <div className="review-item">
             <div className="review-stars">★★★★★</div>
-            <p className="review-text">"Outstanding service! They explained the process clearly and were very thorough. Our HVAC system is running more efficiently now. Will definitely use them again."</p>
+            <p className="review-text">"Outstanding service! They explained the process clearly and were very thorough. Our HVAC system is running more efficiently now."</p>
             <p className="review-author">- John D., Temple, TX</p>
           </div>
           <div className="review-item">
@@ -69,29 +69,42 @@ const DuctLandingPage = () => {
             <div className="policy-links">
               <span>Privacy Policy</span> | <span className="terms-trigger" onClick={() => setShowTerms(true)}>Terms and Conditions</span>
             </div>
+            
             <div className="social-row">
-              <div className="s-icon fb">f</div>
-              <div className="s-icon tw">t</div>
-              <div className="s-icon yt">y</div>
+              <a 
+                href="https://www.facebook.com/share/17DuWb7eAK/?mibextid=wwXIfr" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <div className="s-icon fb">f</div>
+              </a>
+
+              <a href="#" className="social-link">
+                <div className="s-icon tw">t</div>
+              </a>
+
+              <a href="#" className="social-link">
+                <div className="s-icon yt">y</div>
+              </a>
             </div>
           </div>
 
-<div className="footer-col map-col">
-  <div className="map-wrapper">
-    <iframe 
-      /* Yeh link ab bilkul sahi hai */
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d415637.0529283808!2d-97.80937855551282!3d31.104313042371736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1skelleen%20air%20duct%20cleaning!5e1!3m2!1sen!2sus!4v1771487539175!5m2!1sen!2sus" 
-      className="google-map-iframe"
-      width="100%"
-      height="300"
-      style={{ border: 0 }}
-      allowFullScreen="" 
-      loading="lazy" 
-      referrerPolicy="no-referrer-when-downgrade"
-      title="Killeen Air Duct Cleaners Map"
-    ></iframe>
-  </div>
-</div>
+          <div className="footer-col map-col">
+            <div className="map-wrapper" style={{ overflow: 'hidden', borderRadius: '8px' }}>
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110123.456789!2d-97.7277!3d31.1171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86454bc5f2e8f77d%3A0x868b8b9b8b8b8b8b!2sKilleen%2C%20TX!5e0!3m2!1sen!2sus!4v1234567890" 
+                className="google-map-iframe"
+                width="100%"
+                height="180" // Map ki height 300 se kam karke 180 kar di hai
+                style={{ border: 0 }}
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Killeen Air Duct Cleaners Map"
+              ></iframe>
+            </div>
+          </div>
         </div>
         
         <div className="footer-bottom">
@@ -103,7 +116,7 @@ const DuctLandingPage = () => {
       {showTerms && (
         <div className="modal-overlay" onClick={() => setShowTerms(false)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setShowTerms(false)}> </button>
+            <button className="close-btn" onClick={() => setShowTerms(false)}>×</button>
             <h2>Terms and Conditions</h2>
             <div className="modal-body">
               <p>These terms and conditions govern your use of KILLEEN Air Duct Cleaning Services...</p>

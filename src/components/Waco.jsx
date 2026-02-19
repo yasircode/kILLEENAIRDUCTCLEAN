@@ -116,7 +116,7 @@ const Waco = () => {
           <h1>UV Light System Installation in Waco, TX</h1>
           <p className="breadcrumb">Home » Residential Air Quality</p>
           <a href="tel:2459983484" className="call-btn">
-            📞 CALL US: (245) 998-3484
+            📞 CALL US: (254) 998-3484
           </a>
         </div>
       </section>
