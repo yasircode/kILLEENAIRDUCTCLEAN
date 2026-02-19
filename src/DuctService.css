@@ -74,7 +74,7 @@
 }
 
 /* Responsive View (Mobile) */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .duct-container {
     flex-direction: column; /* Stacks image below text */
     padding: 20px;

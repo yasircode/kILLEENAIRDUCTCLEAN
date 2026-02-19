@@ -76,14 +76,15 @@ const DuctLandingPage = () => {
             </div>
           </div>
 
-         
-   <div className="footer-col map-col">
-  <div className="map-wrapper" style={{ overflow: 'hidden', borderRadius: '15px' }}>
+<div className="footer-col map-col">
+  <div className="map-wrapper">
     <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110123.456789!2d-97.7277!3d31.1171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86454b3353787737%3A0x46850b1f4129c00d!2sKilleen%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-      width="100%" 
-      height="250" 
-      style={{ border: 0 }} 
+      /* Yeh link ab bilkul sahi hai */
+      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d415637.0529283808!2d-97.80937855551282!3d31.104313042371736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1skelleen%20air%20duct%20cleaning!5e1!3m2!1sen!2sus!4v1771487539175!5m2!1sen!2sus" 
+      className="google-map-iframe"
+      width="100%"
+      height="300"
+      style={{ border: 0 }}
       allowFullScreen="" 
       loading="lazy" 
       referrerPolicy="no-referrer-when-downgrade"
@@ -102,7 +103,7 @@ const DuctLandingPage = () => {
       {showTerms && (
         <div className="modal-overlay" onClick={() => setShowTerms(false)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setShowTerms(false)}>×</button>
+            <button className="close-btn" onClick={() => setShowTerms(false)}> </button>
             <h2>Terms and Conditions</h2>
             <div className="modal-body">
               <p>These terms and conditions govern your use of KILLEEN Air Duct Cleaning Services...</p>

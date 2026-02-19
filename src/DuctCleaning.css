@@ -1,92 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
+/* --- General Container --- */
 .container {
-  background-color: #f1f1f1; /* Matches the light grey background */
-  padding: 60px 40px;
+  background-color: #f1f1f1;
+  padding: 60px 20px;
   font-family: 'Inter', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
 }
 
+/* --- Content Wrapper --- */
 .content-wrapper {
   display: flex;
-  max-width: 1100px;
-  gap: 40px;
+  flex-direction: row-reverse; /* Image Right Side */
+  max-width: 1400px;         /* Container ki width mazeed barha di */
+  width: 100%;
+  gap: 50px;
   align-items: flex-start;
 }
 
+/* --- Text Section --- */
 .text-section {
-  flex: 1.2;
-}
-.image-section {
-  flex: 1.5; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Agar aap poore section ki lambai barhana chahte hain to yahan min-height dein */
-  min-height: 500px; 
-}
-
-.duct-image {
-  width: 100%;
-  max-width: 600px; 
-  
-  /* --- LENGTH BARHANE KE LIYE YEH CHANGE KAREIN --- */
-  height: 500px;         /* Aap 500px ya apni pasand ki koi bhi height dein */
-  object-fit: cover;     /* Isse image stretch nahi hogi balkay crop ho kar fit hogi */
-  object-position: center; /* Image ka darmiyani hissa dikhayega */
-  
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease;
-}
-
-.duct-image:hover {
-  transform: scale(1.02);
+  flex: 1; 
 }
 
 .title {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #000;
   text-transform: uppercase;
 }
 
 .intro-text {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 25px;
-  line-height: 1.5;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .signs-list {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .sign-item {
-  font-size: 14px;
-  font-weight: 700; /* Bolded as per the screenshot */
-  line-height: 1.4;
-  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 18px;
   color: #333;
+  padding-left: 30px;
+  position: relative;
+}
+
+.sign-item::before {
+  content: "•";
+  color: #ca1d1d;
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+/* --- Image Section (MAX SIZE) --- */
+.image-section {
+  flex: 1.5; /* Image ko text se zyada space di hai */
+  display: flex;
+  justify-content: center;
 }
 
 .duct-image {
   width: 100%;
-  height: auto;
+  height: 700px;           /* DESKTOP PAR BOHOT BARI IMAGE */
+  max-width: 800px;        /* Image ki max chorai */
+  object-fit: cover;       
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
   display: block;
-  object-fit: cover;
 }
 
-/* Responsive adjustment */
-@media (max-width: 768px) {
+.duct-image:hover {
+  transform: scale(1.01);
+}
+
+/* --- Responsive Design (Mobile View) --- */
+@media (max-width: 992px) {
   .content-wrapper {
     flex-direction: column;
+    gap: 30px;
+  }
+
+  .image-section {
+    order: -1; 
+    width: 100%;
+  }
+
+  .duct-image {
+    height: 500px; /* MOBILE PAR BHI BARI IMAGE */
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 24px;
+    text-align: center;
   }
 }
