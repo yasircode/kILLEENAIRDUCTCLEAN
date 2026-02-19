@@ -25,6 +25,7 @@ import Gallery from './Gallery';
 import ServiceAreas from './components/ServiceAreas';
 import Management from './components/Management'
 import MultiStepQuoteForm from './components/MultiStepQuoteForm';
+
 // --- NEW IMPORTS FOR SERVICES ---
 import AirDuctCleaning from './components/AirDuctCleaning';
 import Commercialcleaning from './components/Commerciacleaning';
@@ -72,6 +73,7 @@ const Home = () => (
     <Gallery />
     <br />
     <Banner />
+   
 <MultiStepQuoteForm/>
 
     <br />
@@ -83,6 +85,7 @@ const Home = () => (
     <br />
     <Blue />
     <Yahoo/>
+    
     <MaintenanceGuide/>
     <DuctCleaning />
     <HVACLandingPage />

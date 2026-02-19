@@ -1,5 +1,4 @@
 import React from "react";
-
 import DuctLandingPage from "../DuctLandingPage";
 
 const Ductservice = () => {
@@ -28,11 +27,11 @@ const Ductservice = () => {
         <div className="container">
           <div className="text">
             <p>
-         Your air duct system is essential for delivering clean, conditioned air throughout your home or business. When ductwork becomes damaged, leaky, or outdated, it can reduce indoor air quality, increase energy costs, and put extra strain on your HVAC system.
-</p>
+              Your air duct system is essential for delivering clean, conditioned air throughout your home or business. When ductwork becomes damaged, leaky, or outdated, it can reduce indoor air quality, increase energy costs, and put extra strain on your HVAC system.
+            </p>
 
             <p>
-             At Killeen Air Duct Cleaning, we provide professional air duct repair and air duct replacement services in Killeen, TX. Our experienced technicians carefully inspect your ductwork to identify leaks, loose connections, poor insulation, or airflow restrictions. We then restore or replace damaged sections to ensure maximum efficiency and proper air circulation.
+              At <strong>Killeen Air Duct Cleaning</strong>, we provide professional air duct repair and air duct replacement services in Killeen, TX. Our experienced technicians carefully inspect your ductwork to identify leaks, loose connections, poor insulation, or airflow restrictions. We then restore or replace damaged sections to ensure maximum efficiency and proper air circulation.
             </p>
           </div>
 
@@ -111,7 +110,7 @@ const Ductservice = () => {
 
         /* CONTENT SECTION */
         .content-section {
-          padding: 80px 20px;
+          padding: 60px 20px;
           background: #f7f7f7;
         }
 
@@ -142,58 +141,141 @@ const Ductservice = () => {
           border-radius: 10px;
         }
 
-        /* 🔥 PERFECT MOBILE RESPONSIVE */
+        /* NEW DUAL BOX SECTION (AS PER SCREENSHOT) */
+        .repair-grid-section {
+          padding: 60px 20px;
+          background: #fff;
+        }
+
+        .grid-wrapper {
+          max-width: 1200px;
+          margin: auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+
+        .grid-card {
+          border: 1px solid #e0e0e0;
+          border-radius: 5px;
+          overflow: hidden;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .card-heading {
+          background-color: #0e1b4d;
+          color: white;
+          padding: 18px;
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        .card-content {
+          padding: 30px;
+          font-size: 16px;
+          line-height: 1.7;
+          color: #444;
+        }
+
+        .card-content p { margin-bottom: 15px; }
+
+        .service-bullets {
+          list-style: none;
+          margin-top: 15px;
+        }
+
+        .service-bullets li {
+          position: relative;
+          padding-left: 25px;
+          margin-bottom: 10px;
+          font-weight: 600;
+        }
+
+        .service-bullets li::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #000;
+          font-weight: bold;
+          font-size: 22px;
+          top: -4px;
+        }
+
+        .cta-text {
+          font-weight: bold;
+          margin-top: 20px;
+        }
+
+        .red-brand {
+          color: #c62828;
+        }
+
+        /* 🔥 MOBILE RESPONSIVE OPTIMIZATION */
         @media (max-width: 992px) {
-          .overlay h1 {
-            font-size: 28px;
-          }
-
-          .container {
-            flex-direction: column;
-            gap: 30px;
-          }
-
-          .text {
-            font-size: 16px;
-            text-align: center;
-          }
-
-          .image img {
-            border-radius: 8px;
-          }
+          .overlay h1 { font-size: 28px; }
+          .container { flex-direction: column; text-align: center; }
+          .grid-wrapper { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 576px) {
-          .hero {
-            min-height: 420px;
-          }
-
-          .overlay {
-            padding: 30px 15px;
-          }
-
-          .overlay h1 {
-            font-size: 22px;
-          }
-
-          .breadcrumb {
-            font-size: 14px;
-          }
-
-          .call-btn {
-            width: 100%;
-            max-width: 300px;
-            padding: 14px;
-            font-size: 16px;
-          }
-
-          .content-section {
-            padding: 50px 15px;
-          }
+          .hero { min-height: 420px; }
+          .overlay h1 { font-size: 22px; }
+          .card-heading { font-size: 18px; padding: 15px; }
+          .call-btn { width: 100%; font-size: 16px; }
+          .repair-grid-section { padding: 40px 15px; }
         }
-
       `}</style>
-     
+
+      {/* NEW UPDATED CONTENT BASED ON SCREENSHOT STYLE */}
+      <section className="repair-grid-section">
+        <div className="grid-wrapper">
+          
+          {/* Box 1: Repair and Replacement */}
+          <div className="grid-card">
+            <div className="card-heading">
+              Premier Air Duct Repair and Replacement in Killeen
+            </div>
+            <div className="card-body card-content">
+              <p>
+                Residents of <strong>Killeen and Fort Hood</strong> trust <strong>Killeen Air Duct Cleaning</strong> for their high-quality air duct repair and replacement needs. With years of hands-on experience in <strong>Central Texas</strong>, we understand the specific environmental factors that cause duct wear and tear.
+              </p>
+              <p>
+                Our certified technicians provide <strong>reliable duct sealing and structural renewals</strong>, guaranteeing customer satisfaction at every stage. We focus on eliminating leaks that cause your HVAC to work overtime, ultimately lowering your utility bills.
+              </p>
+              <div className="cta-text">
+                Reach out to <span className="red-brand">Killeen Air Duct Cleaning</span> for a comprehensive system evaluation today and breathe easier tomorrow.
+              </div>
+            </div>
+          </div>
+
+          {/* Box 2: Solutions and Lists */}
+          <div className="grid-card">
+            <div className="card-heading">
+              Comprehensive Ductwork Solutions
+            </div>
+            <div className="card-body card-content">
+              <p>
+                From minor leaks to full-scale ventilation system renewals, we offer tailored solutions for homes in <strong>Harker Heights, Nolanville, and Copperas Cove</strong>. Our goal is to restore the structural integrity of your air delivery system.
+              </p>
+              <p>
+                We use <strong>professional-grade mastic sealants and R-8 insulated ducting</strong> to ensure your climate-controlled air reaches its destination without loss.
+              </p>
+              <h3 style={{fontSize: '18px', fontWeight: 'bold', marginTop: '20px'}}>Our Services Include:</h3>
+              <ul className="service-bullets">
+                <li>Professional Ductwork Repair Solutions</li>
+                <li>Full Air Duct Replacement Services</li>
+                <li>Precision HVAC Duct Restoration</li>
+                <li>Modern Ventilation System Renewal</li>
+                <li className="red-brand">Energy-Efficient Airflow Optimization</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
       <DuctLandingPage/>
     </div>
   );
