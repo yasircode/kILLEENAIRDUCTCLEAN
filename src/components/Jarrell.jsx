@@ -164,7 +164,7 @@ const Jarrell = () => {
         </section>
 
         <Management />
-        <br />
+      
         <DuctServiceFAQ />
         <DuctLandingPage />
       </div>
