@@ -3,13 +3,55 @@ import DuctServiceFAQ from '../DuctServiceFAQ';
 import DuctLandingPage from '../DuctLandingPage'; 
 import Management from './Management';
 
-
 const Nolanville = () => {
   return (
     <div className="city-page">
       {/* 1. Global Styles for this page */}
       <style>
         {`
+          .video-hero {
+            position: relative;
+            width: 100%;
+            height: 500px; 
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .video-hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+          }
+
+          .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Halka dark filter */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .video-overlay h1 {
+            color: #ffffff;
+            font-size: clamp(32px, 6vw, 52px);
+            font-weight: 900;
+            text-align: center;
+            padding: 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.7); /* Text ko prominent karne ke liye */
+          }
+
           .nolanville-section {
             display: flex;
             align-items: center;
@@ -61,9 +103,10 @@ const Nolanville = () => {
           }
 
           @media (max-width: 992px) {
+            .video-hero { height: 400px; } /* Mobile pe height thori kam */
             .nolanville-section {
               flex-direction: column;
-              padding: 40px 20px;
+              padding: 400px 20px;
               text-align: center;
             }
             .nolanville-image-box {
@@ -74,14 +117,20 @@ const Nolanville = () => {
         `}
       </style>
 
-      {/* 2. Content Sections */}
       <div style={{ width: '100%', overflowX: 'hidden' }}>
         
-        {/* Agar Hero component hai to yahan uncomment karein */}
-        {/* <Hero /> */}
-        
-        <h1 style={{ textAlign: 'center', marginTop: '40px' }}>Air Duct Cleaning in Nolanville, TX</h1>
+        {/* --- Video Section --- */}
+        <div className="video-hero">
+          <video autoPlay muted loop playsInline>
+            <source src="/red.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="video-overlay">
+            <h1>Air Duct Cleaning in Nolanville, TX</h1>
+          </div>
+        </div>
 
+        {/* --- Text Content Section --- */}
         <section className="nolanville-section">
           <div className="nolanville-content">
             <h2 className="nolanville-heading">Local Air Duct Cleaning Services</h2>
@@ -113,14 +162,11 @@ const Nolanville = () => {
             />
           </div>
         </section>
-        <Management />
-<br></br>
-        <DuctServiceFAQ />
-        
-        <DuctLandingPage />
 
-        {/* Agar Banner component hai to yahan use karein */}
-        {/* <Banner /> */}
+        <Management />
+        <br />
+        <DuctServiceFAQ />
+        <DuctLandingPage />
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 import React from 'react';
-
+import Banner from './Banner';
 import Hero from './Hero';
 import DuctLandingPage from '../DuctLandingPage';
-import Management from './Management';
+import Any from './Any';
+import Gallery from '../Gallery';
 const Lampasas = () => {
   // --- Yahan Company ka content aur image paths hain ---
   const serviceData = [
@@ -10,7 +11,7 @@ const Lampasas = () => {
       title: "BENEFITS OF CLEANING YOUR AIR DUCTS",
       content: "Cleaning your air ducts does wonders for your home. It gets rid of dust and other nasty stuff, making the air cleaner and fresher. This means less coughing and sneezing. Also, your air system works smoother, which can lower your energy bills.",
       cta: "Want cleaner air in your home? Get your air ducts cleaned today and breathe easier!",
-      image: "/013.jpeg", // Apni image ka path yahan dalein
+      image: "/013.jpeg", 
       imageLeft: false
     },
     {
@@ -44,16 +45,63 @@ const Lampasas = () => {
 
   return (
     <div className="killeen-air-duct-page">
-        <h1>KELLEEN Air Duct Cleaning in Lampasas, TX</h1>
-        <Hero />
-       
-      {/* --- Inline CSS (Styled JSX) --- */}
+      
+      {/* --- Inline CSS (Video + Content Styles) --- */}
       <style>
         {`
+          .video-hero-section {
+            position: relative;
+            width: 100%;
+            height: 65vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+          }
+
+          .hero-video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+          }
+
+          .video-dark-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+          }
+
+          .hero-content-inner {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+          }
+
+          .hero-content-inner h1 {
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+          }
+
           .services-wrapper {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
           }
 
@@ -139,31 +187,46 @@ const Lampasas = () => {
             background-color: #8a181d;
           }
 
-          /* --- Mobile Responsive --- */
           @media (max-width: 900px) {
+            .video-hero-section { height: 45vh; }
             .service-row, .service-row.reverse {
               flex-direction: column;
               text-align: center;
               gap: 30px;
               margin-bottom: 60px;
             }
-
-            .image-container {
-              order: -1; /* Image text se upar dikhegi mobile pe */
-            }
-
-            .points-list {
-              text-align: left;
-              display: inline-block;
-            }
-
-            .call-btn {
-              width: 100%;
-              justify-content: center;
-            }
+            .image-container { order: -1; }
+            .points-list { text-align: left; display: inline-block; }
+            .call-btn { width: 100%; justify-content: center; }
           }
         `}
       </style>
+
+      {/* --- Top Video Hero Section --- */}
+      <section className="video-hero-section">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline 
+          className="hero-video-bg"
+        >
+          {/* Apni video file ka path yahan check karein */}
+          <source src="/red.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="video-dark-overlay"></div>
+        <div className="hero-content-inner">
+          <h1>KILLEEN Air Duct Cleaning in Lampasas, TX</h1>
+          <p style={{marginTop: '10px', fontSize: '1.2rem'}}>Expert Solutions for Cleaner Indoor Air</p>
+        </div>
+      </section>
+
+      {/* Banner aur Hero components agar video ke neeche chahiye hon to yahan rehne dein */}
+      <Banner />
+<Gallery/>
+      <Any/>
+      {/* <Hero /> - Video ke baad iski zarurat shayad na pade, par aap use kar sakte hain */}
 
       {/* --- Main Content Render --- */}
       <div className="services-wrapper">
@@ -197,8 +260,8 @@ const Lampasas = () => {
           </section>
         ))}
       </div>
-      <Management/>
-       <DuctLandingPage />
+      
+      <DuctLandingPage />
     </div>
   );
 };

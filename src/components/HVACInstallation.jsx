@@ -42,7 +42,7 @@ const HVACInstallation = () => {
         <div className="overlay">
           <h1>Killeen Air Conditioning And Heating Killeen, Tx</h1>
           <p className="breadcrumb">Home » HVAC Services » Installation & Repair</p>
-          <a href="tel:2459983484" className="call-btn">CALL US: (254) 998-3484</a>
+          <a href="tel:2549983484" className="call-btn">CALL US: (254) 998-3484</a>
         </div>
       </section>
 
@@ -97,7 +97,7 @@ const HVACInstallation = () => {
             <div className="card-header">Prompt and Efficient Debris Removal</div>
             <div className="card-body">
               <p>Accumulated debris in air ducts can impact performance. Our team uses specialized tools to meticulously clean your ducts, ensuring they are free from dust and dirt.</p>
-              <a href="tel:2459983484" className="inline-call">CALL US: (254) 998-3484</a>
+              <a href="tel:2549983484" className="inline-call">CALL US: (254) 998-3484</a>
             </div>
           </div>
           <div className="info-card">

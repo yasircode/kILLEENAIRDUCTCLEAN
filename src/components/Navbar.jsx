@@ -68,6 +68,10 @@ const Navbar = () => {
                 <li><Link to="/location/belton" onClick={closeMenu}>Belton, TX</Link></li>
                 <li><Link to="/location/temple" onClick={closeMenu}>Temple, TX</Link></li>
                 <li><Link to="/location/salado" onClick={closeMenu}>Salado, TX</Link></li>
+                <li><Link to="/location/Lampasas" onClick={closeMenu}>Lampasas, TX</Link></li>
+                <li><Link to="/location/LibertyHill" onClick={closeMenu}>Liberty Hill, TX</Link></li>
+                 <li><Link to="/location/Georgetown" onClick={closeMenu}>George Town, TX</Link></li>
+                 <li><Link to="/location/Waco" onClick={closeMenu}>Waco, TX</Link></li>
               </ul>
             </li>
             

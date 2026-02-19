@@ -6,6 +6,10 @@ import ImageComparison from './ImageComparison';
 import DuctLandingPage from '../DuctLandingPage';
 import DuctServiceFAQ from '../DuctServiceFAQ';
 import Any from './Any';
+import YahooCard from './yahoo';
+import Gallery from '../Gallery';
+import Newadd from './Newadd';
+
 
 const Killeen = () => {
   return (
@@ -120,6 +124,10 @@ const Killeen = () => {
       <IntroCard />
       <ImageComparison />
 
+      <YahooCard/>
+      <Gallery/>
+      <Newadd/>
+      
       <Any/>
       <Banner />
       <DuctServiceFAQ />

@@ -1,208 +1,173 @@
 import React from 'react';
-import MaintenanceGuide from '../MaintenanceGuide';
-
-
-import DuctLandingPage from '../DuctLandingPage';
+import DuctServiceFAQ from '../DuctServiceFAQ';
+import DuctLandingPage from '../DuctLandingPage'; 
 import Management from './Management';
-import ImageComparison from './ImageComparison';
-import ChimneyCleaning from './ChimneyCleaning';
-const LibertyHill = () => {
-  // --- Yahan Company ka content aur image paths hain ---
-  const serviceData = [
-    {
-      title: "BENEFITS OF CLEANING YOUR AIR DUCTS",
-      content: "Cleaning your air ducts does wonders for your home. It gets rid of dust and other nasty stuff, making the air cleaner and fresher. This means less coughing and sneezing. Also, your air system works smoother, which can lower your energy bills.",
-      cta: "Want cleaner air in your home? Get your air ducts cleaned today and breathe easier!",
-      image: "/013.jpeg", // Apni image ka path yahan dalein
-      imageLeft: false
-    },
-    {
-      title: "ELEVATE YOUR HOME'S AIR QUALITY WITH OUR EXPERT SERVICES",
-      content: "We offer a variety of services to keep your home's air clean and your family healthy:",
-      list: [
-        "Air Duct Cleaning: Get rid of dust, allergens, and pollutants.",
-        "Dryer Vent Cleaning: Reduce fire risk and increase efficiency.",
-        "HVAC System Cleaning: Ensure smooth running and lower bills.",
-        "Air Quality Testing: Target problem areas effectively."
-      ],
-      cta: "Ready for cleaner air in your home? Call Killeen Air Duct Cleaner today!",
-      image: "/1000.png", 
-      imageLeft: true
-    },
-    {
-      title: "DRYER VENT CLEANING IN KILLEEN, TEXAS",
-      content: "Cleaning your dryer vent stops fires and cuts down on your energy bills. Lint can block your vent, but cleaning it makes your dryer work faster and safer. This simple step keeps your home safe and saves you money.",
-      cta: "Want to dry your clothes safely and save money? Book our service today!",
-      image: "/015.jpeg", 
-      imageLeft: false
-    },
-    {
-      title: "REPAIRING OR REPLACING YOUR AIR DUCTS",
-      content: "Sometimes air ducts need fixing or even replacing. If your ducts are old or damaged, they might not work well, making your system struggle. Fixing them can make your home more comfortable.",
-      cta: "Noticing issues? Reach out to Killeen Air Duct Cleaner today!",
-      image: "/016.jpeg", 
-      imageLeft: true
-    }
-  ];
 
+const LibertyHill = () => {
   return (
-    <div className="killeen-air-duct-page">
-        <h1>KELLEEN Air Duct Cleaning in LibertyHill, TX</h1>
-        
-    <ImageComparison/>
-       
-      {/* --- Inline CSS (Styled JSX) --- */}
+    <div className="city-page">
+      {/* 1. Global Styles for this page */}
       <style>
         {`
-          .services-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          .video-hero {
+            position: relative;
+            width: 100%;
+            height: 500px; 
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
           }
 
-          .service-row {
+          .video-hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+          }
+
+          .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Halka dark filter */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .video-overlay h1 {
+            color: #ffffff;
+            font-size: clamp(32px, 6vw, 52px);
+            font-weight: 900;
+            text-align: center;
+            padding: 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 3px 3px 15px rgba(0,0,0,0.7); /* Text ko prominent karne ke liye */
+          }
+
+          .nolanville-section {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 50px;
-            margin-bottom: 100px;
+            padding: 60px 8%;
+            gap: 40px;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
           }
 
-          .service-row.reverse {
-            flex-direction: row-reverse;
+          .nolanville-content {
+            flex: 1.2;
           }
 
-          .text-container {
-            flex: 1;
-          }
-
-          .image-container {
-            flex: 1;
+          .nolanville-image-box {
+            flex: 0.8;
             display: flex;
             justify-content: center;
           }
 
-          .image-container img {
-            width: 100%;
-            max-width: 500px;
+          .nolanville-image-box img {
+            max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
           }
 
-          .title {
-            font-size: clamp(24px, 4vw, 32px);
-            font-weight: 900;
-            color: #111;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+          .nolanville-heading {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 800;
+            margin: 0;
+            color: #000;
+            line-height: 1.1;
           }
 
-          .description {
+          .nolanville-subheading {
+            font-size: clamp(24px, 3.5vw, 38px);
+            color: #e11d24; 
+            margin-top: 5px;
+            margin-bottom: 25px;
+            font-weight: 700;
+          }
+
+          .nolanville-text {
             font-size: 16px;
             line-height: 1.7;
             color: #444;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
           }
 
-          .points-list {
-            margin-bottom: 25px;
-            padding-left: 20px;
-          }
-
-          .points-list li {
-            margin-bottom: 10px;
-            font-weight: 500;
-            color: #333;
-          }
-
-          .cta-text {
-            font-size: 17px;
-            margin-bottom: 30px;
-            color: #000;
-            display: block;
-          }
-
-          .call-btn {
-            display: inline-flex;
-            align-items: center;
-            background-color: #a51d24;
-            color: #fff;
-            padding: 14px 28px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s transform;
-          }
-
-          .call-btn:hover {
-            transform: translateY(-3px);
-            background-color: #8a181d;
-          }
-
-          /* --- Mobile Responsive --- */
-          @media (max-width: 900px) {
-            .service-row, .service-row.reverse {
+          @media (max-width: 992px) {
+            .video-hero { height: 400px; } /* Mobile pe height thori kam */
+            .nolanville-section {
               flex-direction: column;
+              padding: 400px 20px;
               text-align: center;
-              gap: 30px;
-              margin-bottom: 60px;
             }
-
-            .image-container {
-              order: -1; /* Image text se upar dikhegi mobile pe */
-            }
-
-            .points-list {
-              text-align: left;
-              display: inline-block;
-            }
-
-            .call-btn {
+            .nolanville-image-box {
+              order: -1; 
               width: 100%;
-              justify-content: center;
             }
           }
         `}
       </style>
 
-      {/* --- Main Content Render --- */}
-      <div className="services-wrapper">
-        {serviceData.map((item, index) => (
-          <section 
-            key={index} 
-            className={`service-row ${item.imageLeft ? 'reverse' : ''}`}
-          >
-            <div className="text-container">
-              <h2 className="title">{item.title}</h2>
-              <p className="description">{item.content}</p>
-              
-              {item.list && (
-                <ul className="points-list">
-                  {item.list.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              )}
+      <div style={{ width: '100%', overflowX: 'hidden' }}>
+        
+        {/* --- Video Section --- */}
+        <div className="video-hero">
+          <video autoPlay muted loop playsInline>
+            <source src="/red.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="video-overlay">
+            <h1>Air Duct Cleaning in Nolanville, TX</h1>
+          </div>
+        </div>
 
-              <span className="cta-text"><strong>{item.cta}</strong></span>
-              
-              <a href="tel:(245)998-3484" className="call-btn">
-                <span style={{ marginRight: '10px' }}>📞</span> CALL US
-              </a>
-            </div>
+        {/* --- Text Content Section --- */}
+        <section className="nolanville-section">
+          <div className="nolanville-content">
+            <h2 className="nolanville-heading">Local Air Duct Cleaning Services</h2>
+            <div className="nolanville-subheading">In Nolanville & Killeen, Texas</div>
+            
+            <p className="nolanville-text">
+              Searching for a reliable service to breathe fresh air into your home? Your search ends here! 
+              At <strong>Killeen Air Duct</strong>, cleanliness is our passion, and we’re ready to 
+              elevate your indoor air quality to new heights.
+            </p>
 
-            <div className="image-container">
-              <img src={item.image} alt={item.title} />
-            </div>
-          </section>
-        ))}
+            <p className="nolanville-text">
+              Say goodbye to dusty air ducts and clogged dryer vents; we’ve got you covered with our 
+              comprehensive services. From meticulous air duct repair to efficient dryer vent cleaning, 
+              and from top-notch AC maintenance to seamless replacements, we offer it all.
+            </p>
+
+            <p className="nolanville-text">
+              But we don’t stop there! What sets us apart is our commitment to going the extra mile. 
+              We leave no stone unturned in ensuring your entire HVAC system works optimally, 
+              bringing you true comfort.
+            </p>
+          </div>
+
+          <div className="nolanville-image-box">
+            <img 
+              src="/013.jpeg"
+              alt="Killeen Air Duct Cleaning Team" 
+            />
+          </div>
+        </section>
+
+        <Management />
+        <br />
+        <DuctServiceFAQ />
+        <DuctLandingPage />
       </div>
-      <Management/>
-       <DuctLandingPage />
     </div>
   );
 };

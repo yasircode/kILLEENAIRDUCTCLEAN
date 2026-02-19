@@ -2,14 +2,63 @@ import React from 'react';
 import Banner from './Banner';
 import Management from './Management';
 import DuctLandingPage from '../DuctLandingPage';
-// import Hero from './Hero'; // Agar Hero component hai to ise uncomment karein
 
 const FortCavazos = () => {
   return (
     <div className="city-page">
-      {/* 1. Scoped Styles for Fort Cavazos */}
+      {/* 1. Scoped Styles for Fort Cavazos & Video Hero */}
       <style>
         {`
+          /* Video Hero Section Styles */
+          .hero-video-container {
+            position: relative;
+            width: 100%;
+            height: 70vh; /* Screen ka 70% height lega */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+          }
+
+          .bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+          }
+
+          .video-overlay-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Text readability ke liye dark shade */
+            z-index: 0;
+          }
+
+          .hero-text-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+          }
+
+          .hero-text-content h1 {
+            font-size: clamp(32px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+          }
+
+          /* Content Section Styles */
           .fort-cavazos-section {
             display: flex;
             align-items: center;
@@ -61,6 +110,7 @@ const FortCavazos = () => {
           }
 
           @media (max-width: 992px) {
+            .hero-video-container { height: 50vh; }
             .fort-cavazos-section {
               flex-direction: column;
               padding: 40px 20px;
@@ -78,11 +128,28 @@ const FortCavazos = () => {
       <div style={{ width: '100%', overflowX: 'hidden' }}>
         
         <Banner />
-        
-        <h1 style={{ textAlign: 'center', marginTop: '40px' }}>
-          Air Duct Cleaning in Fort Cavazos, TX
-        </h1>
 
+        {/* --- Video Background Top Section --- */}
+        <section className="hero-video-container">
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline 
+            className="bg-video"
+          >
+            {/* Apni video ka path yahan change karein */}
+            <source src="/red.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="video-overlay-layer"></div>
+          <div className="hero-text-content">
+            <h1>Air Duct Cleaning in Fort Cavazos, TX</h1>
+            <p style={{fontSize: '22px', fontWeight: '500'}}>Breathe Pure, Live Healthy</p>
+          </div>
+        </section>
+
+        {/* --- Professional Services Section --- */}
         <section className="fort-cavazos-section">
           <div className="fort-cavazos-content">
             <h2 className="fort-cavazos-heading">Professional Air Duct Services</h2>
@@ -113,12 +180,11 @@ const FortCavazos = () => {
               alt="Air Duct Cleaning Services Fort Cavazos" 
             />
           </div>
-         
         </section>
+
         <Management />
-<br></br>
-      
-         <DuctLandingPage />
+        <br />
+        <DuctLandingPage />
       </div>
     </div>
   );

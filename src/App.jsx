@@ -55,6 +55,7 @@ import Lampasas from './components/Lampasas';
 import Georgetown from './components/Georgetown';
 import LibertyHill from './components/LibertyHill';
 import FortHood from './components/FortHood';
+import Waco from './components/Waco';
 
 
 // ... baaqi cities ke imports yahan karein
@@ -131,10 +132,11 @@ function App() {
         <Route path="/location/belton" element={<Belton />} />
         <Route path="/location/temple" element={<Temple />} />
         <Route path="/location/salado" element={<Salado />} />
-        <Route path="/location/lampasas" element={<Lampasas />} />
+       <Route  path="/location/lampasas" element={<Lampasas/>}/>
         <Route path="/location/georgetown" element={<Georgetown />} />
         <Route path="/location/libertyhill" element={<LibertyHill />} />
         <Route path="/location/forthood" element={<FortHood />} />
+        <Route path="/location/waco" element={<Waco />} />
        
         
 
