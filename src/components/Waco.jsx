@@ -3,6 +3,11 @@ import React from "react";
 import DuctLandingPage from "../DuctLandingPage"; 
 import Any from "./Any";
 import Gallery from "../Gallery";
+import Hero from "./Hero";
+import MultiStepQuoteForm from "./MultiStepQuoteForm";
+import ImageComparison from "./ImageComparison";
+import DuctCleaning from "../DuctCleaning";
+import Management from "./Management";
 const Waco = () => {
   return (
     <div className="residential-page">
@@ -113,7 +118,7 @@ const Waco = () => {
         </video>
         
         <div className="overlay">
-          <h1>UV Light System Installation in Waco, TX</h1>
+          <h1>Killeen Air Duct Cleaners in Waco, TX</h1>
           <p className="breadcrumb">Home » Residential Air Quality</p>
           <a href="tel:2459983484" className="call-btn">
             📞 CALL US: (254) 998-3484
@@ -144,11 +149,15 @@ const Waco = () => {
           </div>
         </div>
       </section>
+      <Hero/>
 <Any/>
 <Gallery/>
+<ImageComparison/>
+<Management/>
       {/* DuctLandingPage agar import sahi hai toh niche uncomment kar dein */}
+       <MultiStepQuoteForm/>
       <DuctLandingPage />
-      
+     
     </div>
   );
 };

@@ -72,6 +72,8 @@ const Navbar = () => {
                 <li><Link to="/location/LibertyHill" onClick={closeMenu}>Liberty Hill, TX</Link></li>
                  <li><Link to="/location/Georgetown" onClick={closeMenu}>George Town, TX</Link></li>
                  <li><Link to="/location/Waco" onClick={closeMenu}>Waco, TX</Link></li>
+                 <li><Link to="/location/Jarrell" onClick={closeMenu}>Jarrell, TX</Link></li>
+
               </ul>
             </li>
             

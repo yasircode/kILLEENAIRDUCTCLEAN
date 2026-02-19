@@ -56,6 +56,7 @@ import Georgetown from './components/Georgetown';
 import LibertyHill from './components/LibertyHill';
 import FortHood from './components/FortHood';
 import Waco from './components/Waco';
+import Jarrell from './components/Jarrell';
 
 
 // ... baaqi cities ke imports yahan karein
@@ -137,7 +138,7 @@ function App() {
         <Route path="/location/libertyhill" element={<LibertyHill />} />
         <Route path="/location/forthood" element={<FortHood />} />
         <Route path="/location/waco" element={<Waco />} />
-       
+        <Route path="/location/Jarrell" element={<Jarrell />} />
         
 
          {/* Aap yahan aur bhi routes add kar sakte hain */}
