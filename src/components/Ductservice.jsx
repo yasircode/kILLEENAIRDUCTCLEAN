@@ -1,6 +1,7 @@
 import React from "react";
 import DuctLandingPage from "../DuctLandingPage";
-
+import Any from "./Any";
+import Banner from "./Banner";
 const Ductservice = () => {
   return (
     <div className="residential-page">
@@ -275,7 +276,8 @@ const Ductservice = () => {
 
         </div>
       </section>
-      
+      <Banner/>
+      <Any/>
       <DuctLandingPage/>
     </div>
   );

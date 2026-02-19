@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DuctLandingPage from "../DuctLandingPage";
-
+import Banner from "./Banner";
+import Any from "./Any";
 const ACcleaning = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -169,7 +170,8 @@ const ACcleaning = () => {
           .overlay h1 { font-size: 24px; }
         }
       `}</style>
-      
+      <Banner/>
+      <Any/>
       <DuctLandingPage/>
     </div>
   );

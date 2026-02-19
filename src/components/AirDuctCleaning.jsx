@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "./Banner";
 import DuctLandingPage from "../DuctLandingPage";
-
+import Any from "./Any";
 const AirDuctCleaning = () => {
   return (
     <div className="residential-page">
@@ -41,7 +41,7 @@ const AirDuctCleaning = () => {
           </div>
         </div>
       </section>
-
+<Any/>
       <Banner />
 
       {/* NEW UPDATED CONTENT SECTION (AS PER SCREENSHOT) */}
@@ -126,7 +126,7 @@ const AirDuctCleaning = () => {
         }
 
         .overlay {
-          background: rgba(0, 0, 0, 0.65);
+          background: rgba(49, 47, 47, 0.65);
           width: 100%;
           height: 100%;
           display: flex;
@@ -134,7 +134,7 @@ const AirDuctCleaning = () => {
           align-items: center;
           justify-content: center;
           text-align: center;
-          padding: 40px 20px;
+          padding: 10px 20px;
           color: white;
         }
 

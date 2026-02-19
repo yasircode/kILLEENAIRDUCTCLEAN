@@ -40,7 +40,9 @@ const DuctService = () => {
           className="duct-image"
         />
       </div>
+      
     </section>
+   
   );
 };
 
