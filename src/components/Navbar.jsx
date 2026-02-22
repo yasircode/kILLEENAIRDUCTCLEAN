@@ -46,10 +46,10 @@ const Navbar = () => {
                 <li><Link to="/commerciacleaning" onClick={closeMenu}>Commercial Air Cleaning</Link></li>
                 <li><Link to="/dryerventcleaning" onClick={closeMenu}>Dryer Vent Cleaning</Link></li>
                 <li><Link to="/ductservice" onClick={closeMenu}>Air Duct Repair & Replacement</Link></li>
-                <li><Link to="/hvcleaning" onClick={closeMenu}>HVAC Installation Service</Link></li>
+                <li><Link to="/hvcleaning" onClick={closeMenu}>HVAC Installation</Link></li>
                 <li><Link to="/chimneycleaning" onClick={closeMenu}>Chimney Cleaning</Link></li>
                 <li><Link to="/atticinsulation" onClick={closeMenu}>Attic Insulation and Repair</Link></li>
-                <li><Link to="/accleaning" onClick={closeMenu}>AC Cleaning Service</Link></li>
+                <li><Link to="/accleaning" onClick={closeMenu}>AC Cleaning</Link></li>
                 <li><Link to="/uvlightinstallation" onClick={closeMenu}>UV Light System Installation</Link></li>
               </ul>
             </li>
