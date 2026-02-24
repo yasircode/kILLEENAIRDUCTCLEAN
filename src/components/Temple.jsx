@@ -1,200 +1,252 @@
 import React from 'react';
 
-const Temple = () => {
-  // --- INTERNAL STYLES (Mobile & Desktop Responsive) ---
+const TempleDuctCleaning = () => {
   const styles = {
-    container: {
-      fontFamily: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    wrapper: {
+      fontFamily: '"Segoe UI", Roboto, Helvetica, Arial, sans-serif',
       color: '#2d3436',
-      lineHeight: '1.7',
-      margin: '0 auto',
-      padding: '0',
-      backgroundColor: '#ffffff',
+      backgroundColor: '#f8f9fa',
+      lineHeight: '1.8',
+      margin: 0,
     },
-    hero: {
-      background: 'linear-gradient(rgba(0, 41, 107, 0.85), rgba(0, 41, 107, 0.85)), url("https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80")',
+    header: {
+      background: 'linear-gradient(rgba(0, 74, 153, 0.9), rgba(0, 74, 153, 0.9)), url("https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000")', 
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       color: 'white',
-      padding: '80px 20px',
+      padding: '100px 20px',
       textAlign: 'center',
     },
-    section: {
-      maxWidth: '1000px',
-      margin: '40px auto',
-      padding: '0 20px',
+    heroH1: {
+      fontSize: 'clamp(1.8rem, 6vw, 3rem)',
+      margin: '0 0 20px 0',
+      fontWeight: '850',
+      lineHeight: '1.2',
     },
-    h1: { fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '15px', fontWeight: '800' },
-    h2: { 
-      fontSize: '1.8rem', 
-      color: '#00296b', 
-      borderLeft: '5px solid #d9534f', 
+    accentBar: {
+      height: '5px',
+      width: '80px',
+      backgroundColor: '#ffce00',
+      margin: '20px auto',
+    },
+    container: {
+      maxWidth: '1200px',
+      margin: '0 auto',
+      padding: '40px 20px',
+    },
+    introBox: {
+      background: 'white',
+      padding: '40px',
+      borderRadius: '20px',
+      boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+      marginTop: '-80px',
+      position: 'relative',
+      zIndex: 2,
+    },
+    sectionTitle: {
+      color: '#004a99',
+      fontSize: '2.1rem',
+      marginBottom: '20px',
+      borderLeft: '6px solid #ffce00',
       paddingLeft: '15px',
-      marginTop: '40px',
-      marginBottom: '20px'
     },
-    grid: {
+    serviceGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '25px',
-      marginTop: '20px'
+      gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+      gap: '30px',
+      margin: '50px 0',
     },
     card: {
-      backgroundColor: '#f8f9fa',
-      padding: '25px',
-      borderRadius: '10px',
-      boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-      border: '1px solid #e9ecef'
-    },
-    ctaBox: {
-      backgroundColor: '#00296b',
-      color: 'white',
-      padding: '50px 20px',
-      textAlign: 'center',
+      backgroundColor: 'white',
+      padding: '35px',
       borderRadius: '15px',
-      margin: '60px 20px'
+      boxShadow: '0 5px 15px rgba(0,0,0,0.03)',
+      borderTop: '6px solid #004a99',
     },
-    button: {
-      backgroundColor: '#d9534f',
+    list: {
+      paddingLeft: '20px',
+      color: '#444',
+    },
+    highlight: {
+      color: '#004a99',
+      fontWeight: '700',
+    },
+    ctaArea: {
+      backgroundColor: '#004a99',
       color: 'white',
-      padding: '16px 35px',
+      padding: '60px 30px',
+      borderRadius: '25px',
+      textAlign: 'center',
+      margin: '60px 0',
+    },
+    btn: {
+      padding: '18px 40px',
       fontSize: '1.2rem',
       fontWeight: 'bold',
-      border: 'none',
       borderRadius: '50px',
+      border: 'none',
       cursor: 'pointer',
-      textDecoration: 'none',
-      display: 'inline-block',
-      marginTop: '20px',
-      transition: 'transform 0.2s'
-    },
-    faqContainer: {
-      backgroundColor: '#f1f3f5',
-      padding: '40px 20px',
-      borderRadius: '10px'
+      margin: '10px',
+      boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
     },
     faqItem: {
-      marginBottom: '25px',
-      paddingBottom: '15px',
-      borderBottom: '1px solid #dee2e6'
+      backgroundColor: '#fff',
+      padding: '25px',
+      borderRadius: '12px',
+      marginBottom: '15px',
+      borderLeft: '5px solid #00d2ff',
     }
   };
 
   return (
-    <div style={styles.container}>
-      <br></br>
-      <br></br>
-      {/* HERO SECTION */}
-      <header style={styles.hero}>
-        <div style={{maxWidth: '900px', margin: '0 auto'}}>
-          <h1 style={styles.h1}>Air Duct Cleaning in Temple, TX | Killeen Air Duct Cleaners</h1>
-          <p style={{fontSize: '1.2rem', opacity: '0.9'}}>Professional Air Quality Solutions for Central Texas Homes & Businesses</p>
+    <div style={styles.wrapper}>
+      {/* --- HERO SECTION --- */}
+      <header style={styles.header}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h1 style={styles.heroH1}>Air Duct Cleaning in Temple, TX | Killeen Air Duct Cleaners</h1>
+          <div style={styles.accentBar}></div>
+          <p style={{ fontSize: '1.3rem', fontWeight: '300' }}>
+            Temple's Premier Choice for Healthier Air and Lower Energy Bills.
+          </p>
         </div>
       </header>
 
-      {/* INTRO SECTION */}
-      <section style={styles.section}>
-        <p>
-          The <strong>Texas heat</strong> is relentless, and your AC works overtime to keep you cool. In Temple, this heavy usage leads to a rapid buildup of <strong>dust, allergens, and debris</strong> within your ventilation system. At Killeen Air Duct Cleaners, we focus on maximizing your home’s <strong>energy efficiency</strong> and ensuring the air your family breathes is clean and safe.
-        </p>
-      </section>
+      <div style={styles.container}>
+        {/* --- LOCALIZED INTRO --- */}
+        <section style={styles.introBox}>
+          <p>
+            Living in the <strong>Temple-Belton area</strong> means dealing with unpredictable Central Texas weather—from scorching summer humidity to windy, dust-filled springs. At <strong>Killeen Air Duct Cleaners</strong>, we specialize in helping Temple homeowners maintain peak efficiency in their HVAC systems.
+          </p>
+          <p>
+            Whether you have a newer home near <strong>Pepper Creek</strong> or an established property closer to <strong>Scott & White Medical Center</strong>, your air vents act as the lungs of your house. Heavy AC usage leads to massive dust buildup and seasonal allergens that can strain your system and your health. We provide localized expertise to keep Temple's air clean and affordable.
+          </p>
+        </section>
 
-      {/* AIR DUCT CLEANING SECTION */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Air Duct Cleaning in Temple, TX</h2>
-        <p>Our comprehensive <strong>duct cleaning Temple TX</strong> service ensures every corner of your system is addressed. We don't just vacuum vents; we perform a deep medical-grade cleaning.</p>
-        <div style={styles.grid}>
+        {/* --- SERVICE 1: DUCT CLEANING --- */}
+        <div style={{ marginTop: '60px' }}>
+          <h2 style={styles.sectionTitle}>Air Duct Cleaning in Temple, TX</h2>
+          <p>
+            Are you noticing more dust on your furniture or sneezing more often? <strong>Duct cleaning Temple TX</strong> is essential for removing years of accumulated debris. Our high-powered vacuum extraction removes pet dander, mold spores, and pollen from your supply and return vents.
+          </p>
+          <div style={styles.serviceGrid}>
+            <div style={styles.card}>
+              <h4 style={styles.highlight}>Service Highlights:</h4>
+              <ul style={styles.list}>
+                <li>Full <strong>vent cleaning Temple</strong> specialists</li>
+                <li>Removal of deep-seated trunk line debris</li>
+                <li>Commercial-grade suction technology</li>
+                <li>Immediate improvement in airflow</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* --- SERVICE 2: HVAC SYSTEM CLEANING (High Ticket) --- */}
+        <div style={{ marginTop: '40px' }}>
+          <h2 style={styles.sectionTitle}>HVAC System Cleaning in Temple, TX</h2>
+          <p>
+            Sometimes cleaning the ducts isn't enough. For total efficiency, your entire <strong>AC system cleaning Temple</strong> needs attention. We target the mechanical heart of your home to ensure you aren't overpaying on utility bills.
+          </p>
+          <div style={styles.serviceGrid}>
+            <div style={styles.card}>
+              <h4 style={styles.highlight}>What We Clean:</h4>
+              <ul style={styles.list}>
+                <li>Blower motor & housing</li>
+                <li>Evaporator coil decontamination</li>
+                <li>Air handler deep cleaning</li>
+                <li>Return plenum sanitization</li>
+              </ul>
+            </div>
+            <div style={{...styles.card, borderTopColor: '#ffce00'}}>
+              <h4 style={styles.highlight}>The Result:</h4>
+              <p>Better cooling performance during 100°F+ days, lower monthly energy costs, and prevention of expensive emergency breakdowns.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* --- SERVICE 3: DRYER VENT & CHIMNEY --- */}
+        <div style={styles.serviceGrid}>
           <div style={styles.card}>
-            <strong>Full System Cleaning:</strong> We clean both supply and return vents to eliminate pet dander, dust, and mold spores.
+            <h2 style={{fontSize: '1.6rem', color: '#004a99'}}>🧺 Dryer Vent Cleaning</h2>
+            <p>Lint is highly flammable. Our Temple team removes hidden obstructions and bird nests, significantly reducing fire hazards and making your laundry dry faster.</p>
           </div>
           <div style={styles.card}>
-            <strong>Improved Airflow:</strong> Professional <strong>vent cleaning Temple</strong> removes blockages, allowing your HVAC to breathe easier.
+            <h2 style={{fontSize: '1.6rem', color: '#004a99'}}>🧹 Chimney Sweep Services</h2>
+            <p>Prepare for the Central Texas winter. We provide creosote removal and fireplace safety evaluations to ensure your family stays warm safely.</p>
           </div>
         </div>
-      </section>
 
-      {/* HVAC SYSTEM CLEANING SECTION */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>HVAC System Cleaning in Temple, TX</h2>
-        <p>To target higher efficiency and bigger energy savings, our <strong>HVAC cleaning Temple TX</strong> includes the internal components that most cleaners skip.</p>
-        <div style={styles.grid}>
-          <ul style={{paddingLeft: '20px'}}>
-            <li><strong>Blower Motor Cleaning:</strong> Improves mechanical longevity.</li>
-            <li><strong>Evaporator Coil Cleaning:</strong> Boosts cooling performance.</li>
-            <li><strong>Air Handler Cleaning:</strong> Ensures pure air at the source.</li>
-          </ul>
-          <ul style={{paddingLeft: '20px'}}>
-            <li><strong>Lower Energy Bills:</strong> A clean system runs cheaper.</li>
-            <li><strong>Prevent Breakdowns:</strong> Reduce <strong>AC system cleaning Temple</strong> emergency calls.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* DRYER VENT & CHIMNEY SECTION */}
-      <section style={styles.section}>
-        <div style={styles.grid}>
-          <div>
-            <h2 style={styles.h2}>Dryer Vent Cleaning</h2>
-            <p>Lint is a major fire hazard. Our Temple team provides expert lint removal for faster drying times and <strong>fire hazard prevention</strong>.</p>
-          </div>
-          <div>
-            <h2 style={styles.h2}>Chimney Sweep</h2>
-            <p>Prepare for the cooler months with our <strong>creosote removal</strong> and fireplace inspection services in Temple, TX.</p>
+        {/* --- SERVICE 4: DUCT REPLACEMENT (High Ticket) --- */}
+        <div style={{ marginTop: '40px' }}>
+          <h2 style={styles.sectionTitle}>Air Duct Replacement in Temple, TX</h2>
+          <p>
+            If your home is over 15 years old, your flexible ductwork might be collapsing or torn. We offer professional <strong>air duct installation Temple</strong> to restore your home's balance.
+          </p>
+          <div style={styles.serviceGrid}>
+            <div style={{...styles.card, borderTopColor: '#e17055'}}>
+              <h4 style={styles.highlight}>Signs You Need New Ductwork:</h4>
+              <ul style={styles.list}>
+                <li>Hot and cold spots in different rooms</li>
+                <li>Rats or mice have damaged the insulation</li>
+                <li>Visible mold growth inside vents</li>
+                <li>Crushed or restricted flex ducts</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* DUCT REPLACEMENT SECTION */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Air Duct Replacement in Temple, TX</h2>
-        <p>Sometimes cleaning isn't enough. If you have <strong>new ductwork Temple</strong> needs, we provide high-ticket replacement services for:</p>
-        <ul>
-          <li>Old or torn flexible ductwork (15+ years old).</li>
-          <li>Significant mold contamination or rodent damage.</li>
-          <li>Crushed ducts causing poor airflow in specific rooms.</li>
-        </ul>
-        <p><em>Benefit: Total control over your indoor climate and maximum energy savings.</em></p>
-      </section>
+        {/* --- SERVICE 5: ATTIC INSULATION --- */}
+        <div style={{ marginTop: '40px' }}>
+          <h2 style={styles.sectionTitle}>Attic Insulation Services in Temple, TX</h2>
+          <p>
+            In Temple, attic temperatures can skyrocket. Without proper <strong>blown-in insulation Temple</strong>, your AC is fighting a losing battle. We help you seal the heat out.
+          </p>
+          <div style={styles.serviceGrid}>
+            <div style={{...styles.card, borderTopColor: '#00b894'}}>
+              <h4 style={styles.highlight}>Save Money Today:</h4>
+              <ul style={styles.list}>
+                <li>Old insulation removal & disposal</li>
+                <li>Premium blown-in fiberglass or cellulose</li>
+                <li>Immediate reduction in HVAC strain</li>
+                <li>Stable indoor temperatures year-round</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      {/* ATTIC INSULATION SECTION */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Attic Insulation Services in Temple, TX</h2>
-        <p>In Texas, your attic can reach 150°F. Our <strong>attic insulation Temple TX</strong> services include blown-in insulation that acts as a thermal shield, drastically reducing the strain on your HVAC system.</p>
-      </section>
+        {/* --- FAQ SECTION --- */}
+        <section style={{ margin: '60px 0' }}>
+          <h2 style={{textAlign: 'center', color: '#004a99', marginBottom: '30px'}}>Temple Homeowner FAQs</h2>
+          <div style={styles.faqItem}>
+            <p><strong>How do I know if my air ducts need replacement?</strong></p>
+            <p>If your ducts are over 15 years old, show signs of rodent damage, or if some rooms never get cool enough, a replacement is often more cost-effective than a repair.</p>
+          </div>
+          <div style={styles.faqItem}>
+            <p><strong>Does attic insulation really lower energy bills in Texas?</strong></p>
+            <p>Absolutely. Proper insulation acts as a thermal barrier, keeping the 130°F attic heat from entering your living space, lowering cooling costs by up to 25%.</p>
+          </div>
+          <div style={styles.faqItem}>
+            <p><strong>What’s the difference between duct cleaning and HVAC cleaning?</strong></p>
+            <p>Duct cleaning clears the "pipes," while HVAC cleaning services the "machine" (coils, blowers, and motors) to ensure the whole system runs like new.</p>
+          </div>
+        </section>
 
-      {/* CTA SECTION */}
-      <div style={styles.ctaBox}>
-        <h2 style={{color: 'white', border: 'none', padding: '0'}}>Get a Free Estimate in Temple, TX</h2>
-        <p>Call Killeen Air Duct Cleaners today for professional air duct cleaning, HVAC cleaning, duct replacement, and insulation.</p>
-        <div style={{display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap'}}>
-            <a href="tel:#" style={styles.button}>📞 Call Now</a>
-            <a href="#contact" style={{...styles.button, backgroundColor: '#ffffff', color: '#00296b'}}>📩 Request Estimate</a>
+        {/* --- CALL TO ACTION --- */}
+        <div style={styles.ctaArea}>
+          <h2 style={{ fontSize: '2.2rem', marginBottom: '10px' }}>Get a Free Estimate in Temple, TX</h2>
+          <p style={{ fontSize: '1.2rem', opacity: '0.9', marginBottom: '30px' }}>
+            Professional duct cleaning, replacement, and insulation services.
+          </p>
+          <button style={{ ...styles.btn, backgroundColor: '#ffce00', color: '#003366' }}>📞 Call Now: (254) XXX-XXXX</button>
+          <button style={{ ...styles.btn, backgroundColor: 'transparent', color: 'white', border: '2px solid white' }}>📩 Request Service Online</button>
         </div>
       </div>
 
-      {/* FAQ SECTION */}
-      <section style={{...styles.section, ...styles.faqContainer}}>
-        <h2 style={{...styles.h2, border: 'none', textAlign: 'center'}}>Frequently Asked Questions</h2>
-        <div style={styles.faqItem}>
-          <h4 style={{marginBottom: '5px'}}>How do I know if my air ducts need replacement?</h4>
-          <p>If your ducts are over 15 years old, have visible tears, or if you notice consistent dust despite regular cleaning, it's time for a replacement.</p>
-        </div>
-        <div style={styles.faqItem}>
-          <h4 style={{marginBottom: '5px'}}>Does attic insulation really lower energy bills in Texas?</h4>
-          <p>Absolutely. Proper <strong>blown-in insulation Temple</strong> can lower your cooling costs by up to 20% by preventing heat transfer from the attic into your living space.</p>
-        </div>
-        <div style={styles.faqItem}>
-          <h4 style={{marginBottom: '5px'}}>What’s the difference between duct cleaning and HVAC cleaning?</h4>
-          <p>Duct cleaning focuses on the tubes (vents), while HVAC cleaning includes the mechanical parts like coils, blowers, and air handlers.</p>
-        </div>
-      </section>
-
-      {/* FOOTER AREA (Simple) */}
-      <footer style={{textAlign: 'center', padding: '40px', color: '#777', fontSize: '0.9rem'}}>
-        &copy; {new Date().getFullYear()} Killeen Air Duct Cleaners. Serving Temple, Belton, and surrounding areas.
+      <footer style={{ textAlign: 'center', padding: '40px', color: '#636e72', fontSize: '0.9rem' }}>
+        © 2026 Killeen Air Duct Cleaners | Serving Temple, Belton, and Morgan's Point Resort.
       </footer>
     </div>
   );
 };
 
-export default Temple;
+export default TempleDuctCleaning;
