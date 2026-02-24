@@ -190,7 +190,7 @@ const BeltonDuctCleaning = () => {
             Serving the Tiger community with pride and professional integrity.
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button style={styles.btn}>📞 Call Now: (254) XXX-XXXX</button>
+            <button style={styles.btn}>📞 Call Now: (254) 998 3484</button>
             <button style={{ ...styles.btn, backgroundColor: 'white', border: '2px solid #d4af37' }}>📩 Get a Free Quote</button>
           </div>
         </div>

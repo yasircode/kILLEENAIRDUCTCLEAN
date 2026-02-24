@@ -206,7 +206,7 @@ const CopperasCoveCleaning = () => {
             Contact the Cove's most trusted air quality team today.
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button style={{ ...styles.btn, backgroundColor: '#00d2ff', color: '#003264' }}>📞 Call (254) XXX-XXXX</button>
+            <button style={{ ...styles.btn, backgroundColor: '#00d2ff', color: '#003264' }}>📞 Call (254) 998 3484</button>
             <button style={{ ...styles.btn, backgroundColor: 'white', color: '#003264' }}>📩 Request Quote</button>
           </div>
         </div>

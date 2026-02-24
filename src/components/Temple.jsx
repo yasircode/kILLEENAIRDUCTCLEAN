@@ -202,7 +202,7 @@ const TempleDuctCleaning = () => {
             Get a Free Estimate for your Temple home today. Professional. Local. Guaranteed.
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button style={styles.btn}>📞 Call Now: (254) XXX-XXXX</button>
+            <button style={styles.btn}>📞 Call Now: (254) 998 3484</button>
             <button style={{ ...styles.btn, backgroundColor: 'white', color: '#004aad' }}>📩 Request Estimate</button>
           </div>
         </div>

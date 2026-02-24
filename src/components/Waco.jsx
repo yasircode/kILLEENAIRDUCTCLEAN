@@ -188,7 +188,7 @@ const WacoDuctCleaning = () => {
             Schedule your professional air duct inspection today.
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button style={styles.btn}>📞 Call Now: (254) XXX-XXXX</button>
+            <button style={styles.btn}>📞 Call Now: (254) 998 3484</button>
             <button style={{ ...styles.btn, backgroundColor: 'white', color: '#1a3629' }}>📩 Get a Free Quote</button>
           </div>
         </div>

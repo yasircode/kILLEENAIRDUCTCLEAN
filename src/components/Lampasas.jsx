@@ -188,7 +188,7 @@ const LampasasDuctCleaning = () => {
             Experience the best air duct and HVAC cleaning in the Hill Country.
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button style={styles.btn}>📞 Call Now: (254) XXX-XXXX</button>
+            <button style={styles.btn}>📞 Call Now: (254) 998 3484</button>
             <button style={{ ...styles.btn, backgroundColor: 'white', border: '1px solid #2e5233' }}>📩 Request Quote</button>
           </div>
         </div>
