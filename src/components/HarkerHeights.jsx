@@ -86,7 +86,7 @@ const KilleenCityPage = () => {
       {/* HERO SECTION */}
       <header style={styles.hero}>
         <div style={{maxWidth: '1000px', margin: '0 auto'}}>
-          <h1 style={styles.h1}>Air Duct Cleaning in Killeen, TX | Killeen Air Duct Cleaners</h1>
+          <h1 style={styles.h1}>Air Duct Cleaning in HarkerHeights, TX | Killeen Air Duct Cleaners</h1>
           <p style={{fontSize: '1.3rem', opacity: '0.9'}}>Professional Air Quality, HVAC Cleaning & Attic Insulation for Central Texas</p>
           <a href="#quote" style={styles.button}>Get Free Estimate</a>
         </div>

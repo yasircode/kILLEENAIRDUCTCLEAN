@@ -1,233 +1,271 @@
 import React from 'react';
 
-const KilleenCityPage = () => {
-  // --- INTERNAL STYLES ---
+const KilleenDuctCleaning = () => {
   const styles = {
-    container: {
-      fontFamily: "'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+    wrapper: {
+      fontFamily: '"Segoe UI", Roboto, Helvetica, Arial, sans-serif',
       color: '#2d3436',
-      lineHeight: '1.7',
-      margin: '0 auto',
-      padding: '0',
-      backgroundColor: '#ffffff',
+      backgroundColor: '#f8f9fa',
+      lineHeight: '1.8',
+      margin: 0,
     },
-    hero: {
-      background: 'linear-gradient(rgba(0, 41, 107, 0.9), rgba(0, 41, 107, 0.9)), url("https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80")',
+    header: {
+      background: 'linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), url("https://images.unsplash.com/photo-1581094288338-2314dddb790b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")', // Professional Background Hint
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       color: 'white',
       padding: '100px 20px',
       textAlign: 'center',
     },
-    section: {
-      maxWidth: '1100px',
-      margin: '50px auto',
-      padding: '0 25px',
+    heroH1: {
+      fontSize: 'clamp(1.8rem, 6vw, 3.2rem)',
+      margin: '0 0 20px 0',
+      fontWeight: '850',
+      lineHeight: '1.2',
     },
-    h1: { fontSize: 'clamp(2.2rem, 6vw, 3.5rem)', marginBottom: '20px', fontWeight: '800', lineHeight: '1.2' },
-    h2: { 
-      fontSize: '2rem', 
-      color: '#00296b', 
-      borderLeft: '6px solid #d9534f', 
-      paddingLeft: '20px',
-      marginTop: '50px',
-      marginBottom: '25px',
-      fontWeight: '700'
+    accentBar: {
+      height: '5px',
+      width: '80px',
+      backgroundColor: '#00d2ff',
+      margin: '20px auto',
     },
-    grid: {
+    container: {
+      maxWidth: '1200px',
+      margin: '0 auto',
+      padding: '40px 20px',
+    },
+    introBox: {
+      background: 'white',
+      padding: '40px',
+      borderRadius: '20px',
+      boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+      marginTop: '-80px',
+      position: 'relative',
+      zIndex: 2,
+    },
+    sectionTitle: {
+      color: '#003366',
+      fontSize: '2rem',
+      marginBottom: '20px',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '10px',
+    },
+    serviceGrid: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-      gap: '25px',
-      marginTop: '30px'
+      gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+      gap: '30px',
+      margin: '50px 0',
     },
     card: {
-      backgroundColor: '#f8f9fa',
-      padding: '25px',
-      borderRadius: '12px',
-      boxShadow: '0 4px 8px rgba(0,0,0,0.05)',
-      border: '1px solid #e9ecef'
+      backgroundColor: 'white',
+      padding: '35px',
+      borderRadius: '15px',
+      boxShadow: '0 5px 15px rgba(0,0,0,0.03)',
+      borderTop: '6px solid #0056b3',
+      transition: 'transform 0.3s ease',
     },
-    ctaBox: {
-      backgroundColor: '#00296b',
+    list: {
+      paddingLeft: '20px',
+      color: '#444',
+    },
+    highlight: {
+      color: '#0056b3',
+      fontWeight: '700',
+    },
+    ctaArea: {
+      backgroundColor: '#003366',
       color: 'white',
-      padding: '60px 20px',
+      padding: '60px 30px',
+      borderRadius: '25px',
       textAlign: 'center',
-      borderRadius: '20px',
-      margin: '80px 25px'
+      margin: '60px 0',
     },
-    button: {
-      backgroundColor: '#d9534f',
-      color: 'white',
-      padding: '18px 45px',
-      fontSize: '1.3rem',
+    btn: {
+      padding: '18px 40px',
+      fontSize: '1.2rem',
       fontWeight: 'bold',
-      border: 'none',
       borderRadius: '50px',
+      border: 'none',
       cursor: 'pointer',
-      textDecoration: 'none',
-      display: 'inline-block',
-      marginTop: '25px',
-      transition: '0.3s'
-    },
-    faqContainer: {
-      backgroundColor: '#f1f3f5',
-      padding: '50px 25px',
-      borderRadius: '15px'
+      margin: '10px',
+      boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
     },
     faqItem: {
-      marginBottom: '25px',
-      paddingBottom: '15px',
-      borderBottom: '1px solid #dee2e6'
+      backgroundColor: '#fff',
+      padding: '25px',
+      borderRadius: '12px',
+      marginBottom: '15px',
+      borderLeft: '5px solid #00d2ff',
     }
   };
 
   return (
-    <div style={styles.container}>
-      {/* HERO SECTION */}
-      <header style={styles.hero}>
-        <div style={{maxWidth: '1000px', margin: '0 auto'}}>
-          <h1 style={styles.h1}>Air Duct Cleaning in Killeen, TX | Killeen Air Duct Cleaners</h1>
-          <p style={{fontSize: '1.3rem', opacity: '0.9'}}>Professional Air Quality, HVAC Cleaning & Attic Insulation for Central Texas</p>
-          <a href="#quote" style={styles.button}>Get Free Estimate</a>
+    <div style={styles.wrapper}>
+      {/* --- HERO --- */}
+      <header style={styles.header}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h1 style={styles.heroH1}>Air Duct Cleaning in Killeen, TX | Killeen Air Duct Cleaners</h1>
+          <div style={styles.accentBar}></div>
+          <p style={{ fontSize: '1.4rem', fontWeight: '300' }}>
+            Breathe Cleaner, Live Better. Your Local Air Quality Experts.
+          </p>
         </div>
       </header>
 
-      {/* INTRO SECTION (LOCALIZED) */}
-      <section style={styles.section}>
-        <p style={{fontSize: '1.1rem'}}>
-          Killeen Air Duct Cleaners proudly provides professional <strong>air duct cleaning, HVAC cleaning, dryer vent cleaning, chimney sweep, duct replacement, and attic insulation services in Killeen, TX</strong>. With Central Texas heat and year-round air conditioning use, homes in Killeen experience heavy dust buildup and airflow issues. Whether you live near <strong>Fort Cavazos</strong>, in neighborhoods off <strong>Rancier Avenue</strong>, or newer developments, we help you lower energy bills and improve indoor air quality.
-        </p>
-      </section>
+      <div style={styles.container}>
+        {/* --- INTRO --- */}
+        <section style={styles.introBox}>
+          <p>
+            <strong>Killeen Air Duct Cleaners</strong> provides professional air duct cleaning, HVAC system cleaning, 
+            dryer vent cleaning, chimney sweep, duct replacement, attic insulation, and indoor UV light purification 
+            services throughout <strong>Killeen, TX</strong>.
+          </p>
+          <p>
+            With extreme Central Texas heat and nearly year-round air conditioning use, HVAC systems in Killeen homes 
+            operate constantly. From homes near <strong>Fort Cavazos</strong> to established neighborhoods off 
+            <strong> Rancier Avenue</strong> and <strong>Stan Schlueter Loop</strong>, we deliver safe, thorough, 
+            and efficient solutions designed for long-term performance.
+          </p>
+        </section>
 
-      {/* 1. AIR DUCT CLEANING */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Air Duct Cleaning in Killeen, TX</h2>
-        <p>In Killeen’s dry and windy conditions, buildup happens fast. Our professional <strong>duct cleaning Killeen TX</strong> service includes:</p>
-        <div style={styles.grid}>
-          <div style={styles.card}>
-            <strong>Full System Cleaning:</strong> We clean both supply and return vents, removing dust, pet dander, and mold spores.
-          </div>
-          <div style={styles.card}>
-            <strong>Improved Airflow:</strong> Professional <strong>vent cleaning Killeen</strong> removes debris to help your HVAC system breathe.
-          </div>
-        </div>
-      </section>
-
-      {/* 2. HVAC SYSTEM CLEANING (Bigger Jobs) */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>HVAC System Cleaning in Killeen, TX</h2>
-        <p>Targeting the mechanical components is critical for performance. Our <strong>HVAC cleaning Killeen TX</strong> includes:</p>
-        <div style={styles.grid}>
-          <ul style={{paddingLeft: '20px'}}>
-            <li><strong>Blower Motor:</strong> Removes dust to prevent friction.</li>
-            <li><strong>Evaporator Coils:</strong> Essential for cooling performance.</li>
-            <li><strong>Air Handler:</strong> Cleans the source of your air.</li>
-            <li><strong>Return Plenum:</strong> Ensures the intake is sanitized.</li>
-          </ul>
-          <div style={styles.card}>
-            <strong>Benefits:</strong> Lower energy bills, better cooling in Texas heat, and prevention of expensive system breakdowns.
-          </div>
-        </div>
-      </section>
-
-      {/* 3. DRYER VENT CLEANING (Fire Safety) */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Dryer Vent Cleaning in Killeen, TX</h2>
-        <p>Clogged dryer vents are a leading cause of home fires. Our <strong>fire hazard prevention</strong> service includes:</p>
-        <div style={styles.grid}>
-          <div style={styles.card}>✔ Complete Lint Removal</div>
-          <div style={styles.card}>✔ Faster Drying Times</div>
-          <div style={styles.card}>✔ Annual Safety Maintenance</div>
-          <div style={styles.card}>✔ Reduced Fire Risk</div>
-        </div>
-      </section>
-
-      {/* 4. CHIMNEY SWEEP */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Chimney Sweep Services in Killeen, TX</h2>
-        <p>Prepare for the Central Texas winter with our fall fireplace prep:</p>
-        <ul>
-          <li><strong>Creosote Removal:</strong> Eliminating dangerous flammable buildup.</li>
-          <li><strong>Fireplace Inspection:</strong> Checking for draft issues and safety.</li>
-          <li><strong>Smoke Draft Correction:</strong> Ensuring smoke leaves your home properly.</li>
-        </ul>
-      </section>
-
-      {/* 5. AIR DUCT REPLACEMENT (High-Ticket) */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Air Duct Replacement in Killeen, TX</h2>
-        <p>Sometimes cleaning isn't enough. Signs you need <strong>duct replacement Killeen</strong>:</p>
-        <div style={styles.grid}>
-          <div style={styles.card}>
-            <strong>When to Replace:</strong>
-            <p>Old flex ductwork (15+ years), torn/crushed ducts, rodent damage, or severe mold contamination.</p>
-          </div>
-          <div style={styles.card}>
-            <strong>The Result:</strong>
-            <p>Perfect <strong>air duct installation Killeen</strong> leads to balanced airflow, silent operation, and maximum energy savings.</p>
+        {/* --- SERVICE SECTION 1: DUCTS --- */}
+        <div style={{ marginTop: '60px' }}>
+          <h2 style={styles.sectionTitle}>🌬️ Air Duct Cleaning in Killeen, TX</h2>
+          <p>
+            In Killeen’s dry climate, dust, pollen, and pet dander accumulate faster than many homeowners expect inside supply and return vents.
+          </p>
+          <div style={styles.serviceGrid}>
+            <div style={styles.card}>
+              <h4 style={styles.highlight}>What’s Included:</h4>
+              <ul style={styles.list}>
+                <li>Complete supply and return vent cleaning</li>
+                <li>High-powered vacuum extraction</li>
+                <li>Debris removal from trunk lines</li>
+                <li>Inspection of airflow performance</li>
+              </ul>
+            </div>
+            <div style={{...styles.card, borderTopColor: '#00d2ff'}}>
+              <h4 style={styles.highlight}>The Benefits:</h4>
+              <p>Clean ductwork improves air circulation, reduces allergens, and helps your HVAC system operate more efficiently. Notice fewer dust particles on surfaces and improved breathing comfort.</p>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* 6. ATTIC INSULATION (Energy Savings) */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Attic Insulation Services in Killeen, TX</h2>
-        <p>Texas summers are brutal. <strong>Attic insulation Killeen TX</strong> is the best way to lower your utility bills.</p>
-        <ul>
-          <li><strong>Blown-in Insulation:</strong> High-efficiency energy barrier.</li>
-          <li><strong>Insulation Removal:</strong> Getting rid of old, dusty insulation.</li>
-          <li><strong>Temperature Control:</strong> Keeps your home cooler and reduces HVAC strain.</li>
-        </ul>
-      </section>
-
-      {/* 7. INDOOR UV LIGHT PURIFICATION */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Indoor UV Light Purification in Killeen, TX</h2>
-        <p>For maximum health, we install UV purification systems directly into your HVAC unit to neutralize airborne pathogens and prevent mold growth on your coils.</p>
-      </section>
-
-      {/* WHY CHOOSE US */}
-      <section style={styles.section}>
-        <h2 style={styles.h2}>Why Choose Killeen Air Duct Cleaners?</h2>
-        <div style={styles.grid}>
-          <p>• Locally owned & operated</p>
-          <p>• Professional-grade equipment</p>
-          <p>• Honest, transparent pricing</p>
-          <p>• Fast, reliable response times</p>
+        {/* --- SERVICE SECTION 2: HVAC & UV --- */}
+        <div style={styles.serviceGrid}>
+          <div style={styles.card}>
+            <h2 style={{...styles.sectionTitle, fontSize: '1.5rem'}}>❄️ HVAC System Cleaning</h2>
+            <p>Duct cleaning alone is not enough if internal components are dirty.</p>
+            <ul style={styles.list}>
+              <li>Blower motor cleaning</li>
+              <li>Evaporator coil cleaning</li>
+              <li>Air handler servicing</li>
+              <li>Return plenum cleaning</li>
+            </ul>
+          </div>
+          <div style={{...styles.card, borderTopColor: '#6c5ce7'}}>
+            <h2 style={{...styles.sectionTitle, fontSize: '1.5rem'}}>🛡️ Indoor UV Light Purification</h2>
+            <p>Neutralize airborne bacteria, mold spores, and viruses directly inside your HVAC system.</p>
+            <ul style={styles.list}>
+              <li>Reduction of airborne pathogens</li>
+              <li>Mold growth prevention inside coils</li>
+              <li>Continuous operation & low maintenance</li>
+            </ul>
+          </div>
         </div>
-      </section>
 
-      {/* CALL TO ACTION */}
-      <section style={styles.ctaBox} id="quote">
-        <h2 style={{color: 'white', border: 'none', padding: '0'}}>Schedule Service in Killeen Today</h2>
-        <p style={{fontSize: '1.2rem'}}>Contact us for a free estimate on Air Duct, HVAC, Insulation, or Chimney services.</p>
-        <a href="tel:YOUR-PHONE" style={styles.button}>📞 Call Killeen Cleaners Now</a>
-      </section>
+        {/* --- SERVICE SECTION 3: DRYER & CHIMNEY --- */}
+        <div style={styles.serviceGrid}>
+          <div style={styles.card}>
+            <h2 style={{...styles.sectionTitle, fontSize: '1.5rem'}}>🧺 Dryer Vent Cleaning</h2>
+            <p>Lint buildup is a serious fire hazard. Annual inspection is strongly recommended for Killeen homes.</p>
+            <ul style={styles.list}>
+              <li>Faster drying times</li>
+              <li>Lower energy bills</li>
+              <li>Reduced fire risk</li>
+            </ul>
+          </div>
+          <div style={styles.card}>
+            <h2 style={{...styles.sectionTitle, fontSize: '1.5rem'}}>🧹 Chimney Sweep Services</h2>
+            <p>Ensure safe seasonal operation with professional creosote removal and flue inspection.</p>
+            <ul style={styles.list}>
+              <li>Creosote removal</li>
+              <li>Fireplace safety evaluation</li>
+              <li>Smoke draft correction</li>
+            </ul>
+          </div>
+        </div>
 
-      {/* FAQ SECTION */}
-      <section style={styles.section}>
-        <div style={styles.faqContainer}>
-          <h2 style={{marginTop: '0'}}>Frequently Asked Questions</h2>
+        {/* --- SERVICE SECTION 4: REPLACEMENT & INSULATION --- */}
+        <div style={styles.serviceGrid}>
+          <div style={{...styles.card, borderTopColor: '#e17055'}}>
+            <h2 style={{...styles.sectionTitle, fontSize: '1.5rem'}}>🛠️ Air Duct Replacement</h2>
+            <p>Old or damaged duct systems reduce airflow efficiency. We design and install properly sized systems.</p>
+            <ul style={styles.list}>
+              <li>Fix uneven room temperatures</li>
+              <li>Replace torn or collapsed flex ducts</li>
+              <li>Remediate mold or rodent damage</li>
+            </ul>
+          </div>
+          <div style={{...styles.card, borderTopColor: '#00b894'}}>
+            <h2 style={{...styles.sectionTitle, fontSize: '1.5rem'}}>🏠 Attic Insulation Services</h2>
+            <p>Attic temperatures in Killeen often exceed 130°F. Proper insulation is your first line of defense.</p>
+            <ul style={styles.list}>
+              <li>Blown-in insulation</li>
+              <li>Insulation removal</li>
+              <li>Energy cost reduction</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* --- WHY CHOOSE US --- */}
+        <section style={{ textAlign: 'center', margin: '80px 0' }}>
+          <h2 style={styles.sectionTitle, {justifyContent: 'center', display: 'flex'}}>Why Choose Killeen Air Duct Cleaners?</h2>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', marginTop: '30px' }}>
+            {['Locally Owned', 'Texas Climate Experts', 'Professional Equipment', 'Transparent Pricing'].map((text, i) => (
+              <div key={i} style={{ padding: '15px 25px', background: '#fff', borderRadius: '50px', boxShadow: '0 4px 10px rgba(0,0,0,0.05)', fontWeight: 'bold', color: '#0056b3' }}>
+                ✓ {text}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* --- FAQ --- */}
+        <section style={{ marginBottom: '60px' }}>
+          <h2 style={{...styles.sectionTitle, textAlign: 'center', display: 'block'}}>Frequently Asked Questions</h2>
           <div style={styles.faqItem}>
-            <strong>How often should air ducts be cleaned in Killeen, TX?</strong>
-            <p>Every 2–3 years due to heavy dust and year-round AC usage.</p>
-          </div>
-          <div style={styles.faqItem}>
-            <strong>How do I know if my air ducts need replacement?</strong>
-            <p>If they are over 15 years old, damaged by rodents, or causing major airflow problems.</p>
-          </div>
-          <div style={styles.faqItem}>
-            <strong>Does attic insulation really lower energy bills in Texas?</strong>
-            <p>Yes. It reduces heat transfer from the attic into your home, lowering cooling costs significantly.</p>
+            <p><strong>How often should air ducts be cleaned in Killeen?</strong></p>
+            <p>Every 2–3 years, depending on usage and dust exposure.</p>
           </div>
           <div style={styles.faqItem}>
-            <strong>What’s the difference between duct cleaning and HVAC cleaning?</strong>
-            <p>Duct cleaning focuses on the vents; HVAC cleaning includes internal components like coils and blowers.</p>
+            <p><strong>Is HVAC cleaning different from duct cleaning?</strong></p>
+            <p>Yes. HVAC cleaning includes internal mechanical components like coils and blower motors.</p>
           </div>
+          <div style={styles.faqItem}>
+            <p><strong>Do UV lights really work?</strong></p>
+            <p>Yes. UV systems reduce microbial growth and neutralize airborne pathogens inside HVAC systems.</p>
+          </div>
+          <div style={styles.faqItem}>
+            <p><strong>Does insulation reduce summer cooling costs?</strong></p>
+            <p>Proper insulation significantly lowers heat transfer and reduces energy usage by keeping your home cooler.</p>
+          </div>
+        </section>
+
+        {/* --- CTA --- */}
+        <div style={styles.ctaArea}>
+          <h2 style={{ fontSize: '2.2rem', marginBottom: '10px' }}>Get a Free Estimate in Killeen, TX</h2>
+          <p style={{ fontSize: '1.2rem', opacity: '0.9', marginBottom: '30px' }}>Contact us today for professional air system solutions.</p>
+          <button style={{ ...styles.btn, backgroundColor: '#ffce00', color: '#003366' }}>📞 Call Now: (254) XXX-XXXX</button>
+          <button style={{ ...styles.btn, backgroundColor: 'transparent', color: 'white', border: '2px solid white' }}>📩 Request Service Online</button>
         </div>
-      </section>
+      </div>
+
+      <footer style={{ textAlign: 'center', padding: '40px', color: '#636e72', fontSize: '0.9rem' }}>
+        © 2026 Killeen Air Duct Cleaners. All Rights Reserved. | Serving Killeen, Fort Cavazos, and Central Texas.
+      </footer>
     </div>
   );
 };
 
-export default KilleenCityPage;
+export default KilleenDuctCleaning;
