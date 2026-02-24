@@ -1,175 +1,220 @@
 import React from 'react';
-import DuctServiceFAQ from '../DuctServiceFAQ';
-import DuctLandingPage from '../DuctLandingPage'; 
-import Management from './Management';
 
-const Nolanville = () => {
+const NolanvilleDuctCleaning = () => {
+  const styles = {
+    wrapper: {
+      fontFamily: '"Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+      color: '#2d3436',
+      backgroundColor: '#f4f7f6',
+      lineHeight: '1.8',
+      margin: 0,
+    },
+    header: {
+      background: 'linear-gradient(rgba(0, 60, 120, 0.9), rgba(0, 60, 120, 0.9)), url("https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=1000")', 
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      color: 'white',
+      padding: '110px 20px',
+      textAlign: 'center',
+    },
+    heroH1: {
+      fontSize: 'clamp(1.8rem, 6vw, 3.2rem)',
+      margin: '0 0 20px 0',
+      fontWeight: '850',
+      letterSpacing: '-1px',
+    },
+    accentBar: {
+      height: '6px',
+      width: '100px',
+      backgroundColor: '#00d2ff',
+      margin: '25px auto',
+    },
+    container: {
+      maxWidth: '1200px',
+      margin: '0 auto',
+      padding: '40px 20px',
+    },
+    introBox: {
+      background: 'white',
+      padding: '50px',
+      borderRadius: '30px',
+      boxShadow: '0 20px 40px rgba(0,0,0,0.08)',
+      marginTop: '-100px',
+      position: 'relative',
+      zIndex: 2,
+    },
+    sectionTitle: {
+      color: '#003c78',
+      fontSize: '2.3rem',
+      marginBottom: '25px',
+      fontWeight: '800',
+      borderLeft: '8px solid #00d2ff',
+      paddingLeft: '20px',
+    },
+    serviceGrid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+      gap: '35px',
+      margin: '60px 0',
+    },
+    card: {
+      backgroundColor: '#ffffff',
+      padding: '40px',
+      borderRadius: '25px',
+      boxShadow: '0 10px 25px rgba(0,0,0,0.04)',
+      borderTop: '10px solid #003c78',
+      height: '100%',
+    },
+    highlightText: {
+      color: '#003c78',
+      fontWeight: '700',
+      fontSize: '1.1rem',
+    },
+    ctaArea: {
+      backgroundColor: '#003c78',
+      color: 'white',
+      padding: '80px 30px',
+      borderRadius: '40px',
+      textAlign: 'center',
+      margin: '80px 0',
+      boxShadow: '0 25px 50px rgba(0,0,0,0.2)',
+    },
+    btnMain: {
+      padding: '20px 50px',
+      fontSize: '1.3rem',
+      fontWeight: 'bold',
+      borderRadius: '60px',
+      border: 'none',
+      cursor: 'pointer',
+      margin: '15px',
+      backgroundColor: '#00d2ff',
+      color: '#003c78',
+    }
+  };
+
   return (
-    <div className="city-page">
-      {/* 1. Global Styles for this page */}
-      <style>
-        {`
-          .video-hero {
-            position: relative;
-            width: 100%;
-            height: 500px; 
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
+    <div style={styles.wrapper}>
+      {/* --- HERO SECTION --- */}
+      <header style={styles.header}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h1 style={styles.heroH1}>Air Duct Cleaning in Nolanville, TX | Small Town Pride, Big City Quality</h1>
+          <div style={styles.accentBar}></div>
+          <p style={{ fontSize: '1.5rem', fontWeight: '300', opacity: 0.9 }}>
+            Comprehensive Air Quality & Energy Solutions for Nolanville Families.
+          </p>
+        </div>
+      </header>
 
-          .video-hero video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-          }
+      <div style={styles.container}>
+        {/* --- LOCALIZED INTRO --- */}
+        <section style={styles.introBox}>
+          <h2 style={{ color: '#003c78', marginTop: 0 }}>Expert Care for Nolanville's Growing Homes</h2>
+          <p>
+            Nolanville is no longer just a pass-through between Killeen and Belton—it’s a premier destination for families seeking space and quality. Whether you’re located in the prestigious <strong>Bella Charca</strong> gated community or own a classic ranch-style home off <strong>Warrior Way</strong>, your indoor air quality is our top priority.
+          </p>
+          <p>
+            The open landscapes around Nolanville and proximity to <strong>Stillhouse Hollow Lake</strong> mean higher exposure to seasonal allergens, outdoor dust, and humidity. At <strong>Killeen Air Duct Cleaners</strong>, we help Nolanville residents keep their homes allergy-free and their HVAC systems running efficiently throughout the brutal Texas summers.
+          </p>
+        </section>
 
-          .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Halka dark filter */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-
-          .video-overlay h1 {
-            color: #ffffff;
-            font-size: clamp(32px, 6vw, 52px);
-            font-weight: 900;
-            text-align: center;
-            padding: 0 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-shadow: 3px 3px 15px rgba(0,0,0,0.7); /* Text ko prominent karne ke liye */
-          }
-
-          .nolanville-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 60px 8%;
-            gap: 40px;
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            background-color: #ffffff;
-          }
-
-          .nolanville-content {
-            flex: 1.2;
-          }
-
-          .nolanville-image-box {
-            flex: 0.8;
-            display: flex;
-            justify-content: center;
-          }
-
-          .nolanville-image-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-          }
-
-          .nolanville-heading {
-            font-size: clamp(28px, 4vw, 42px);
-            font-weight: 800;
-            margin: 0;
-            color: #000;
-            line-height: 1.1;
-          }
-
-          .nolanville-subheading {
-            font-size: clamp(24px, 3.5vw, 38px);
-            color: #e11d24; 
-            margin-top: 5px;
-            margin-bottom: 25px;
-            font-weight: 700;
-          }
-
-          .nolanville-text {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 20px;
-          }
-
-          @media (max-width: 992px) {
-            .video-hero { height: 400px; } /* Mobile pe height thori kam */
-            .nolanville-section {
-              flex-direction: column;
-              padding: 400px 20px;
-              text-align: center;
-            }
-            .nolanville-image-box {
-              order: -1; 
-              width: 100%;
-            }
-          }
-        `}
-      </style>
-
-      <div style={{ width: '100%', overflowX: 'hidden' }}>
-        
-        {/* --- Video Section --- */}
-        <div className="video-hero">
-          <video autoPlay muted loop playsInline>
-            <source src="/red.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="video-overlay">
-            <h1>Air Duct Cleaning in Nolanville, TX</h1>
+        {/* --- SERVICE 1: AIR DUCT CLEANING --- */}
+        <div style={{ marginTop: '80px' }}>
+          <h2 style={styles.sectionTitle}>Air Duct Cleaning in Nolanville, TX</h2>
+          <p>
+            Construction dust from new developments and rural debris can quickly clog your vents. Our <strong>duct cleaning Nolanville TX</strong> service is a deep-clean process that reaches every inch of your air distribution system, ensuring your family breathes only the purest air.
+          </p>
+          <div style={styles.serviceGrid}>
+            <div style={styles.card}>
+              <h4 style={styles.highlightText}>Our Professional Approach:</h4>
+              <ul style={{ paddingLeft: '20px' }}>
+                <li>Precision <strong>vent cleaning Nolanville</strong> for supply & return lines</li>
+                <li>HEPA-filtered negative pressure vacuuming</li>
+                <li>Source removal of dander, dust, and pollen</li>
+                <li>Detailed airflow performance inspection</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* --- Text Content Section --- */}
-        <section className="nolanville-section">
-          <div className="nolanville-content">
-            <h2 className="nolanville-heading">Local Air Duct Cleaning Services</h2>
-            <div className="nolanville-subheading">In Nolanville & Killeen, Texas</div>
-            
-            <p className="nolanville-text">
-              Searching for a reliable service to breathe fresh air into your home? Your search ends here! 
-              At <strong>Killeen Air Duct</strong>, cleanliness is our passion, and we’re ready to 
-              elevate your indoor air quality to new heights.
-            </p>
-
-            <p className="nolanville-text">
-              Say goodbye to dusty air ducts and clogged dryer vents; we’ve got you covered with our 
-              comprehensive services. From meticulous air duct repair to efficient dryer vent cleaning, 
-              and from top-notch AC maintenance to seamless replacements, we offer it all.
-            </p>
-
-            <p className="nolanville-text">
-              But we don’t stop there! What sets us apart is our commitment to going the extra mile. 
-              We leave no stone unturned in ensuring your entire HVAC system works optimally, 
-              bringing you true comfort.
-            </p>
+        {/* --- SERVICE 2: HVAC SYSTEM CLEANING (The High-Ticket Target) --- */}
+        <div style={{ marginTop: '40px' }}>
+          <h2 style={styles.sectionTitle}>HVAC System Cleaning in Nolanville, TX</h2>
+          <p>
+            In Nolanville, a clean duct is only half the battle. If your coils are caked with Texas grime, your AC works twice as hard for half the cooling. Our <strong>HVAC cleaning Nolanville TX</strong> is a full-system restoration designed to lower your utility bills.
+          </p>
+          
+          <div style={styles.serviceGrid}>
+            <div style={{...styles.card, borderTopColor: '#00d2ff'}}>
+              <h4 style={styles.highlightText}>Total System Restoration:</h4>
+              <ul style={{ paddingLeft: '20px' }}>
+                <li><strong>AC system cleaning Nolanville</strong> expert service</li>
+                <li>Blower motor and housing deep-clean</li>
+                <li>Evaporator coil decontamination</li>
+                <li>Return plenum and air handler sanitization</li>
+              </ul>
+              <p style={{marginTop: '20px', fontWeight: 'bold', color: '#27ae60'}}>Benefit: Prevents sudden system failures during 100°F+ days.</p>
+            </div>
           </div>
+        </div>
 
-          <div className="nolanville-image-box">
-            <img 
-              src="/013.jpeg"
-              alt="Killeen Air Duct Cleaning Team" 
-            />
+        {/* --- SERVICE 3: REPLACEMENT & INSULATION --- */}
+        <div style={styles.serviceGrid}>
+          <div style={{...styles.card, borderTopColor: '#e17055'}}>
+            <h3 style={{color: '#d35400'}}>🛠️ Air Duct Replacement</h3>
+            <p>Older Nolanville properties often suffer from leaky, torn, or rodent-damaged ductwork. We provide high-efficiency <strong>duct replacement Nolanville TX</strong> to ensure your cold air actually reaches your living space.</p>
+            <p style={{fontSize: '0.95rem', fontStyle: 'italic'}}>Recommended for homes with uneven room temperatures.</p>
+          </div>
+          <div style={{...styles.card, borderTopColor: '#2ecc71'}}>
+            <h3 style={{color: '#27ae60'}}>🏠 Attic Insulation Services</h3>
+            <p>Nolanville attics can act like ovens. Our <strong>blown-in insulation Nolanville</strong> creates a thermal barrier that can reduce your cooling costs by up to 30%. Stop paying to cool the outdoors!</p>
+          </div>
+        </div>
+
+        {/* --- SERVICE 4: DRYER VENTS & CHIMNEYS --- */}
+        <div style={styles.serviceGrid}>
+          <div style={styles.card}>
+            <h3>🧺 Dryer Vent Cleaning</h3>
+            <p>Don't ignore the warning signs of a clogged vent. We help Nolanville homeowners prevent house fires and improve dryer efficiency with professional lint removal.</p>
+          </div>
+          <div style={styles.card}>
+            <h3>🧹 Chimney Sweep</h3>
+            <p>Keeping Nolanville cozy and safe. Our chimney services include creosote removal and draft inspections for your peace of mind.</p>
+          </div>
+        </div>
+
+        {/* --- FAQ SECTION --- */}
+        <section style={{ margin: '80px 0' }}>
+          <h2 style={{textAlign: 'center', color: '#003c78', marginBottom: '40px'}}>Nolanville Resident FAQ</h2>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <div style={{background: '#fff', padding: '25px', borderRadius: '15px', marginBottom: '20px', boxShadow: '0 4px 10px rgba(0,0,0,0.05)'}}>
+              <p><strong>Is HVAC cleaning better than just vent cleaning?</strong></p>
+              <p>In Nolanville's dusty climate, we recommend both. Vent cleaning clears the air paths, but HVAC cleaning services the internal motor and coils to ensure energy efficiency.</p>
+            </div>
+            <div style={{background: '#fff', padding: '25px', borderRadius: '15px', marginBottom: '20px', boxShadow: '0 4px 10px rgba(0,0,0,0.05)'}}>
+              <p><strong>How do I know if I need new insulation?</strong></p>
+              <p>If your AC runs constantly or your upstairs rooms are significantly warmer than downstairs, your insulation is likely insufficient for Texas summers.</p>
+            </div>
           </div>
         </section>
 
-        <Management />
-        <br />
-        <DuctServiceFAQ />
-        <DuctLandingPage />
+        {/* --- CALL TO ACTION --- */}
+        <div style={styles.ctaArea}>
+          <h2 style={{ fontSize: '2.8rem', marginBottom: '20px' }}>Get Your Free Nolanville Estimate</h2>
+          <p style={{ fontSize: '1.4rem', opacity: '0.9', marginBottom: '50px' }}>
+            Join hundreds of satisfied Nolanville neighbors. Professional service, guaranteed.
+          </p>
+          <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <button style={styles.btnMain}>📞 Call (254) XXX-XXXX</button>
+            <button style={{ ...styles.btnMain, backgroundColor: 'white', color: '#003c78' }}>📩 Request Quote</button>
+          </div>
+        </div>
       </div>
+
+      <footer style={{ textAlign: 'center', padding: '60px', color: '#95a5a6', fontSize: '1rem' }}>
+        © 2026 Killeen Air Duct Cleaners | Serving Nolanville, Bella Charca, and Warrior Way.
+      </footer>
     </div>
   );
 };
 
-export default Nolanville;
+export default NolanvilleDuctCleaning;
