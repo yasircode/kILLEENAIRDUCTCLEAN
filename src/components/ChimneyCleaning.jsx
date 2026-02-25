@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DuctLandingPage from "../DuctLandingPage";
 import Any from "./Any";
+
 const ChimneyCleaning = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
@@ -10,32 +11,32 @@ const ChimneyCleaning = () => {
 
   const faqs = [
     {
-      question: "Why is chimney cleaning essential for Killeen homes?",
-      answer: "Cleaning is vital to prevent hazardous creosote fires, manage heat transfer effectively, and ensure your fireplace operates at peak performance during Texas's cooler months."
+      question: "Why is chimney cleaning essential for Killeen & Temple homes?",
+      answer: "Cleaning is vital to prevent hazardous creosote fires, especially after heavy use during Central Texas winter snaps. It ensures your fireplace operates safely in Killeen, Temple, and Belton homes."
     },
     {
-      question: "How often should I get my chimney cleaned?",
-      answer: "We recommend a professional inspection and sweep at least once a year, or more frequently if you use your fireplace as a primary heating source throughout the winter."
+      question: "How often should I get my chimney cleaned in Bell County?",
+      answer: "We recommend a professional inspection and sweep at least once a year. Homeowners in Harker Heights and Copperas Cove who use wood-burning stoves as a primary heat source may need it twice a season."
     },
     {
       question: "Can I clean the chimney myself?",
-      answer: "DIY cleaning often misses dangerous soot buildup in the flue lining. Our professional technicians use specialized tools and cameras to ensure every blockage and fire hazard is removed safely."
+      answer: "DIY cleaning often misses dangerous soot buildup. Our professional technicians use specialized cameras to ensure every blockage and fire hazard is removed safely for residents across Nolanville and Salado."
     },
     {
       question: "What signs indicate that my chimney needs cleaning?",
-      answer: "Common signs include a strong smoky odor, visible soot buildup, difficulty starting a fire, or seeing black flaky debris falling into the firebox."
+      answer: "Common signs include a strong smoky odor, difficulty starting a fire, or seeing black flaky debris (creosote) falling into the firebox in your Killeen or Belton property."
     }
   ];
 
   return (
     <div className="residential-page">
       
-      {/* HERO SECTION */}
+      {/* HERO SECTION - Optimized for Multiple Cities */}
       <section className="hero">
         <div className="overlay">
-          <h1>Professional Chimney Cleaning & Safety Inspections in Killeen, TX</h1>
-          <p className="breadcrumb">Home » Residential Services » Chimney Sweep</p>
-          <a href="tel:2549983484" className="call-btn">CALL US: (254) 998-3484</a>
+          <h1>Expert Chimney Cleaning in Killeen, Temple & Belton, TX</h1>
+          <p className="breadcrumb">Home » Residential Services » Chimney Sweep & Inspection</p>
+          <a href="tel:2549983484" className="call-btn">BOOK A SWEEP: (254) 998-3484</a>
         </div>
       </section>
 
@@ -43,48 +44,48 @@ const ChimneyCleaning = () => {
       <section className="content-section">
         <div className="container">
           <div className="text">
-            <h2>Reliable Chimney Sweeping & Maintenance</h2>
+            <h2>Reliable Chimney Sweeping for Central Texas Families</h2>
             <p>
-              A cozy fireplace is the heart of a home during Central Texas's winter, providing warmth and a relaxing atmosphere. However, without regular maintenance, your chimney can become a hidden danger. Over time, hazardous <strong>creosote buildup and debris</strong> accumulate, leading to fire risks and ventilation issues.
+              A cozy fireplace is the heart of a home during Central Texas's winter, providing warmth to families in <strong>Killeen, Harker Heights, and Copperas Cove</strong>. However, without regular maintenance, your chimney can become a hidden danger. Over time, hazardous <strong>creosote buildup and soot</strong> accumulate, leading to fire risks.
             </p>
             <p>
-              At <strong>Killeen Air Duct Cleaning</strong>, we specialize in comprehensive chimney services. Our expert team ensures your flue is clear and your ventilation is perfect, so your family stays safe while enjoying the fireside.
+              At <strong>Killeen Air Duct Cleaning</strong>, we specialize in comprehensive chimney services for <strong>Temple and Belton</strong>. Our expert team ensures your flue is clear and your ventilation is perfect, so your family stays safe while enjoying the fireside.
             </p>
           </div>
           <div className="image">
-            <img src="profile3.jpeg" alt="Professional Chimney Sweep Killeen" className="main-image" />
+            <img src="profile3.jpeg" alt="Professional Chimney Sweep Killeen & Temple TX" className="main-image" />
           </div>
         </div>
       </section>
 
-      {/* DUAL BOX SECTION (SEO Content based on Screenshots) */}
+      {/* DUAL BOX SECTION - Location Targeted */}
       <section className="service-grid-area">
         <div className="grid-flex">
           
           <div className="service-card">
-            <div className="card-title">Chimney Lining Inspection & Repair: The Safety Net</div>
+            <div className="card-title">Chimney Lining & Safety: Killeen & Belton</div>
             <div className="card-body">
-              <p>The chimney lining is more critical than most homeowners realize. It acts as the primary barrier between heat and your home's structure. Why prioritize its health?</p>
+              <p>The chimney lining is your primary barrier between extreme heat and your home's structure. We serve <strong>Killeen and Fort Cavazos</strong> with precision repairs.</p>
               <ul className="feature-list">
-                <li><strong>Safety:</strong> Properly maintained linings prevent hazardous structure fires.</li>
-                <li><strong>Heat Management:</strong> It controls heat transfer, protecting your interior walls.</li>
-                <li><strong>Performance:</strong> Ensures a smooth, smoke-free fireplace experience.</li>
+                <li><strong>Fire Prevention:</strong> We remove creosote which causes 90% of chimney fires.</li>
+                <li><strong>Heat Management:</strong> Protecting the walls of your <strong>Temple, TX</strong> home.</li>
+                <li><strong>Smoke Control:</strong> Ensuring proper draft and air circulation.</li>
               </ul>
-              <p>An unchecked lining can pose severe risks. Prioritize your safety by keeping it in top shape with our specialized Killeen repair services.</p>
+              <p>An unchecked lining can pose severe risks. Prioritize your safety by keeping it in top shape with our specialized <strong>Bell County</strong> repair services.</p>
             </div>
           </div>
 
           <div className="service-card">
-            <div className="card-title">Your Go-To for Chimney Cleaning in Killeen</div>
+            <div className="card-title">Top-Rated Chimney Sweep in Temple & Cove</div>
             <div className="card-body">
-              <p>Clean chimneys make all the difference in efficiency and safety. We don't just sweep; we restore your system to prime condition using industry-leading tools.</p>
+              <p>Clean chimneys make all the difference in efficiency. We provide mess-free sweeping services for residents in <strong>Copperas Cove and Harker Heights</strong>.</p>
               <ul className="feature-list">
-                <li><strong>Better Fires:</strong> Experience more efficient and vibrant burns.</li>
-                <li><strong>Risk Reduction:</strong> Minimize blockages and the danger of unexpected fires.</li>
-                <li><strong>Longevity:</strong> Regular maintenance prolongs the life of your entire chimney system.</li>
+                <li><strong>Better Fires:</strong> Enjoy vibrant, cleaner burns this winter.</li>
+                <li><strong>Blockage Removal:</strong> We clear bird nests and debris common in <strong>Central Texas</strong>.</li>
+                <li><strong>Longevity:</strong> Routine maintenance saves you thousands in future repairs.</li>
               </ul>
               <div className="cta-box">
-                <p>Looking for a clean start this season? Let's connect and secure your home.</p>
+                <p>Ready for a safe fire season in <strong>Temple or Belton</strong>? Let's secure your home.</p>
                 <a href="tel:2549983484" className="bold-call">GET A FREE QUOTE</a>
               </div>
             </div>
@@ -93,10 +94,10 @@ const ChimneyCleaning = () => {
         </div>
       </section>
 
-      {/* FAQ SECTION (From Screenshots) */}
+      {/* FAQ SECTION */}
       <section className="faq-section">
         <div className="faq-container">
-          <h2 className="faq-heading">Chimney Cleaning: FAQs</h2>
+          <h2 className="faq-heading">Bell County Chimney Cleaning: FAQs</h2>
           {faqs.map((faq, index) => (
             <div key={index} className="faq-item">
               <div className="faq-question" onClick={() => toggleFaq(index)}>
@@ -118,46 +119,50 @@ const ChimneyCleaning = () => {
         .residential-page { font-family: 'Segoe UI', Roboto, sans-serif; color: #333; overflow-x: hidden; }
 
         /* HERO */
-        .hero { background-image: url("047.jpeg"); background-size: cover; background-position: center; min-height: 480px; display: flex; align-items: center; justify-content: center; position: relative; }
+        .hero { background-image: url("047.jpeg"); background-size: cover; background-position: center; min-height: 500px; display: flex; align-items: center; justify-content: center; position: relative; }
         .overlay { background: rgba(0, 0, 0, 0.75); width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; color: white; }
-        .overlay h1 { font-size: clamp(24px, 5vw, 40px); font-weight: 800; max-width: 900px; line-height: 1.2; }
-        .call-btn { margin-top: 30px; background-color: #c62828; color: white; padding: 16px 40px; text-decoration: none; font-size: 18px; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+        .overlay h1 { font-size: clamp(26px, 5vw, 42px); font-weight: 800; max-width: 950px; line-height: 1.2; text-transform: uppercase; }
+        .call-btn { margin-top: 30px; background-color: #c62828; color: white; padding: 18px 45px; text-decoration: none; font-size: 19px; font-weight: bold; border-radius: 5px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .call-btn:hover { background-color: #a51d1d; transform: translateY(-2px); }
 
         /* INTRO */
         .content-section { padding: 80px 20px; background: #fff; }
-        .container { max-width: 1200px; margin: auto; display: flex; align-items: center; gap: 50px; }
+        .container { max-width: 1200px; margin: auto; display: flex; align-items: center; gap: 60px; }
         .text { flex: 1.2; font-size: 18px; line-height: 1.8; }
-        .text h2 { color: #0e1b4d; margin-bottom: 20px; font-size: 32px; }
-        .main-image { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .text h2 { color: #0e1b4d; margin-bottom: 20px; font-size: 34px; font-weight: 700; }
+        .main-image { width: 100%; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
         .image { flex: 0.8; }
 
         /* GRID BOXES */
-        .service-grid-area { padding: 40px 20px 80px; background: #f8f9fa; }
-        .grid-flex { max-width: 1200px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .service-card { background: white; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .card-title { background: #0e1b4d; color: white; padding: 22px; text-align: center; font-size: 20px; font-weight: bold; }
-        .card-body { padding: 30px; }
-        .feature-list { list-style: none; margin: 20px 0; }
-        .feature-list li { position: relative; padding-left: 30px; margin-bottom: 12px; font-weight: 600; }
-        .feature-list li::before { content: "✔"; position: absolute; left: 0; color: #c62828; font-weight: 900; }
-        .bold-call { display: block; background: #c62828; color: white; padding: 15px; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; font-size: 18px; }
+        .service-grid-area { padding: 80px 20px; background: #f8f9fa; }
+        .grid-flex { max-width: 1200px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .service-card { background: white; border: 1px solid #eee; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+        .card-title { background: #0e1b4d; color: white; padding: 25px; text-align: center; font-size: 22px; font-weight: bold; }
+        .card-body { padding: 35px; }
+        .feature-list { list-style: none; margin: 25px 0; }
+        .feature-list li { position: relative; padding-left: 35px; margin-bottom: 15px; font-weight: 600; font-size: 17px; }
+        .feature-list li::before { content: "✔"; position: absolute; left: 0; color: #c62828; font-weight: 900; font-size: 20px; }
+        .bold-call { display: block; background: #c62828; color: white; padding: 16px; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 25px; font-size: 18px; transition: 0.3s; }
+        .bold-call:hover { background: #0e1b4d; }
 
         /* FAQ Section */
         .faq-section { padding: 80px 20px; background: #fff; }
-        .faq-container { max-width: 900px; margin: auto; }
-        .faq-heading { text-align: center; margin-bottom: 40px; color: #0e1b4d; font-size: 36px; }
-        .faq-item { border-bottom: 1px solid #eee; margin-bottom: 10px; }
-        .faq-question { padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: bold; color: #c62828; font-size: 18px; transition: 0.2s; }
-        .faq-answer { padding: 0 20px 20px; line-height: 1.6; color: #555; }
+        .faq-container { max-width: 1000px; margin: auto; }
+        .faq-heading { text-align: center; margin-bottom: 40px; color: #0e1b4d; font-size: 36px; font-weight: 800; }
+        .faq-item { border-bottom: 1px solid #eee; margin-bottom: 15px; background: #fdfdfd; border-radius: 8px; }
+        .faq-question { padding: 22px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: bold; color: #c62828; font-size: 19px; }
+        .faq-answer { padding: 0 22px 22px; line-height: 1.7; color: #555; font-size: 17px; }
 
         /* MOBILE RESPONSIVE */
         @media (max-width: 992px) {
-          .container { flex-direction: column-reverse; text-align: center; }
+          .container { flex-direction: column-reverse; text-align: center; gap: 30px; }
           .grid-flex { grid-template-columns: 1fr; }
-          .hero { min-height: 400px; }
+          .hero { min-height: 450px; }
+          .overlay h1 { font-size: 28px; }
         }
       `}</style>
-<Any/>
+
+      <Any/>
       <DuctLandingPage/>
     </div>
   );

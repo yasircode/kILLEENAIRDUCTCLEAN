@@ -40,7 +40,7 @@ const WacoDuctCleaning = () => {
       border: '1px solid #eee',
     },
     sectionTitle: {
-      color: '#1a3629', // Deep Waco Green
+      color: '#769c8a', // Deep Waco Green
       fontSize: '2.5rem',
       marginBottom: '25px',
       fontWeight: '800',
@@ -59,7 +59,7 @@ const WacoDuctCleaning = () => {
       borderTop: '10px solid #1a3629',
     },
     ctaArea: {
-      backgroundColor: '#1a3629',
+      backgroundColor: '#5a8873',
       color: 'white',
       padding: '80px 30px',
       borderRadius: '20px',

@@ -1,23 +1,24 @@
 import React from "react";
 import DuctLandingPage from "../DuctLandingPage";
 import Any from "./Any";
+
 const DryerVentCleaning = () => {
   return (
     <div className="residential-page">
       
-      {/* HERO SECTION */}
+      {/* HERO SECTION - SEO Optimized for Killeen & Surrounding Areas */}
       <section className="hero">
         <div className="overlay">
           <h1>
-            Killeen Dryer Vent Cleaning Services | Licensed & Affordable
+            Professional Dryer Vent Cleaning in Killeen, TX & Nearby Cities
           </h1>
 
           <p className="breadcrumb">
-            Home » Residential Air Duct Cleaning
+            Home » Residential Services » Dryer Vent Cleaning
           </p>
 
           <a href="tel:2459983484" className="call-btn">
-            CALL US: (245) 998-3484
+            BOOK A CLEANING: (245) 998-3484
           </a>
         </div>
       </section>
@@ -26,22 +27,74 @@ const DryerVentCleaning = () => {
       <section className="content-section">
         <div className="container">
           <div className="text">
+            <h2>Reliable Dryer Vent Maintenance for Central Texas Homes</h2>
             <p>
-              Looking for the best dryer vent cleaning in Killeen, TX? Our professional team at <strong>Killeen Air Duct Cleaning</strong> provides expert dryer vent inspection, cleaning, and maintenance services to keep your home safe and energy-efficient.
+              Looking for the best dryer vent cleaning in <strong>Killeen, TX</strong>? Our professional team at <strong>Killeen Air Duct Cleaning</strong> provides expert dryer vent inspection, cleaning, and maintenance services to keep your home safe and energy-efficient across <strong>Harker Heights, Copperas Cove, and Nolanville</strong>.
             </p>
             <p>
-              Clogged dryer vents are one of the top causes of residential fires and high electricity bills. Over time, lint, dust, and debris accumulate inside the dryer exhaust system, restricting airflow and forcing your dryer to work harder. This can lead to overheating, longer drying times, increased energy costs, and potential fire hazards.
+              Clogged dryer vents are one of the top causes of residential fires and high electricity bills in <strong>Bell County</strong>. Over time, lint and debris accumulate inside the dryer exhaust system, restricting airflow. This forces your dryer to work harder, leading to overheating and potential fire hazards.
             </p>
             <p>
-              Our certified technicians use advanced vacuum systems and specialized tools to completely remove lint buildup from your dryer vent line. We ensure proper airflow, improved dryer performance, and maximum safety for your home.
+              Our certified technicians use advanced vacuum systems to completely remove lint buildup. We serve homeowners in <strong>Fort Cavazos, Temple, and Belton</strong>, ensuring proper airflow and maximum safety for your family.
             </p>
           </div>
 
           <div className="image">
-            <img src="profile1.jpeg" alt="Killeen Air Duct Team" />
+            <img src="profile1.jpeg" alt="Professional Dryer Vent Cleaning Team in Killeen TX" />
           </div>
         </div>
       </section>
+
+      {/* SEO RANKED UPDATED INFO GRID SECTION */}
+      <section className="info-grid-section">
+        <div className="info-grid-container">
+          
+          {/* Box 1: Fire Safety & Efficiency */}
+          <div className="info-box">
+            <div className="info-box-header">
+              Home Safety & Efficiency in Killeen & Belton
+            </div>
+            <div className="info-box-body">
+              <p>
+                Did you know that lint buildup is a leading cause of household fires in <strong>Killeen, TX and Temple</strong>? At <strong>Killeen Air Duct Cleaning</strong>, our specialized sanitation services are designed to eliminate dangerous blockages, <strong>improving your dryer's efficiency and extending its lifespan.</strong>
+              </p>
+              <p>
+                Our local technicians serve <strong>Harker Heights and Copperas Cove</strong>, utilizing professional-grade brush systems to clear exhaust lines. This preventive care ensures consistent airflow, reducing drying times and <strong>slashing your monthly energy costs</strong>. Don't let a clogged vent put your family at risk.
+              </p>
+              <p>
+                Reach out to <span className="highlight-red">Killeen Air Duct Cleaning</span> today for premium maintenance in <strong>Salado, Nolanville, and Belton</strong>.
+              </p>
+            </div>
+          </div>
+
+          {/* Box 2: Service Cities & List */}
+          <div className="info-box">
+            <div className="info-box-header">
+              Top-Rated Vent Cleaning Across Bell County
+            </div>
+            <div className="info-box-body">
+              <p>
+                We are proud to serve the hardworking communities of <strong>Killeen, Fort Cavazos (Fort Hood), Harker Heights, and Nolanville</strong>. Our local experts provide the most reliable and prompt dryer vent solutions in the region.
+              </p>
+              <p>
+                Our team ensures a <strong>thorough, mess-free cleaning process</strong> every time, helping your appliances run at peak performance while keeping your indoor air quality high in <strong>Temple and Copperas Cove</strong>.
+              </p>
+              <strong>Our Specialized Services Include:</strong>
+              <ul>
+                <li>Professional Dryer Vent Lint Removal</li>
+                <li>Harker Heights & Temple Airflow Testing</li>
+                <li>Fire Hazard Inspection & Risk Assessment</li>
+                <li className="highlight-red">Energy-Efficiency Optimization</li>
+                <li>Serving Killeen, Belton, & Copperas Cove</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <Any/>
+      <DuctLandingPage/>
 
       <style>{`
         * {
@@ -51,8 +104,9 @@ const DryerVentCleaning = () => {
         }
 
         .residential-page {
-          font-family: Arial, sans-serif;
+          font-family: 'Segoe UI', Roboto, Arial, sans-serif;
           overflow-x: hidden;
+          background: #ffffff;
         }
 
         /* HERO SECTION */
@@ -81,10 +135,11 @@ const DryerVentCleaning = () => {
         }
 
         .overlay h1 {
-          font-size: 40px;
-          font-weight: 700;
+          font-size: 42px;
+          font-weight: 800;
           max-width: 900px;
-          line-height: 1.3;
+          line-height: 1.2;
+          text-transform: uppercase;
         }
 
         .breadcrumb {
@@ -104,10 +159,12 @@ const DryerVentCleaning = () => {
           border-radius: 4px;
           transition: 0.3s;
           display: inline-block;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .call-btn:hover {
           background-color: #a51d1d;
+          transform: translateY(-2px);
         }
 
         /* CONTENT SECTION */
@@ -125,9 +182,16 @@ const DryerVentCleaning = () => {
         }
 
         .text {
-          flex: 1;
+          flex: 1.2;
           font-size: 18px;
           line-height: 1.8;
+          color: #333;
+        }
+
+        .text h2 {
+          color: #0e1b4d;
+          margin-bottom: 20px;
+          font-size: 28px;
         }
 
         .text p {
@@ -140,12 +204,13 @@ const DryerVentCleaning = () => {
 
         .image img {
           width: 100%;
-          border-radius: 10px;
+          border-radius: 12px;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
-        /* NEW BOX DESIGN SECTION (As per Image Style) */
+        /* INFO GRID SECTION */
         .info-grid-section {
-          padding: 60px 20px;
+          padding: 80px 20px;
           background: #fff;
         }
 
@@ -154,50 +219,52 @@ const DryerVentCleaning = () => {
           margin: auto;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 30px;
+          gap: 40px;
         }
 
         .info-box {
-          border: 1px solid #ddd;
-          border-radius: 5px;
+          background: #fff;
+          border: 1px solid #eee;
+          border-radius: 8px;
           overflow: hidden;
-          box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+          box-shadow: 0 8px 25px rgba(0,0,0,0.05);
         }
 
         .info-box-header {
           background-color: #0e1b4d;
           color: white;
-          padding: 20px;
+          padding: 25px;
           text-align: center;
-          font-size: 20px;
-          font-weight: bold;
-          text-transform: uppercase;
+          font-size: 22px;
+          font-weight: 700;
         }
 
         .info-box-body {
-          padding: 30px;
-          font-size: 16px;
-          line-height: 1.7;
-          color: #333;
+          padding: 35px;
+          font-size: 17px;
+          line-height: 1.8;
+          color: #444;
         }
 
         .info-box-body ul {
           list-style: none;
-          margin-top: 15px;
+          margin-top: 20px;
         }
 
         .info-box-body ul li {
-          margin-bottom: 10px;
+          margin-bottom: 12px;
           position: relative;
-          padding-left: 25px;
+          padding-left: 30px;
+          font-weight: 500;
         }
 
         .info-box-body ul li::before {
-          content: "•";
+          content: "✓";
           position: absolute;
           left: 0;
-          color: #000;
+          color: #c62828;
           font-weight: bold;
+          font-size: 18px;
         }
 
         .highlight-red {
@@ -205,71 +272,21 @@ const DryerVentCleaning = () => {
           font-weight: bold;
         }
 
-        /* 🔥 PERFECT MOBILE RESPONSIVE */
+        /* MOBILE RESPONSIVE */
         @media (max-width: 992px) {
-          .overlay h1 { font-size: 28px; }
-          .container { flex-direction: column; gap: 30px; }
-          .text { font-size: 16px; text-align: center; }
+          .overlay h1 { font-size: 32px; }
+          .container { flex-direction: column; text-align: center; }
           .info-grid-container { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 576px) {
-          .hero { min-height: 420px; }
-          .overlay h1 { font-size: 22px; }
-          .info-box-header { font-size: 17px; }
+          .hero { min-height: 450px; }
+          .overlay h1 { font-size: 24px; }
+          .info-box-header { font-size: 18px; }
           .call-btn { width: 100%; font-size: 16px; }
+          .info-box-body { padding: 25px; }
         }
       `}</style>
-
-      {/* SEO RANKED UPDATED CONTENT SECTION */}
-      <section className="info-grid-section">
-        <div className="info-grid-container">
-          
-          {/* Box 1: Fire Safety & Efficiency */}
-          <div className="info-box">
-            <div className="info-box-header">
-              Maximize Home Safety with Expert Dryer Vent Cleaning
-            </div>
-            <div className="info-box-body">
-              <p>
-                Did you know that lint buildup is a leading cause of household fires in <strong>Killeen and Bell County</strong>? At <strong>Killeen Air Duct Cleaning</strong>, our specialized dryer vent sanitation services are designed to eliminate dangerous blockages, <strong>improving your dryer's efficiency and significantly extending its lifespan.</strong>
-              </p>
-              <p>
-                Our local technicians utilize professional-grade brush systems to clear debris from your exhaust lines. This preventive care ensures consistent airflow, reducing drying times and <strong>slashing your monthly energy costs</strong>. Don't let a clogged vent put your family's safety at risk.
-              </p>
-              <p>
-                Take action today! Contact <span className="highlight-red">Killeen Air Duct Cleaning</span> for premium dryer vent maintenance and enjoy a safer, more efficient home all year round.
-              </p>
-            </div>
-          </div>
-
-          {/* Box 2: Service Cities & List */}
-          <div className="info-box">
-            <div className="info-box-header">
-              Killeen's Top-Rated Professional Vent Maintenance
-            </div>
-            <div className="info-box-body">
-              <p>
-                We are proud to serve the hardworking communities of <strong>Killeen, Fort Hood, Harker Heights, and Nolanville</strong>. Our local experts are dedicated to providing the most reliable and prompt dryer vent solutions in the region.
-              </p>
-              <p>
-                Our skilled team ensures a <strong>thorough, mess-free cleaning process</strong> every time, helping your appliances run at peak performance while keeping your indoor air quality high.
-              </p>
-              <strong>Our Specialized Services Include:</strong>
-              <ul>
-                <li>Complete Dryer Vent Lint Removal</li>
-                <li>Exhaust Line Airflow Testing</li>
-                <li>Fire Hazard Inspection & Risk Assessment</li>
-                <li className="highlight-red">Energy-Efficiency System Optimization</li>
-                <li>Professional Vent Hood & Cap Cleaning</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <Any/>
-      <DuctLandingPage/>
     </div>
   );
 };
