@@ -175,7 +175,8 @@ const UVLightInstallation = () => {
           .text h2 { font-size: 28px; }
           .hero { min-height: 400px; }
           .box-header { font-size: 20px; }
-          .overlay h1 { font-size: 28px; }
+          .overlay h1 { font-size:
+           28px; }
         }
       `}</style>
       <DuctLandingPage/>

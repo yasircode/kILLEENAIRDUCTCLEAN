@@ -1,3 +1,4 @@
+/* --- 0. DROPDOWN BASICS --- */
 .dropdown-link {
   display: block;
 }
@@ -38,19 +39,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 5%;
+  padding: 10px 5%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   position: relative;
-  transition: all 0.3s ease; /* Smooth transition for resizing */
+  transition: all 0.3s ease;
 }
 
+/* 🔥 SQUARE LOGO SETTINGS 🔥 */
 .site-logo {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+  height: 60px;          /* Height fix ki hai */
+  width: 60px;           /* Width bhi utni hi rakhi square ke liye */
+  border-radius: 4px;    /* Isse logo square dikhega (0 bhi kar sakte hain) */
   border: 2px solid #0d47a1;
-  object-fit: cover;
+  object-fit: contain;   /* Logo katega nahi, box ke andar fit rahega */
+  background: #ffffff;   /* Agar logo transparent ho to peeche white base dikhega */
   transition: all 0.3s ease;
+  display: block;
 }
 
 /* --- 4. DESKTOP MENU --- */
@@ -128,18 +132,17 @@
 /* --- 7. MOBILE RESPONSIVE (992px and below) --- */
 @media (max-width: 992px) {
   
-  /* Navbar height badha di taaki bada logo fit ho sake */
   .main-nav-white {
     padding: 10px 4%;
-    height: 80px; 
+    height: 90px; /* Navbar ki height badhai taaki bada logo fit ho sake */
   }
 
-  /* 🔥 LOGO ZOOM FOR MOBILE 🔥 */
+  /* 🔥 SQUARE LOGO ZOOM FOR MOBILE 🔥 */
   .site-logo {
-    height: 70px; /* Size badha diya */
-    width: 70px;  /* Size badha diya */
-    border-width: 3px; /* Thoda bold border */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Behtar visibility */
+    height: 75px; 
+    width: 75px;  
+    border-width: 2px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .top-black-bar {
@@ -151,7 +154,7 @@
     display: block;
     font-size: 26px;
     position: absolute;
-    right: 20px; /* Right edge ke paas shift kiya */
+    right: 20px;
   }
 
   .nav-center {
@@ -161,10 +164,10 @@
   .nav-center.nav-center-mobile {
     display: block;
     position: absolute;
-    top: 80px; /* Navbar height ke sath match kiya */
+    top: 90px; 
     left: 0;
     width: 100%;
-    max-height: calc(100vh - 80px);
+    max-height: calc(100vh - 90px);
     overflow-y: auto;
     background: #ffffff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -178,8 +181,7 @@
   }
 
   .nav-link-item {
-    padding: 12px 20px; /* Tap area behtar kiya */
-    margin-bottom: 0;
+    padding: 15px 20px;
     border-bottom: 1px solid #eaeaf0;
     display: flex;
     justify-content: space-between;
@@ -189,15 +191,10 @@
     box-sizing: border-box;
     font-size: 16px;
     background: #fff;
-    -webkit-tap-highlight-color: transparent;
   }
 
   .dropdown.open > .nav-link-item {
     background-color: #0d47a1;
-    color: #ffffff;
-  }
-
-  .dropdown.open > .nav-link-item .arrow {
     color: #ffffff;
   }
 
@@ -229,15 +226,6 @@
     color: #444;
     text-decoration: none;
     border-bottom: 1px solid #eee;
-    transition: 0.2s;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-
-  .dropdown-menu li a:active,
-  .dropdown-menu li a:focus {
-    background-color: #0d47a1 !important;
-    color: #ffffff !important;
   }
 
   .desktop-only-call {

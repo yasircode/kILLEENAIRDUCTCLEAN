@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="main-nav-white">
         <div className="nav-left">
           <Link to="/" onClick={closeMenu}>
-            <img src="/profile2.jpeg" alt="Logo" className="site-logo" />
+            <img src="/logom.jpeg" alt="Logo" className="site-logo" />
           </Link>
         </div>
 
