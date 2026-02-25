@@ -6,6 +6,7 @@
   background-color: #0d47a1 !important;
   color: #ffffff !important;
 }
+
 /* --- 1. GENERAL LAYOUT & WRAPPER --- */
 .nav-fixed-wrapper {
   width: 100%;
@@ -40,6 +41,7 @@
   padding: 8px 5%;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   position: relative;
+  transition: all 0.3s ease; /* Smooth transition for resizing */
 }
 
 .site-logo {
@@ -48,6 +50,7 @@
   border-radius: 50%;
   border: 2px solid #0d47a1;
   object-fit: cover;
+  transition: all 0.3s ease;
 }
 
 /* --- 4. DESKTOP MENU --- */
@@ -119,14 +122,24 @@
 }
 
 .mobile-menu-icon {
-  display: none; /* Desktop par hide */
+  display: none;
 }
 
 /* --- 7. MOBILE RESPONSIVE (992px and below) --- */
 @media (max-width: 992px) {
+  
+  /* Navbar height badha di taaki bada logo fit ho sake */
   .main-nav-white {
-    padding: 4px 4%;
-    height: 60px;
+    padding: 10px 4%;
+    height: 80px; 
+  }
+
+  /* 🔥 LOGO ZOOM FOR MOBILE 🔥 */
+  .site-logo {
+    height: 70px; /* Size badha diya */
+    width: 70px;  /* Size badha diya */
+    border-width: 3px; /* Thoda bold border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Behtar visibility */
   }
 
   .top-black-bar {
@@ -136,9 +149,9 @@
 
   .mobile-menu-icon {
     display: block;
-    font-size: 22px;
+    font-size: 26px;
     position: absolute;
-    right: 70px;
+    right: 20px; /* Right edge ke paas shift kiya */
   }
 
   .nav-center {
@@ -148,10 +161,10 @@
   .nav-center.nav-center-mobile {
     display: block;
     position: absolute;
-    top: 60px;
+    top: 80px; /* Navbar height ke sath match kiya */
     left: 0;
     width: 100%;
-    max-height: calc(100vh - 60px);
+    max-height: calc(100vh - 80px);
     overflow-y: auto;
     background: #ffffff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
@@ -165,18 +178,18 @@
   }
 
   .nav-link-item {
-    padding: 5px 10px;
-    margin-bottom: 5px;/* Thoda bara padding mobile ke liye */
+    padding: 12px 20px; /* Tap area behtar kiya */
+    margin-bottom: 0;
     border-bottom: 1px solid #eaeaf0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 44px;
+    min-height: 50px;
     box-sizing: border-box;
     font-size: 16px;
     background: #fff;
-    -webkit-tap-highlight-color: transparent; /* Mobile blue highlight remove karne ke liye */
+    -webkit-tap-highlight-color: transparent;
   }
 
   .dropdown.open > .nav-link-item {
@@ -188,7 +201,6 @@
     color: #ffffff;
   }
 
-  /* SERVICE & LOCATION Dropdown list styling */
   .dropdown {
     width: 100%;
   }
@@ -198,7 +210,7 @@
     list-style: none;
     background: #fcfcfc;
     padding: 0;
-    width: 100%; /* Mobile par full width */
+    width: 100%;
     position: relative;
     max-height: 0;
     overflow: hidden;
@@ -212,8 +224,8 @@
 
   .dropdown-menu li a {
     display: block;
-    padding: 12px 25px; /* Sahi tap area */
-    font-size: 14px;
+    padding: 15px 30px;
+    font-size: 15px;
     color: #444;
     text-decoration: none;
     border-bottom: 1px solid #eee;
@@ -222,7 +234,6 @@
     touch-action: manipulation;
   }
 
-  /* 👇 YEH MOBILE CLICK (TAP) PAR BLUE KAREGA 👇 */
   .dropdown-menu li a:active,
   .dropdown-menu li a:focus {
     background-color: #0d47a1 !important;
@@ -233,6 +244,3 @@
     display: none;
   }
 }
-
-
-
