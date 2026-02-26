@@ -86,7 +86,7 @@ const BeltonDuctCleaning = () => {
       {/* --- HERO SECTION --- */}
       <header style={styles.header}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h1 style={styles.heroH1}>Air Duct Cleaning in Belton, TX | Preservation & Purity</h1>
+          <h1 style={styles.heroH1}>Air Duct Cleaning in Belton, TX | Killeen Air Duct Cleaners</h1>
           <p style={{ fontSize: '1.4rem', fontWeight: '300' }}>
             Trusted HVAC Care for Belton’s Historic Homes and Modern Developments.
           </p>
@@ -96,12 +96,13 @@ const BeltonDuctCleaning = () => {
       <div style={styles.container}>
         {/* --- LOCALIZED INTRO --- */}
         <section style={styles.introBox}>
+          <div style={{ color: '#d4af37', fontWeight: 'bold', marginBottom: '10px' }}>✅ BELTON, TX</div>
           <h2 style={{ color: '#641414', marginTop: 0 }}>Breathe Better in the Heart of Bell County</h2>
           <p>
-            Belton is a city of legacy, from the historic architecture near the <strong>Bell County Courthouse</strong> to the scenic beauty of <strong>Nolan Creek</strong>. However, older homes in Belton often harbor decades of settled dust, allergens, and debris within their original ductwork. 
+            Belton homeowners, especially those near <strong>Lake Belton</strong> and surrounding neighborhoods, rely heavily on efficient HVAC systems during long Texas summers. Dust, pollen, and moisture fluctuations contribute to duct contamination over time.
           </p>
           <p>
-            At <strong>Killeen Air Duct Cleaners</strong>, we specialize in the delicate yet deep cleaning required for Belton’s diverse housing. Whether you are a student/faculty member near <strong>UMHB</strong> or a family enjoying life near <strong>Lake Belton</strong>, our mission is to ensure your indoor air is as fresh as a Texas breeze.
+            At <strong>Killeen Air Duct Cleaners</strong>, we deliver comprehensive air system services throughout Belton, TX. Whether you are a student/faculty member near <strong>UMHB</strong> or a family living near the <strong>Bell County Courthouse</strong>, our mission is to ensure your indoor air is as fresh as a Texas breeze.
           </p>
         </section>
 
@@ -109,7 +110,7 @@ const BeltonDuctCleaning = () => {
         <div style={{ marginTop: '80px' }}>
           <h2 style={styles.sectionTitle}>Air Duct Cleaning in Belton, TX</h2>
           <p>
-            Dust isn't just a nuisance; it's an efficiency killer. Our <strong>duct cleaning Belton TX</strong> process is thorough and safe for all types of ventilation systems. We remove "historic dust," pet dander, and pollen that Central Texas is famous for.
+            Seasonal pollen and dust accumulation can restrict airflow and reduce indoor air quality. Our <strong>duct cleaning Belton TX</strong> process is thorough and restores proper circulation by removing "historic dust," pet dander, and contaminants from the duct system.
           </p>
           <div style={styles.serviceGrid}>
             <div style={styles.card}>
@@ -117,18 +118,18 @@ const BeltonDuctCleaning = () => {
               <ul style={{ paddingLeft: '20px' }}>
                 <li>Complete <strong>vent cleaning Belton</strong> registers & lines</li>
                 <li>HEPA-filtered particulate extraction</li>
-                <li>Anti-microbial fogging (optional for allergy sufferers)</li>
-                <li>Full airflow diagnostic check</li>
+                <li>Removal of seasonal pollen and allergens</li>
+                <li>Anti-microbial fogging for deep sanitization</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* --- SERVICE 2: HVAC SYSTEM CLEANING (The Energy Saver) --- */}
+        {/* --- SERVICE 2: HVAC SYSTEM CLEANING --- */}
         <div style={{ marginTop: '40px' }}>
           <h2 style={styles.sectionTitle}>HVAC System Cleaning in Belton, TX</h2>
           <p>
-            With the high humidity near the lake and the summer heat, your air handler can become a breeding ground for mold if not maintained. Our <strong>HVAC cleaning Belton TX</strong> service ensures that your system's "lungs"—the coils and blower—are spotless.
+            With the high humidity near the lake, your system works harder. Our <strong>HVAC cleaning Belton TX</strong> service ensures that cleaning blower motors and evaporator coils improves cooling efficiency and extends your system's lifespan.
           </p>
           <div style={styles.serviceGrid}>
             <div style={{...styles.card, borderTopColor: '#d4af37'}}>
@@ -136,10 +137,9 @@ const BeltonDuctCleaning = () => {
               <ul style={{ paddingLeft: '20px' }}>
                 <li><strong>AC system cleaning Belton</strong> for evaporator coils</li>
                 <li>Blower wheel and motor housing decontamination</li>
-                <li>Condensate drain line flush (prevents lake-side humidity mold)</li>
+                <li>Condensate drain line flush (prevents humidity mold)</li>
                 <li>Return plenum sanitization</li>
               </ul>
-              <p style={{marginTop: '15px', fontStyle: 'italic'}}>A clean system runs shorter cycles and lasts years longer.</p>
             </div>
           </div>
         </div>
@@ -148,23 +148,27 @@ const BeltonDuctCleaning = () => {
         <div style={styles.serviceGrid}>
           <div style={{...styles.card, borderTopColor: '#e17055'}}>
             <h3 style={{color: '#d35400'}}>🛠️ Air Duct Replacement</h3>
-            <p>If your Belton home has old fiberglass-lined ducts that are crumbling, cleaning might not be enough. We provide <strong>duct replacement Belton TX</strong> using modern, R-8 insulated materials for maximum efficiency.</p>
+            <p>Leaking or outdated duct systems reduce HVAC performance. We provide <strong>duct replacement Belton TX</strong> using modern materials to improve airflow and lower energy waste.</p>
           </div>
           <div style={{...styles.card, borderTopColor: '#27ae60'}}>
             <h3 style={{color: '#218c74'}}>🏠 Attic Insulation Services</h3>
-            <p>Don't let your cool air escape through the roof. Our <strong>blown-in insulation Belton</strong> service keeps your UMHB-area home comfortable and your utility bills manageable.</p>
+            <p>Proper insulation is critical for managing attic heat. Our <strong>blown-in insulation Belton</strong> service keeps your home comfortable and reducing cooling costs during extreme summers.</p>
           </div>
         </div>
 
-        {/* --- SERVICE 4: DRYER VENTS & CHIMNEYS --- */}
+        {/* --- SERVICE 4: DRYER VENTS, CHIMNEYS & UV --- */}
         <div style={styles.serviceGrid}>
           <div style={styles.card}>
             <h3>🧺 Dryer Vent Cleaning</h3>
-            <p>Fast drying and fire safety for Belton households. We remove lint blockages that can lead to hazardous overheating.</p>
+            <p>Homes with longer vent runs often require annual cleaning. We remove lint blockages to prevent overheating and fire hazards in Belton households.</p>
           </div>
           <div style={styles.card}>
             <h3>🧹 Chimney Sweep</h3>
-            <p>Ensure your fireplace is ready for the Chisholm Trail winter. We provide full creosote removal and flue inspections.</p>
+            <p>Ensure your fireplace is ready for the Chisholm Trail winter. We provide full <strong>creosote removal</strong> and flue inspections for safe operation.</p>
+          </div>
+          <div style={{...styles.card, borderTopColor: '#8e44ad'}}>
+            <h3 style={{color: '#6c3483'}}>✨ Indoor UV Light Purification</h3>
+            <p>Maintain cleaner indoor air by neutralizing microbial growth inside your HVAC system with our professional <strong>UV purification</strong> installation.</p>
           </div>
         </div>
 

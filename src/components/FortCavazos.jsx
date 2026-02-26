@@ -97,7 +97,7 @@ const FortCavazosCleaning = () => {
       {/* --- HERO SECTION --- */}
       <header style={styles.header}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h1 style={styles.heroH1}>Air Duct Cleaning in Fort Cavazos, TX | Dedicated Military Support</h1>
+          <h1 style={styles.heroH1}>Air Duct Cleaning in Fort Cavazos, TX | Killeen Air Duct Cleaners</h1>
           <p style={{ fontSize: '1.4rem', fontWeight: '400', fontStyle: 'italic' }}>
             Trusted Air Quality Solutions for the Great Place and Our Service Members.
           </p>
@@ -107,13 +107,16 @@ const FortCavazosCleaning = () => {
       <div style={styles.container}>
         {/* --- LOCALIZED INTRO --- */}
         <section style={styles.introBox}>
-          <div style={styles.militaryBadge}>Proudly Serving Fort Cavazos (formerly Fort Hood)</div>
+          <div style={styles.militaryBadge}>✅ FORT CAVAZOS, TX</div>
           <h2 style={{ color: '#002b5b', marginTop: 10 }}>Ready for Inspection-Grade Air Quality</h2>
           <p>
-            Whether you are living in <strong>Cavalry Family Housing</strong>, moving into on-post quarters near <strong>Clear Creek</strong>, or preparing for a PCS move, the indoor air quality of your home is vital. Fort Cavazos is subject to intense dust, tactical vehicle exhaust particles, and Central Texas allergens that can saturate your ventilation system.
+            Homes on and around <strong>Fort Cavazos</strong> require dependable HVAC performance year-round. With frequent relocations, high system usage, and Central Texas heat, duct systems often accumulate dust and debris quickly. 
           </p>
           <p>
-            At <strong>Killeen Air Duct Cleaners</strong>, we take pride in supporting our troops. We provide thorough, military-grade air duct and HVAC cleaning that ensures your family breathes easy, especially after a long deployment or during the high-pollen spring season in Texas.
+            Whether you are living in <strong>Cavalry Family Housing</strong>, moving into on-post quarters near <strong>Clear Creek</strong>, or preparing for a PCS move, the indoor air quality of your home is vital. <strong>Killeen Air Duct Cleaners</strong> provides professional air duct cleaning, HVAC system cleaning, dryer vent cleaning, chimney sweep services, air duct replacement, attic insulation, and indoor UV light purification throughout the Fort Cavazos area.
+          </p>
+          <p>
+            Military housing and surrounding residential communities experience heavy HVAC cycling during summer months. Proper maintenance ensures clean air circulation, improved efficiency, and reliable cooling performance.
           </p>
         </section>
 
@@ -121,26 +124,28 @@ const FortCavazosCleaning = () => {
         <div style={{ marginTop: '80px' }}>
           <h2 style={styles.sectionTitle}>Air Duct Cleaning in Fort Cavazos, TX</h2>
           <p>
-            Constant moving and high-traffic military life mean dust accumulates faster. Our <strong>duct cleaning Fort Cavazos TX</strong> service is designed to handle the heavy-duty filtration needs of homes on and off post. We remove years of buildup, pet dander, and microscopic contaminants.
+            Frequent occupancy turnover and constant HVAC use make duct cleaning especially important in this area. Constant moving and high-traffic military life mean dust accumulates faster. Our <strong>duct cleaning Fort Cavazos TX</strong> service is designed to handle the heavy-duty filtration needs of homes on and off post.
           </p>
           <div style={styles.serviceGrid}>
             <div style={styles.card}>
-              <h4 style={{color: '#002b5b'}}>Precision Vent Cleaning:</h4>
+              <h4 style={{color: '#002b5b'}}>Our Service Removes:</h4>
               <ul style={{ paddingLeft: '20px' }}>
-                <li>Complete <strong>vent cleaning Fort Cavazos</strong> coverage</li>
-                <li>Powerful HEPA vacuum extraction</li>
-                <li>Sanitization of supply and return registers</li>
-                <li>Removal of construction dust in newer housing units</li>
+                <li><strong>Dust buildup</strong> and debris inside supply lines</li>
+                <li><strong>Pet dander</strong> and hair from previous tenants</li>
+                <li><strong>Allergens</strong> and pollen particles</li>
+                <li><strong>Construction dust</strong> in newer housing units</li>
+                <li>Powerful HEPA vacuum extraction & sanitization</li>
               </ul>
+              <p style={{marginTop: '15px', fontWeight: '600'}}>Clean ducts improve airflow and indoor air quality for families living on base or nearby.</p>
             </div>
           </div>
         </div>
 
-        {/* --- SERVICE 2: HVAC SYSTEM CLEANING (PCS Ready) --- */}
+        {/* --- SERVICE 2: HVAC SYSTEM CLEANING --- */}
         <div style={{ marginTop: '40px' }}>
           <h2 style={styles.sectionTitle}>HVAC System Cleaning in Fort Cavazos, TX</h2>
           <p>
-            Don't let a dirty HVAC system lead to a failed housing inspection or a massive energy bill. Our <strong>HVAC cleaning Fort Cavazos TX</strong> goes deep into the mechanical components of your unit. In the Central Texas heat, a clean coil can be the difference between a cool home and a system breakdown.
+            Don't let a dirty HVAC system lead to a failed housing inspection or a massive energy bill. Our <strong>HVAC cleaning Fort Cavazos TX</strong> goes deep into the mechanical components. We clean internal components including evaporator coils, blower motors, and air handlers. Regular cleaning reduces system strain and helps prevent unexpected breakdowns during peak heat.
           </p>
           <div style={styles.serviceGrid}>
             <div style={{...styles.card, borderLeftColor: '#bf9b30'}}>
@@ -159,24 +164,28 @@ const FortCavazosCleaning = () => {
         {/* --- SERVICE 3: REPLACEMENT & INSULATION --- */}
         <div style={styles.serviceGrid}>
           <div style={{...styles.card, borderLeftColor: '#27ae60'}}>
-            <h3 style={{color: '#1e8449'}}>🏠 Attic Insulation Services</h3>
-            <p>Texas attics are brutal. Our <strong>blown-in insulation Fort Cavazos</strong> service helps maintain a stable temperature, reducing the strain on your AC and saving you money on monthly cooling costs.</p>
+            <h3 style={{color: '#1e8449'}}>🏠 Attic Insulation Fort Cavazos</h3>
+            <p>Texas attics are brutal. Proper <strong>blown-in insulation</strong> reduces cooling demand, maintains indoor comfort, and saves you money on monthly cooling costs during extreme Texas summers.</p>
           </div>
           <div style={{...styles.card, borderLeftColor: '#e67e22'}}>
             <h3 style={{color: '#d35400'}}>🛠️ Air Duct Replacement</h3>
-            <p>If your on-post or off-post rental has old, deteriorating ductwork, we offer professional <strong>duct replacement Fort Cavazos TX</strong> to improve airflow and air quality immediately.</p>
+            <p>Damaged duct systems reduce airflow and increase energy costs. We offer professional <strong>duct replacement Fort Cavazos TX</strong> to design and install properly sized ductwork for balanced airflow.</p>
           </div>
         </div>
 
-        {/* --- SERVICE 4: DRYER VENTS & CHIMNEYS --- */}
+        {/* --- SERVICE 4: DRYER VENTS, CHIMNEYS & UV --- */}
         <div style={styles.serviceGrid}>
           <div style={styles.card}>
             <h3 style={{color: '#002b5b'}}>🧺 Dryer Vent Cleaning</h3>
-            <p>Safety is paramount on a military installation. Clogged dryer vents are a major fire risk. We ensure your vents are clear of lint and obstructions.</p>
+            <p>Safety is paramount. Lint buildup can create fire hazards. Annual <strong>dryer vent cleaning</strong> improves safety and efficiency, especially in high-occupancy military homes.</p>
           </div>
           <div style={styles.card}>
             <h3 style={{color: '#002b5b'}}>🧹 Chimney Sweep</h3>
-            <p>Seasonal maintenance for off-post homes. We remove creosote and ensure your fireplace is ready for the Texas winter.</p>
+            <p>For homes with fireplaces, our <strong>creosote removal</strong> and flue inspection ensure safe operation during cooler Texas winter months.</p>
+          </div>
+          <div style={{...styles.card, borderLeftColor: '#8e44ad'}}>
+            <h3 style={{color: '#6c3483'}}>✨ Indoor UV Light Purification</h3>
+            <p>Our <strong>UV light systems</strong> help eliminate airborne bacteria and mold inside HVAC systems, significantly improving indoor air sanitation for your family.</p>
           </div>
         </div>
 
@@ -186,7 +195,7 @@ const FortCavazosCleaning = () => {
           <div style={{ display: 'grid', gap: '20px' }}>
             <div style={{ background: '#fff', padding: '25px', borderRadius: '10px' }}>
               <p><strong>Do you provide services for on-post housing?</strong></p>
-              <p>Yes! We work with residents in Fort Cavazos housing to ensure their indoor air quality meets high standards for health and comfort.</p>
+              <p>Yes! We work with residents in Fort Cavazos housing (including Cavalry Family Housing) to ensure their indoor air quality meets high standards for health and comfort.</p>
             </div>
             <div style={{ background: '#fff', padding: '25px', borderRadius: '10px' }}>
               <p><strong>How can HVAC cleaning help with my electricity bill?</strong></p>

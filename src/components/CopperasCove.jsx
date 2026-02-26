@@ -91,7 +91,7 @@ const CopperasCoveCleaning = () => {
       {/* --- HERO SECTION --- */}
       <header style={styles.header}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h1 style={styles.heroH1}>Air Duct Cleaning in Copperas Cove, TX | The City of Five Hills</h1>
+          <h1 style={styles.heroH1}>Air Duct Cleaning in Copperas Cove, TX | Killeen Air Duct Cleaners</h1>
           <div style={styles.accentBar}></div>
           <p style={{ fontSize: '1.4rem', fontWeight: '300' }}>
             Breathe Deeply with Expert HVAC & Duct Solutions for Cove Homeowners.
@@ -102,12 +102,13 @@ const CopperasCoveCleaning = () => {
       <div style={styles.container}>
         {/* --- LOCALIZED INTRO --- */}
         <section style={styles.introBox}>
+          <div style={{color: '#00d2ff', fontWeight: 'bold', marginBottom: '10px'}}>✅ COPPERAS COVE, TX</div>
           <h2 style={{ color: '#003264', marginTop: 0 }}>Serving the Heart of Copperas Cove</h2>
           <p>
-            From the winding roads of the <strong>Five Hills</strong> to the busy corridors of <strong>Hwy 190</strong>, Copperas Cove homes face unique environmental challenges. The rocky terrain and dry Texas winds often kick up limestone dust and allergens that find their way directly into your air filtration system.
+            Copperas Cove’s combination of military families, established neighborhoods, and surrounding rural terrain makes indoor air quality especially important. From the winding roads of the <strong>Five Hills</strong> to the busy corridors of <strong>Hwy 190</strong>, dust from open land and constant HVAC usage contribute to duct contamination.
           </p>
           <p>
-            At <strong>Killeen Air Duct Cleaners</strong>, we understand that whether you live in a classic home near <strong>Topsey</strong> or a newer development by <strong>Camp Hood</strong>, a clean HVAC system is your best defense against the Central Texas heat. We specialize in deep-cleaning services that restore your home's air to its natural, fresh state.
+            At <strong>Killeen Air Duct Cleaners</strong>, we deliver full air system services to homeowners throughout Copperas Cove. Whether you live in a classic home near <strong>Topsey</strong> or a newer development by <strong>Camp Hood</strong>, we specialize in restoring your home's air to its natural, fresh state.
           </p>
         </section>
 
@@ -115,7 +116,7 @@ const CopperasCoveCleaning = () => {
         <div style={{ marginTop: '70px' }}>
           <h2 style={styles.sectionTitle}>Air Duct Cleaning in Copperas Cove, TX</h2>
           <p>
-            Are your vents blowing out more than just cool air? Our specialized <strong>duct cleaning Copperas Cove TX</strong> service utilizes negative pressure technology to ensure no dust escapes into your living room during the process. We target every corner of your supply and return lines.
+            Dust and debris can restrict airflow and reduce system efficiency. Our professional <strong>duct cleaning Copperas Cove TX</strong> utilizes negative pressure technology to restore circulation and remove harmful buildup without letting dust escape into your living space.
           </p>
           <div style={styles.serviceGrid}>
             <div style={styles.card}>
@@ -124,17 +125,17 @@ const CopperasCoveCleaning = () => {
                 <li>Precision <strong>vent cleaning Copperas Cove</strong></li>
                 <li>Removal of pet dander & seasonal pollen</li>
                 <li>Trunk line sanitization & debris extraction</li>
-                <li>Elimination of dust-mites and microscopic debris</li>
+                <li>Restoration of proper airflow & efficiency</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* --- SERVICE 2: HVAC SYSTEM CLEANING (The Big Job) --- */}
+        {/* --- SERVICE 2: HVAC SYSTEM CLEANING --- */}
         <div style={{ marginTop: '40px' }}>
-          <h2 style={styles.sectionTitle}>HVAC System Cleaning in Copperas Cove, TX</h2>
+          <h2 style={styles.sectionTitle}>HVAC Cleaning in Copperas Cove, TX</h2>
           <p>
-            In "The Cove," summers are relentless. If your AC is running 24/7 but the house still feels stuffy, the problem might be inside the unit itself. Our <strong>HVAC cleaning Copperas Cove TX</strong> goes beyond the ducts to service the actual machinery that cools your home.
+            We clean internal HVAC components including evaporator coils, blowers, and air handlers. In "The Cove," summers are relentless. Our <strong>HVAC cleaning Copperas Cove TX</strong> maintains optimal cooling performance during extreme Texas heat and prevents system strain.
           </p>
           <div style={styles.serviceGrid}>
             <div style={{...styles.card, borderTopColor: '#003264'}}>
@@ -142,45 +143,39 @@ const CopperasCoveCleaning = () => {
               <ul style={{ paddingLeft: '20px' }}>
                 <li>Comprehensive <strong>AC system cleaning Copperas Cove</strong></li>
                 <li>Blower motor & housing decontamination</li>
-                <li>Evaporator & condenser coil flushing</li>
-                <li>Drain pan and line clearing to prevent mold</li>
+                <li>Evaporator coil flushing</li>
+                <li>Drain pan clearing to prevent mold</li>
               </ul>
               <p style={{marginTop: '15px', color: '#636e72'}}><em>Lower your utility bills by up to 15% with a clean, efficient unit.</em></p>
             </div>
           </div>
         </div>
 
-        {/* --- SERVICE 3: DUCT REPLACEMENT (High Ticket) --- */}
-        <div style={{ marginTop: '40px' }}>
-          <h2 style={styles.sectionTitle}>Air Duct Replacement in Copperas Cove, TX</h2>
-          <p>
-            Many homes in Copperas Cove still have original flexible ductwork that may be leaking or losing air into the attic. We provide <strong>duct replacement Copperas Cove TX</strong> to ensure every bit of cold air you pay for actually reaches your rooms.
-          </p>
-          <div style={styles.serviceGrid}>
-            <div style={{...styles.card, borderTopColor: '#e17055'}}>
-              <h4 style={styles.highlight}>Why Replace?</h4>
-              <p>Old ducts can tear or become a playground for rodents. If you notice uneven cooling or a spike in energy costs, it’s time for a professional <strong>air duct installation Copperas Cove</strong> evaluation.</p>
-            </div>
+        {/* --- SERVICE 3: REPLACEMENT & INSULATION --- */}
+        <div style={styles.serviceGrid}>
+          <div style={{...styles.card, borderTopColor: '#e17055'}}>
+            <h3 style={{color: '#003264'}}>🛠️ Air Duct Replacement</h3>
+            <p>Aging or damaged ductwork can leak conditioned air into attics. We provide <strong>duct replacement Copperas Cove TX</strong> to ensure every bit of cold air reaches your rooms, improving energy efficiency.</p>
+          </div>
+          <div style={{...styles.card, borderTopColor: '#27ae60'}}>
+            <h3 style={{color: '#003264'}}>🏠 Attic Insulation Services</h3>
+            <p>The Five Hills heat is no joke. Our <strong>blown-in insulation Copperas Cove</strong> upgrades your R-value, creating a thermal blanket that keeps the Texas sun out and cooling costs down.</p>
           </div>
         </div>
 
-        {/* --- SERVICE 4: ATTIC INSULATION --- */}
-        <div style={{ marginTop: '40px' }}>
-          <h2 style={styles.sectionTitle}>Attic Insulation Services in Copperas Cove, TX</h2>
-          <p>
-            The Five Hills heat is no joke. Our <strong>blown-in insulation Copperas Cove</strong> service creates a thermal blanket over your home. By upgrading your R-value, you keep the Texas sun out and the cool air in, significantly reducing the load on your HVAC system.
-          </p>
-        </div>
-
-        {/* --- SERVICE 5: DRYER VENTS & CHIMNEY --- */}
+        {/* --- SERVICE 4: DRYER VENTS, CHIMNEY & UV --- */}
         <div style={styles.serviceGrid}>
           <div style={styles.card}>
-            <h3 style={{color: '#003264'}}>🧺 Dryer Vent Cleaning</h3>
-            <p>Don't let lint buildup become a fire hazard. We offer annual maintenance for Copperas Cove families to ensure dryer efficiency and safety.</p>
+            <h3>🧺 Dryer Vent Cleaning</h3>
+            <p>Lint accumulation is a leading cause of fires. Our thorough cleaning improves safety and reduces drying time for Copperas Cove families.</p>
           </div>
           <div style={styles.card}>
-            <h3 style={{color: '#003264'}}>🧹 Chimney Sweep</h3>
-            <p>Ensure your fireplace is ready for the cold Hill Country snaps. We provide thorough creosote removal and flue inspections.</p>
+            <h3>🧹 Chimney Sweep</h3>
+            <p>Older brick homes in Copperas Cove often require maintenance. We remove creosote and ensure proper drafting for safe winter fireplace use.</p>
+          </div>
+          <div style={{...styles.card, borderTopColor: '#8e44ad'}}>
+            <h3 style={{color: '#6c3483'}}>✨ Indoor UV Light Purification</h3>
+            <p>Improve air sanitation with <strong>UV systems</strong> that prevent microbial growth inside your HVAC machinery, ensuring healthier air year-round.</p>
           </div>
         </div>
 
@@ -188,13 +183,13 @@ const CopperasCoveCleaning = () => {
         <section style={{ margin: '60px 0', borderTop: '2px solid #eee', paddingTop: '40px' }}>
           <h2 style={{textAlign: 'center', color: '#003264', marginBottom: '30px'}}>Common Questions from Cove Residents</h2>
           <div style={{ display: 'grid', gap: '20px' }}>
-            <div style={styles.card}>
+            <div style={{ background: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
               <p><strong>Is HVAC cleaning better than just duct cleaning?</strong></p>
               <p>Duct cleaning handles the air paths, but HVAC cleaning ensures the coils and motor are efficient. For Copperas Cove homes, we recommend both for the best results.</p>
             </div>
-            <div style={styles.card}>
+            <div style={{ background: '#fff', padding: '25px', borderRadius: '15px', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
               <p><strong>How does attic insulation save me money?</strong></p>
-              <p>In the summer, your attic can reach 140°F. Proper insulation prevents that heat from "leaking" into your cooled rooms, so your AC doesn't have to work double shifts.</p>
+              <p>In the summer, your attic can reach 140°F. Proper insulation prevents that heat from radiating into your cooled rooms, reducing AC strain significantly.</p>
             </div>
           </div>
         </section>

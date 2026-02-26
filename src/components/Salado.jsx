@@ -87,7 +87,7 @@ const SaladoDuctCleaning = () => {
       {/* --- HERO SECTION --- */}
       <header style={styles.header}>
         <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h1 style={styles.heroH1}>Breathe Pure in Historic Salado, TX</h1>
+          <h1 style={styles.heroH1}>Air Duct Cleaning in Salado, TX | Killeen Air Duct Cleaners</h1>
           <p style={{ fontSize: '1.4rem', fontStyle: 'italic', opacity: 0.9 }}>
             Preserving Air Quality in the Village of Salado with Expert Care.
           </p>
@@ -97,12 +97,13 @@ const SaladoDuctCleaning = () => {
       <div style={styles.container}>
         {/* --- LOCALIZED INTRO --- */}
         <section style={styles.introBox}>
+          <div style={{ color: '#c0392b', fontWeight: 'bold', marginBottom: '10px' }}>✅ SALADO, TX</div>
           <h2 style={{ color: '#2c3e50', marginTop: 0 }}>Specialized Service for a Unique Texas Village</h2>
           <p>
-            Salado is a place of history and charm, from the artisan shops on <strong>Main Street</strong> to the historic homes along <strong>Royal Street</strong>. But with older architecture comes a unique challenge: decades of dust and pollen trapped in aging duct systems. The humidity near <strong>Salado Creek</strong> also creates a perfect environment for mold to grow within HVAC units.
+            Salado’s mix of historic homes and custom-built properties requires specialized HVAC care. From the artisan shops on <strong>Main Street</strong> to the homes along <strong>Royal Street</strong>, dust from rural surroundings and heavy AC usage can impact duct systems.
           </p>
           <p>
-            At <strong>Killeen Air Duct Cleaners</strong>, we treat Salado homes with the respect they deserve. We don't just clean; we restore your indoor air quality to its healthiest state, ensuring your historic or modern home remains a sanctuary.
+            At <strong>Killeen Air Duct Cleaners</strong>, we treat Salado homes with the respect they deserve. Whether you are dealing with the humidity near <strong>Salado Creek</strong> or older architecture, we provide full-service air system solutions to ensure your home remains a healthy sanctuary.
           </p>
         </section>
 
@@ -110,7 +111,7 @@ const SaladoDuctCleaning = () => {
         <div style={{ marginTop: '70px' }}>
           <h2 style={styles.sectionTitle}>Air Duct Cleaning in Salado, TX</h2>
           <p>
-            In Salado’s picturesque setting, allergens like cedar and oak pollen are constant. Our <strong>duct cleaning Salado TX</strong> process uses precision tools to remove these irritants. We specialize in the careful handling of ductwork in older homes to ensure a thorough clean without damage.
+            Older homes in Salado may contain years of duct buildup and seasonal allergens like cedar and oak pollen. Our <strong>duct cleaning Salado TX</strong> process removes debris and improves airflow efficiency using precision tools.
           </p>
           <div style={styles.serviceGrid}>
             <div style={styles.card}>
@@ -118,18 +119,18 @@ const SaladoDuctCleaning = () => {
               <ul style={{ paddingLeft: '20px' }}>
                 <li>Detailed <strong>vent cleaning Salado</strong> for historic properties</li>
                 <li>HEPA-filtered extraction to protect your interior</li>
-                <li>Removal of dust, pet dander, and microscopic pollen</li>
+                <li>Removal of rural dust, dander, and microscopic pollen</li>
                 <li>Restoration of fresh, odorless airflow</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* --- SERVICE 2: HVAC SYSTEM CLEANING (The System Saver) --- */}
+        {/* --- SERVICE 2: HVAC SYSTEM CLEANING --- */}
         <div style={{ marginTop: '40px' }}>
-          <h2 style={styles.sectionTitle}>HVAC System Cleaning in Salado, TX</h2>
+          <h2 style={styles.sectionTitle}>HVAC Cleaning in Salado, TX</h2>
           <p>
-            The humidity from the creek and the intense Texas heat put a massive strain on your air handler. Our <strong>HVAC cleaning Salado TX</strong> service focuses on the internal components that matter. A clean system not only cools better but lasts significantly longer.
+            The humidity from the creek and intense Texas heat put a massive strain on air handlers. Internal <strong>HVAC cleaning Salado TX</strong> prevents overheating and reduces system strain during peak summer months.
           </p>
           <div style={styles.serviceGrid}>
             <div style={{...styles.card, borderLeftColor: '#2c3e50'}}>
@@ -140,7 +141,6 @@ const SaladoDuctCleaning = () => {
                 <li>Condensate drain line clearing (Essential for mold prevention)</li>
                 <li>Return plenum sanitization</li>
               </ul>
-              <p style={{marginTop: '15px', color: '#7f8c8d'}}><em>Keep your Salado property efficient and avoid costly mid-summer breakdowns.</em></p>
             </div>
           </div>
         </div>
@@ -149,23 +149,27 @@ const SaladoDuctCleaning = () => {
         <div style={styles.serviceGrid}>
           <div style={styles.card}>
             <h3 style={{color: '#2c3e50'}}>🛠️ Air Duct Replacement</h3>
-            <p>Older Salado homes often have deteriorating fiberglass ducts that leak energy. We offer <strong>duct replacement Salado TX</strong> to modernize your system while maintaining your home's character.</p>
+            <p>Older Salado homes often have deteriorating fiberglass ducts that leak energy. We offer <strong>duct replacement Salado TX</strong> to restore airflow balance and modernize your system.</p>
           </div>
           <div style={styles.card}>
             <h3 style={{color: '#2c3e50'}}>🏠 Attic Insulation Services</h3>
-            <p>Improve your energy efficiency. Our <strong>blown-in insulation Salado</strong> creates a powerful thermal barrier, keeping the Texas sun from overheating your living space.</p>
+            <p>Insulation upgrades reduce temperature fluctuations and energy costs. Our <strong>blown-in insulation Salado</strong> creates a powerful thermal barrier against the Texas sun.</p>
           </div>
         </div>
 
-        {/* --- SERVICE 4: DRYER VENTS & CHIMNEYS --- */}
+        {/* --- SERVICE 4: DRYER VENTS, CHIMNEYS & UV --- */}
         <div style={styles.serviceGrid}>
           <div style={{...styles.card, borderLeftColor: '#c0392b'}}>
             <h3>🧺 Dryer Vent Cleaning</h3>
-            <p>Lint buildup is the leading cause of dryer fires. We provide professional cleaning to protect your Salado home and improve appliance performance.</p>
+            <p>Annual vent maintenance improves safety and dryer performance. We remove hazardous lint buildup to protect your Salado home.</p>
           </div>
           <div style={{...styles.card, borderLeftColor: '#c0392b'}}>
             <h3>🧹 Chimney Sweep</h3>
-            <p>Annual chimney cleaning and inspection for Salado’s traditional fireplaces. We ensure your home stays cozy and safe during the winter months.</p>
+            <p>Historic and traditional homes often require regular maintenance. We ensure your fireplace is safe and clean for the winter months.</p>
+          </div>
+          <div style={{...styles.card, borderLeftColor: '#2c3e50'}}>
+            <h3>✨ Indoor UV Light Purification</h3>
+            <p>UV systems improve indoor air sanitation and neutralize microbial growth, significantly reducing mold risks in the Salado humidity.</p>
           </div>
         </div>
 
