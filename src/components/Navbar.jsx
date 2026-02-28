@@ -6,11 +6,28 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showService, setShowService] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
+  const [showKilleenSub, setShowKilleenSub] = useState(false); // Killeen sub-menu state
 
   const closeMenu = () => {
     setIsMobile(false);
     setShowService(false);
     setShowLocation(false);
+    setShowKilleenSub(false);
+  };
+
+  // Mobile par dropdowns toggle karne ke liye helper
+  const toggleLocation = (e) => {
+    if (isMobile) {
+      e.preventDefault();
+      setShowLocation(!showLocation);
+    }
+  };
+
+  const toggleKilleen = (e) => {
+    if (isMobile) {
+      e.stopPropagation();
+      setShowKilleenSub(!showKilleenSub);
+    }
   };
 
   return (
@@ -32,11 +49,12 @@ const Navbar = () => {
           {isMobile ? '✖' : '☰'}
         </div>
 
-        <div className={`nav-center ${isMobile ? 'nav-center-mobile' : ''}`}>
+        {/* Menu Container */}
+        <div className={`nav-center ${isMobile ? 'nav-center-mobile open' : ''}`}>
           <ul className="nav-menu-list">
             <li><Link to="/" onClick={closeMenu} className="nav-link-item">HOME</Link></li>
             
-            {/* SERVICE SECTION */}
+            {/* SERVICES DROPDOWN */}
             <li className={`dropdown ${showService ? 'open' : ''}`}>
               <div className="nav-link-item" onClick={() => setShowService(!showService)}>
                 SERVICES <span className="arrow">▾</span>
@@ -53,17 +71,19 @@ const Navbar = () => {
               </ul>
             </li>
 
-            {/* LOCATION SECTION - UPDATED FOR KILLEEN NESTED MENU */}
+            {/* LOCATION DROPDOWN */}
             <li className={`dropdown ${showLocation ? 'open' : ''}`}>
-              <div className="nav-link-item" onClick={() => setShowLocation(!showLocation)}>
+              <div className="nav-link-item" onClick={toggleLocation}>
                 LOCATION <span className="arrow">▾</span>
               </div>
               <ul className="dropdown-menu scrollable-menu">
                 
-                {/* KILLEEN NESTED SUB-MENU */}
-                <li className="nested-parent">
-                  <span className="city-label">Killeen, TX ▸</span>
-                  <ul className="nested-dropdown-menu">
+                {/* KILLEEN WITH SUB-MENU */}
+                <li className={`nested-parent ${showKilleenSub ? 'killeen-open' : ''}`}>
+                  <div className="city-label" onClick={toggleKilleen}>
+                    Killeen, TX <span className="sub-arrow">{isMobile ? (showKilleenSub ? '▴' : '▾') : '▸'}</span>
+                  </div>
+                  <ul className={`nested-dropdown-menu ${showKilleenSub ? 'show-mobile' : ''}`}>
                     <li><Link to="/air-duct-cleaning-killeen-tx" onClick={closeMenu}>Air Duct Cleaning</Link></li>
                     <li><Link to="/hvac-system-cleaning-killeen-tx" onClick={closeMenu}>HVAC System Cleaning</Link></li>
                     <li><Link to="/dryer-vent-cleaning-killeen-tx" onClick={closeMenu}>Dryer Vent Cleaning</Link></li>
@@ -76,19 +96,12 @@ const Navbar = () => {
                   </ul>
                 </li>
 
-                {/* OTHER CITIES */}
                 <li><Link to="/location/harkerheights" onClick={closeMenu}>Harker Heights, TX</Link></li>
                 <li><Link to="/location/copperascove" onClick={closeMenu}>Copperas Cove, TX</Link></li>
                 <li><Link to="/location/nolanville" onClick={closeMenu}>Nolanville, TX</Link></li>
                 <li><Link to="/location/fortcavazos" onClick={closeMenu}>Fort Cavazos, TX</Link></li>
                 <li><Link to="/location/belton" onClick={closeMenu}>Belton, TX</Link></li>
                 <li><Link to="/location/temple" onClick={closeMenu}>Temple, TX</Link></li>
-                <li><Link to="/location/salado" onClick={closeMenu}>Salado, TX</Link></li>
-                <li><Link to="/location/Lampasas" onClick={closeMenu}>Lampasas, TX</Link></li>
-                <li><Link to="/location/LibertyHill" onClick={closeMenu}>Liberty Hill, TX</Link></li>
-                <li><Link to="/location/Georgetown" onClick={closeMenu}>Georgetown, TX</Link></li>
-                <li><Link to="/location/Waco" onClick={closeMenu}>Waco, TX</Link></li>
-                <li><Link to="/location/Jarrell" onClick={closeMenu}>Jarrell, TX</Link></li>
               </ul>
             </li>
             
