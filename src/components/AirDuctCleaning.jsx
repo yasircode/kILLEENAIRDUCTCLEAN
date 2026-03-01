@@ -1,12 +1,18 @@
-import React from "react";
-import Banner from "./Banner";
-import DuctLandingPage from "../DuctLandingPage";
-import Any from "./Any";
+import React, { useState } from "react";
+import ImageComparison from "./ImageComparison";
+import Benefits from "../Benefits";
 
 const AirDuctCleaning = () => {
+  // State for expanding details in cards
+  const [expanded, setExpanded] = useState(null);
+
+  const toggleExpand = (id) => {
+    setExpanded(expanded === id ? null : id);
+  };
+
   return (
     <div className="residential-page">
-      {/* HERO SECTION - SEO Optimized Title */}
+      {/* HERO SECTION - SEO Optimized */}
       <section className="hero">
         <div className="overlay">
           <h1>
@@ -21,7 +27,88 @@ const AirDuctCleaning = () => {
         </div>
       </section>
 
-      {/* CONTENT SECTION */}
+    
+
+      {/* CORE SERVICES SECTION - CARDS (Cleaning, Repair, Replacement) */}
+      <section className="services-grid-section">
+        <div className="container-grid">
+          <h2 className="section-main-title">Our Professional Ductwork Solutions</h2>
+          <div className="services-grid">
+            
+            {/* CARD 1: AIR DUCT CLEANING */}
+            <div className={`service-card ${expanded === 'cleaning' ? 'active' : ''}`}>
+              <div className="card-icon">🌬️</div>
+              <h3>Air Duct Cleaning</h3>
+              <p>Professional vent cleaning to remove dust, pet dander, and mold spores from your home.</p>
+              {expanded === 'cleaning' && (
+                <div className="expanded-content">
+                  <p>Our <strong>duct cleaning Temple TX</strong> and Killeen services include:</p>
+                  <ul>
+                    <li>Supply and Return vent cleaning</li>
+                    <li>Anti-microbial fogging/sanitization</li>
+                    <li>HEPA-filtered extraction</li>
+                    <li>Video inspection of ductwork</li>
+                  </ul>
+                  <p><strong>Benefit:</strong> Reduces allergy symptoms and lowers energy bills by improving airflow.</p>
+                </div>
+              )}
+              <button onClick={() => toggleExpand('cleaning')} className="read-more">
+                {expanded === 'cleaning' ? 'Show Less' : 'Learn More'}
+              </button>
+            </div>
+
+
+            
+
+            {/* CARD 2: AIR DUCT REPAIR */}
+            <div className={`service-card ${expanded === 'repair' ? 'active' : ''}`}>
+              <div className="card-icon">🛠️</div>
+              <h3>Air Duct Repair</h3>
+              <p>Leaky ducts can waste 30% of your energy. We seal and fix damaged ductwork fast.</p>
+              {expanded === 'repair' && (
+                <div className="expanded-content">
+                  <p>Common signs you need <strong>air duct repair in Killeen</strong>:</p>
+                  <ul>
+                    <li>Hot and cold spots in different rooms</li>
+                    <li>Unusually high electricity bills</li>
+                    <li>Visible holes or loose connections</li>
+                    <li>Whistling noises from the vents</li>
+                  </ul>
+                  <p>We use high-grade mastic sealants and R-8 insulation to ensure your air stays inside the pipes.</p>
+                </div>
+              )}
+              <button onClick={() => toggleExpand('repair')} className="read-more">
+                {expanded === 'repair' ? 'Show Less' : 'Learn More'}
+              </button>
+            </div>
+
+            {/* CARD 3: AIR DUCT REPLACEMENT */}
+            <div className={`service-card ${expanded === 'replacement' ? 'active' : ''}`}>
+              <div className="card-icon">🔄</div>
+              <h3>Air Duct Replacement</h3>
+              <p>For old, collapsed, or rodent-damaged ducts, a full replacement is the best long-term solution.</p>
+              {expanded === 'replacement' && (
+                <div className="expanded-content">
+                  <p>Our <strong>duct replacement Killeen TX</strong> service is ideal for:</p>
+                  <ul>
+                    <li>Ducts older than 15-20 years</li>
+                    <li>Severe rodent or pest infestations</li>
+                    <li>Major mold contamination within flex ducts</li>
+                    <li>Upgrading to high-efficiency insulated ducts</li>
+                  </ul>
+                  <p>We install modern, antimicrobial, and highly insulated ductwork for maximum performance.</p>
+                </div>
+              )}
+              <button onClick={() => toggleExpand('replacement')} className="read-more">
+                {expanded === 'replacement' ? 'Show Less' : 'Learn More'}
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+        {/* INTRO CONTENT SECTION */}
       <section className="content-section">
         <div className="container">
           <div className="text">
@@ -31,12 +118,10 @@ const AirDuctCleaning = () => {
               you’re breathing in your home too. At <strong>Killeen Air Duct Cleaning</strong>,
               we specialize in Residential Air Duct Cleaning for homeowners across 
               <strong> Killeen, Harker Heights, and Copperas Cove</strong>. 
-              We ensure you and your loved ones enjoy a cleaner, healthier indoor environment.
             </p>
             <p>
-              We leverage state-of-the-art equipment, advanced techniques,
-              and skilled professionals to remove dust, allergens, and
-              contaminants from your air duct system, serving the entire <strong>Bell County</strong> region.
+              Using <strong>negative pressure technology</strong> and <strong>HEPA-filtered vacuums</strong>, 
+              we remove dust, allergens, and contaminants from your HVAC system, serving the entire <strong>Bell County</strong> region.
             </p>
           </div>
           <div className="image">
@@ -45,242 +130,100 @@ const AirDuctCleaning = () => {
         </div>
       </section>
 
-   
-      {/* NEW UPDATED CONTENT SECTION */}
+      {/* SANITATION & SERVICE AREAS */}
       <section className="sanitation-info-section">
         <div className="info-container">
-          
-          {/* Box 1: HVAC Sanitation */}
           <div className="info-card">
             <div className="card-header">
               <h2>HVAC Sanitation Services in Central Texas</h2>
             </div>
             <div className="card-body">
               <p>
-                A well-functioning HVAC system is the backbone of a comfortable home environment. With 
-                <strong> Killeen Air Duct Cleaning’s </strong> comprehensive HVAC sanitation services, 
-                <strong> we aim to improve your system’s efficiency, extend its lifespan, and save you from unexpected repair costs.</strong>
-              </p>
-              <p>
-                Our experts utilize the latest sanitation techniques, removing dirt, grime, and any potential blockages. 
-                This preventive care helps to maintain <strong>consistent temperatures and optimum air quality</strong> in your 
-                <strong> Belton or Temple, TX</strong> home. 
-                Don’t let a poorly maintained HVAC system compromise your comfort or health.
+                A well-functioning HVAC system is the backbone of a comfortable home. With 
+                <strong> Killeen Air Duct Cleaning’s </strong> comprehensive HVAC sanitation, 
+                we improve efficiency and extend system lifespan.
               </p>
               <p className="highlight-text">
-                Serving <strong>Fort Cavazos (Fort Hood)</strong> and surrounding communities, 
-                reach out to <span className="red-text">Killeen Air Duct Cleaning</span> for top-notch HVAC sanitation services.
+                Serving <strong>Fort Cavazos (Fort Hood)</strong> and surrounding communities.
               </p>
             </div>
           </div>
 
-          {/* Box 2: Best Service */}
           <div className="info-card">
             <div className="card-header">
-              <h2>Killeen's #1 Residential Duct Cleaning Experts</h2>
+              <h2>Killeen's #1 Residential Experts</h2>
             </div>
             <div className="card-body">
-              <p>
-                We’re proud to offer our <strong>top-rated Residential Air Duct Cleaning</strong> services to the beautiful city of 
-                <strong> Killeen, Texas</strong> and neighboring areas like <strong>Nolanville and Salado</strong>.
-              </p>
-              <p>
-                Our technicians are skilled, reliable, and local to the <strong>Killeen, Fort Cavazos, and Harker Heights area</strong>, 
-                ensuring you receive personalized, prompt, and efficient service every time.
-              </p>
-              <h3 className="list-title">Our Service Areas Include:</h3>
               <ul className="service-list">
-                <li>Killeen & Fort Cavazos (Fort Hood)</li>
+                <li>Killeen & Fort Cavazos</li>
                 <li>Harker Heights & Nolanville</li>
                 <li>Copperas Cove & Kempner</li>
                 <li>Temple & Belton, TX</li>
-                <li>Salado & Morgan's Point Resort</li>
+                <li>Salado & Morgan's Point</li>
               </ul>
             </div>
           </div>
-
         </div>
       </section>
-
-   
-
+<ImageComparison/>
+<Benefits/>
       <style>{`
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        .residential-page {
-          font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-          overflow-x: hidden;
-          background: #ffffff;
-        }
+        /* GLOBAL & RESET */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .residential-page { font-family: 'Segoe UI', sans-serif; background: #ffffff; color: #333; }
 
         /* HERO SECTION */
-        .hero {
-          background-image: url("033.jpeg");
-          background-size: cover;
-          background-position: center;
-          min-height: 550px;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        .hero { 
+          background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("033.jpeg") center/cover;
+          min-height: 500px; display: flex; align-items: center; justify-content: center; text-align: center;
         }
-
-        .overlay {
-          background: rgba(0, 0, 0, 0.6);
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 40px 20px;
-          color: white;
+        .overlay h1 { font-size: clamp(24px, 5vw, 42px); color: white; padding: 0 20px; font-weight: 800; }
+        .call-btn { 
+          margin-top: 25px; background: #c62828; color: white; padding: 15px 30px; 
+          text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s;
         }
-
-        .overlay h1 {
-          font-size: 42px;
-          font-weight: 800;
-          max-width: 1000px;
-          line-height: 1.2;
-          text-transform: uppercase;
-        }
-
-        .breadcrumb {
-          margin-top: 20px;
-          font-size: 18px;
-          color: #f1f1f1;
-        }
-
-        .call-btn {
-          margin-top: 35px;
-          background-color: #c62828;
-          color: white;
-          padding: 18px 45px;
-          text-decoration: none;
-          font-size: 20px;
-          font-weight: bold;
-          border-radius: 5px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-          transition: 0.3s;
-          display: inline-block;
-        }
-
-        .call-btn:hover { 
-          background-color: #a51d1d;
-          transform: translateY(-2px);
-        }
+        .call-btn:hover { background: #a51d1d; transform: scale(1.05); }
 
         /* CONTENT SECTION */
-        .content-section {
-          padding: 80px 20px;
-          background: #fdfdfd;
-        }
+        .container { max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; padding: 60px 20px; align-items: center; }
+        .text { flex: 1; min-width: 300px; }
+        .text h2 { color: #0e1b4d; font-size: 32px; margin-bottom: 20px; }
+        .image { flex: 1; min-width: 300px; }
+        .image img { width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-        .container {
-          max-width: 1200px;
-          margin: auto;
-          display: flex;
-          align-items: center;
-          gap: 60px;
-        }
-
-        .text { flex: 1.2; font-size: 18px; line-height: 1.8; color: #333; }
-        .text h2 { color: #0e1b4d; margin-bottom: 20px; font-size: 32px; }
-        .text p { margin-bottom: 20px; }
-        .image { flex: 1; }
-        .image img { width: 100%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-
-        /* SANITATION SECTION */
-        .sanitation-info-section {
-          padding: 80px 20px;
-          background: #f4f7fa;
-        }
-
-        .info-container {
-          max-width: 1200px;
-          margin: auto;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 40px;
-        }
-
-        .info-card {
-          background: #fff;
-          border-radius: 12px;
-          overflow: hidden;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-          display: flex;
-          flex-direction: column;
-        }
-
-        .card-header {
-          background-color: #0e1b4d;
-          padding: 25px;
-          text-align: center;
-        }
-
-        .card-header h2 {
-          color: white;
-          font-size: 24px;
-          font-weight: 700;
-        }
-
-        .card-body {
-          padding: 40px;
-          font-size: 17px;
-          line-height: 1.8;
-          color: #444;
-          flex-grow: 1;
-        }
-
-        .highlight-text { margin-top: 25px; border-top: 1px solid #eee; padding-top: 20px; }
-        .red-text { color: #c62828; font-weight: bold; }
+        /* SERVICES GRID (3 CARDS) */
+        .services-grid-section { background: #f9f9f9; padding: 80px 20px; }
+        .container-grid { max-width: 1200px; margin: auto; }
+        .section-main-title { text-align: center; color: #0e1b4d; font-size: 36px; margin-bottom: 50px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
         
-        .list-title {
-          font-size: 20px;
-          font-weight: 700;
-          color: #0e1b4d;
-          margin: 25px 0 15px 0;
+        .service-card { 
+          background: white; padding: 30px; border-radius: 15px; text-align: center;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 5px solid #c62828;
+          transition: 0.3s ease;
         }
-
-        .service-list {
-          list-style: none;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 10px;
+        .service-card.active { border-top: 5px solid #0e1b4d; }
+        .card-icon { font-size: 40px; margin-bottom: 15px; }
+        .service-card h3 { color: #0e1b4d; margin-bottom: 15px; font-size: 24px; }
+        .expanded-content { margin-top: 20px; text-align: left; background: #fdfdfd; padding: 15px; border-radius: 8px; font-size: 15px; border-left: 3px solid #c62828;}
+        .expanded-content ul { margin-left: 20px; margin-top: 10px; }
+        
+        .read-more { 
+          margin-top: 20px; background: none; border: 2px solid #0e1b4d; color: #0e1b4d; 
+          padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s;
         }
+        .read-more:hover { background: #0e1b4d; color: white; }
 
-        .service-list li {
-          position: relative;
-          padding-left: 25px;
-          font-weight: 600;
-          font-size: 15px;
-        }
+        /* INFO SECTION */
+        .info-container { max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 20px; }
+        .info-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .card-header { background: #0e1b4d; color: white; padding: 20px; text-align: center; }
+        .card-body { padding: 30px; line-height: 1.7; }
+        .service-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-weight: bold; color: #0e1b4d;}
 
-        .service-list li::before {
-          content: "✓";
-          color: #c62828;
-          font-weight: bold;
-          position: absolute;
-          left: 0;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 992px) {
-          .overlay h1 { font-size: 32px; }
-          .container { flex-direction: column; text-align: center; }
-          .info-container { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 576px) {
-          .overlay h1 { font-size: 26px; }
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
           .service-list { grid-template-columns: 1fr; }
-          .card-body { padding: 25px; }
         }
       `}</style>
     </div>

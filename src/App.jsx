@@ -25,6 +25,10 @@ import Gallery from './Gallery';
 import ServiceAreas from './components/ServiceAreas';
 import Management from './components/Management'
 import MultiStepQuoteForm from './components/MultiStepQuoteForm';
+import KilleenServicePage from './KilleenServicePage';
+
+
+
 
 
 
@@ -61,6 +65,7 @@ import Waco from './components/Waco';
 import Jarrell from './components/Jarrell';
 
 
+
 // ... baaqi cities ke imports yahan karein
 
 
@@ -77,7 +82,7 @@ const Home = () => (
     <Gallery />
     <br />
     <Banner />
-   
+  
 <MultiStepQuoteForm/>
 
     <br />
@@ -130,7 +135,7 @@ function App() {
         
         {/* --- DYNAMIC ROUTE FOR ALL CITIES --- */}
         {/* Ye line saare 8 cities ko handle karegi */}
-        
+     
         <Route path="/location/killeen" element={<Killeen />} />
         <Route path="/location/harkerheights" element={<HarkerHeights />} />
         <Route path="/location/copperascove" element={<CopperasCove />} />
@@ -145,6 +150,10 @@ function App() {
         
         <Route path="/location/waco" element={<Waco />} />
         <Route path="/location/Jarrell" element={<Jarrell />} />
+        <Route path="/:serviceSlug" element={<KilleenServicePage />} />
+        
+        
+        
         
         
 
