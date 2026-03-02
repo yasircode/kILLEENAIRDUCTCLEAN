@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
+
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showService, setShowService] = useState(false);
@@ -47,7 +48,7 @@ const Navbar = () => {
                 <li className="menu-category">
                   <span className="category-title">Air Duct Cleaning</span>
                   <ul>
-                    <li><Link to="/hvcleaning" onClick={closeMenu}>HVAC System Cleaning</Link></li>
+                    <li><Link to="/HVACInstallation" onClick={closeMenu}>HVAC System Cleaning</Link></li>
                     <li><Link to="/dryerventcleaning" onClick={closeMenu}>Dryer Vent Cleaning</Link></li>
                     <li><Link to="/chimneycleaning" onClick={closeMenu}>Chimney Sweep</Link></li>
                   </ul>
@@ -57,7 +58,7 @@ const Navbar = () => {
                 <li className="menu-category">
                   <span className="category-title">Chimney Services</span>
                   <ul>
-                    <li><Link to="/airductrepair" onClick={closeMenu}>Air Duct Repair</Link></li>
+                    <li><Link to="/airductcleaning" onClick={closeMenu}>Air Duct Repair</Link></li>
                   </ul>
                 </li>
 

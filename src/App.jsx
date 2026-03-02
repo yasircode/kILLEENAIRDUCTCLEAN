@@ -123,7 +123,7 @@ function App() {
         <Route path="/dryerventcleaning" element={<DryerVentCleaning />} />
         <Route path="/ductservice" element={<Ductservice />} />
         <Route path="/chimneycleaning" element={<ChimneyCleaning />} />
-        <Route path="/hvcleaning" element={<HVACInstallation />} />
+        <Route path="/HVACInstallation" element={<HVACInstallation />} />
     
         <Route path="/atticinsulation" element={<AtticInsulation />} />
         <Route path="/accleaning" element={<ACcleaning />} />

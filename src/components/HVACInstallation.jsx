@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DuctLandingPage from "../DuctLandingPage";
 import Banner from "./Banner";
 import Any from "./Any";
-import HVAC from "./hvac";
+
 const HVACInstallation = () => {
   // State for Accordion FAQs
   const [openIndex, setOpenIndex] = useState(null);
@@ -59,14 +59,31 @@ const HVACInstallation = () => {
             </p>
           </div>
           <div className="image">
-            <img src="profile3.jpeg" alt="HVAC Technicians in Killeen TX" className="square-img" />
+            <img src="o5.jpeg" alt="HVAC Technicians in Killeen TX" className="square-img" />
           </div>
         </div>
       </section>
+      <section className="content-section">
+  <div className="container">
+    <div className="text">
+      <h2>Deep HVAC System Sanitization & Airflow Optimization</h2>
+      <p>
+        Killeen ki dhool aur humidity aapke HVAC coils aur blowers par jam sakti hai, jo system ko slow kar deti hai. Hum provide karte hain <strong>professional HVAC cleaning services</strong> jo sirf surface tak mahdood nahi hain. Hum aapke system ke internal components ko deep-clean karte hain taake aapko mile <strong>maximum airflow aur kam energy consumption</strong>.
+      </p>
+      <p>
+        Chahe aap <strong>Nolanville</strong> mein ho ya <strong>Fort Cavazos</strong> ke kareeb, hamara cleaning process mold aur bacteria ko eliminate karta hai. Isse na sirf aapka AC behtar cooling karta hai, balki aapke <strong>indoor air quality (IAQ)</strong> index ko bhi behtar banata hai—taake aapki family fresh air mein saans le sake.
+      </p>
+    </div>
+    <div className="image">
+      {/* Change image source to something relevant to cleaning if available */}
+      <img src="031.jpeg" alt="Professional HVAC Cleaning and Sanitization in Central Texas" className="square-img" />
+    </div>
+  </div>
+</section>
 
       <Banner/>
       <Any/>
-<HVAC/>
+
       {/* STEP BY STEP DUAL BOX LAYOUT */}
       <div className="dual-box-container">
         
@@ -92,6 +109,7 @@ const HVACInstallation = () => {
             </div>
           </div>
         </div>
+        
 
         {/* Row 2 */}
         <div className="grid-flex">
