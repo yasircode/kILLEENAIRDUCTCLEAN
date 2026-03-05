@@ -46,20 +46,44 @@ const Navbar = () => {
               <ul className="dropdown-menu mega-menu">
                 {/* Air Duct Services Category */}
                 <li className="menu-category">
-                  <span className="category-title">Air Duct Services</span>
+                  <span className="category-title">Air Duct Cleaning Services</span>
                   <ul>
+                     <li><Link to="/Ductservice" onClick={closeMenu}>HVAC Duct & Vent Cleaning</Link></li>
                     <li><Link to="/AirDuctCleaning" onClick={closeMenu}>Air Duct Cleaning</Link></li>
                     <li><Link to="/Commerciacleaning" onClick={closeMenu}>Air Duct Repair</Link></li>
                     <li><Link to="/DryerVentCleaning" onClick={closeMenu}>Air Duct Replacement</Link></li>
-                    <li><Link to="/Ductservice" onClick={closeMenu}>HVAC System Cleaning</Link></li>
+                   
+                  </ul>
+                </li>
+
+                  <li className="menu-category">
+                  <span className="category-title">Dryer Vent Cleaning</span>
+                  <ul>  
+                         <li><Link to="/ChimneyCleaning" onClick={closeMenu}>Dryer Air Vent Cleaning</Link></li>
+                     <li><Link to="/" onClick={closeMenu}>Dryer Vent Inspection </Link></li>
+                    <li><Link to="/" onClick={closeMenu}>Dryer Vent Repair</Link></li>
+                    <li><Link to="/" onClick={closeMenu}>Dryer Vent Installation</Link></li>
+                    <li><Link to="/" onClick={closeMenu}>Lint Removal Service </Link></li>
+                     <li><Link to="/" onClick={closeMenu}>Dryer Vent Blockage Removel </Link></li>
+                       <li><Link to="/" onClick={closeMenu}>Dryer Vent Airflow Testing</Link></li>
+                   
+                  </ul>
+                </li>
+
+                 {/* Chimney & Vent Category */}
+                <li className="menu-category">
+                  <span className="category-title">Indoor Air Quality Services </span>
+                  <ul>
+               
+                  <li><Link to="/UVLightInstallation" onClick={closeMenu}>Indoor Air UV Light Purification</Link></li>
                   </ul>
                 </li>
 
                 {/* Chimney & Vent Category */}
                 <li className="menu-category">
-                  <span className="category-title">Chimney & Vents</span>
+                  <span className="category-title">Chimney Services</span>
                   <ul>
-                    <li><Link to="/ChimneyCleaning" onClick={closeMenu}>Dryer Vent Cleaning</Link></li>
+               
                     <li><Link to="/ChimneySweepPage" onClick={closeMenu}>Chimney Sweep</Link></li>
                     <li><Link to="/ChimneyServicePage" onClick={closeMenu}>Chimney Services</Link></li>
                   </ul>
@@ -67,10 +91,10 @@ const Navbar = () => {
 
                 {/* Insulation & Purification Category */}
                 <li className="menu-category">
-                  <span className="category-title">Home Comfort</span>
+                  <span className="category-title">Insulation Service</span>
                   <ul>
                     <li><Link to="/AtticInsulation" onClick={closeMenu}>Attic Insulation</Link></li>
-                    <li><Link to="/UVLightInstallation" onClick={closeMenu}>Indoor Air UV Light Purification</Link></li>
+                  
                   </ul>
                 </li>
               </ul>
