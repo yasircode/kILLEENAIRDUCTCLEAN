@@ -6,16 +6,23 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [showService, setShowService] = useState(false);
   const [showLocation, setShowLocation] = useState(false);
+  // New state to track which category is selected
+  const [activeCategory, setActiveCategory] = useState(null);
 
   const closeMenu = () => {
     setIsMobile(false);
     setShowService(false);
     setShowLocation(false);
+    setActiveCategory(null);
+  };
+
+  const toggleCategory = (category) => {
+    // Agar wahi category dobara click ho toh band ho jaye, warna nayi select ho
+    setActiveCategory(activeCategory === category ? null : category);
   };
 
   return (
     <nav className="nav-fixed-wrapper">
-      
       <div className="top-black-bar">
         <div className="top-bar-inner">
           <div className="info-item">📍 Serving Killeen, TX & Surrounding Areas</div>
@@ -37,74 +44,84 @@ const Navbar = () => {
           <ul className="nav-menu-list">
             <li><Link to="/" onClick={closeMenu} className="nav-link-item">HOME</Link></li>
             
-            {/* SERVICE SECTION - UPDATED LIST */}
             <li className={`dropdown ${showService ? 'open' : ''}`}>
               <div className="nav-link-item" onClick={() => setShowService(!showService)}>
                 SERVICES <span className="arrow">▾</span>
               </div>
               
               <ul className="dropdown-menu mega-menu">
-                {/* Air Duct Services Category */}
+                {/* Category 1: Air Duct */}
                 <li className="menu-category">
-                  <span className="category-title">Air Duct Cleaning Services</span>
-                  <ul>
-                     <li><Link to="/Ductservice" onClick={closeMenu}>HVAC Duct & Vent Cleaning</Link></li>
-                    <li><Link to="/AirDuctCleaning" onClick={closeMenu}>Air Duct Cleaning</Link></li>
-                    <li><Link to="/Commerciacleaning" onClick={closeMenu}>Air Duct Repair</Link></li>
-                    <li><Link to="/DryerVentCleaning" onClick={closeMenu}>Air Duct Replacement</Link></li>
-                   
-                  </ul>
+                  <span className="category-title" onClick={() => toggleCategory('airduct')}>
+                    Air Duct Cleaning Services {activeCategory === 'airduct' ? '▴' : '▾'}
+                  </span>
+                  {activeCategory === 'airduct' && (
+                    <ul>
+                      <li><Link to="/Ductservice" onClick={closeMenu}>HVAC Duct & Vent Cleaning</Link></li>
+                      <li><Link to="/AirDuctCleaning" onClick={closeMenu}>Air Duct Cleaning</Link></li>
+                      <li><Link to="/Commerciacleaning" onClick={closeMenu}>Air Duct Repair</Link></li>
+                      <li><Link to="/DryerVentCleaning" onClick={closeMenu}>Air Duct Replacement</Link></li>
+                    </ul>
+                  )}
                 </li>
 
-                  <li className="menu-category">
-                  <span className="category-title">Dryer Vent Cleaning</span>
-                  <ul>  
-                         <li><Link to="/ChimneyCleaning" onClick={closeMenu}>Dryer Air Vent Cleaning</Link></li>
-
-
-                     <li><Link to="/dryerventinspection" onClick={closeMenu}>Dryer Vent Inspection </Link></li>
-                    <li><Link to="/dryerventrepair" onClick={closeMenu}>Dryer Vent Repair</Link></li>
-                    <li><Link to="/dryerventinstallation" onClick={closeMenu}>Dryer Vent Installation</Link></li>
-                    <li><Link to="/lintremoval" onClick={closeMenu}>Lint Removal Service </Link></li>
-                     <li><Link to="/dryerventblockage" onClick={closeMenu}>Dryer Vent Blockage Removel </Link></li>
-
-                       <li><Link to="/dryerventflow" onClick={closeMenu}>Dryer Vent Airflow Testing</Link></li>
-                       
-                   
-                  </ul>
+                {/* Category 2: Dryer Vent */}
+                <li className="menu-category">
+                  <span className="category-title" onClick={() => toggleCategory('dryer')}>
+                    Dryer Vent Cleaning {activeCategory === 'dryer' ? '▴' : '▾'}
+                  </span>
+                  {activeCategory === 'dryer' && (
+                    <ul>  
+                      <li><Link to="/ChimneyCleaning" onClick={closeMenu}>Dryer Air Vent Cleaning</Link></li>
+                      <li><Link to="/dryerventinspection" onClick={closeMenu}>Dryer Vent Inspection</Link></li>
+                      <li><Link to="/dryerventrepair" onClick={closeMenu}>Dryer Vent Repair</Link></li>
+                      <li><Link to="/dryerventinstallation" onClick={closeMenu}>Dryer Vent Installation</Link></li>
+                      <li><Link to="/lintremoval" onClick={closeMenu}>Lint Removal Service</Link></li>
+                      <li><Link to="/dryerventblockage" onClick={closeMenu}>Dryer Vent Blockage Removel</Link></li>
+                      <li><Link to="/dryerventflow" onClick={closeMenu}>Dryer Vent Airflow Testing</Link></li>
+                    </ul>
+                  )}
                 </li>
 
-                 {/* Chimney & Vent Category */}
+                {/* Category 3: Indoor Air Quality */}
                 <li className="menu-category">
-                  <span className="category-title">Indoor Air Quality Services </span>
-                  <ul>
-               
-                  <li><Link to="/UVLightInstallation" onClick={closeMenu}>Indoor Air UV Light Purification</Link></li>
-                  </ul>
+                  <span className="category-title" onClick={() => toggleCategory('airquality')}>
+                    Indoor Air Quality Services {activeCategory === 'airquality' ? '▴' : '▾'}
+                  </span>
+                  {activeCategory === 'airquality' && (
+                    <ul>
+                      <li><Link to="/UVLightInstallation" onClick={closeMenu}>Indoor Air UV Light Purification</Link></li>
+                    </ul>
+                  )}
                 </li>
 
-                {/* Chimney & Vent Category */}
+                {/* Category 4: Chimney */}
                 <li className="menu-category">
-                  <span className="category-title">Chimney Services</span>
-                  <ul>
-               
-                    <li><Link to="/ChimneySweepPage" onClick={closeMenu}>Chimney Sweep</Link></li>
-                    <li><Link to="/ChimneyServicePage" onClick={closeMenu}>Chimney Services</Link></li>
-                  </ul>
+                  <span className="category-title" onClick={() => toggleCategory('chimney')}>
+                    Chimney Services {activeCategory === 'chimney' ? '▴' : '▾'}
+                  </span>
+                  {activeCategory === 'chimney' && (
+                    <ul>
+                      <li><Link to="/ChimneySweepPage" onClick={closeMenu}>Chimney Sweep</Link></li>
+                      <li><Link to="/ChimneyServicePage" onClick={closeMenu}>Chimney Services</Link></li>
+                    </ul>
+                  )}
                 </li>
 
-                {/* Insulation & Purification Category */}
+                {/* Category 5: Insulation */}
                 <li className="menu-category">
-                  <span className="category-title">Insulation Service</span>
-                  <ul>
-                    <li><Link to="/AtticInsulation" onClick={closeMenu}>Attic Insulation</Link></li>
-                  
-                  </ul>
+                  <span className="category-title" onClick={() => toggleCategory('insulation')}>
+                    Insulation Service {activeCategory === 'insulation' ? '▴' : '▾'}
+                  </span>
+                  {activeCategory === 'insulation' && (
+                    <ul>
+                      <li><Link to="/AtticInsulation" onClick={closeMenu}>Attic Insulation</Link></li>
+                    </ul>
+                  )}
                 </li>
               </ul>
             </li>
 
-            {/* LOCATION SECTION */}
             <li className={`dropdown ${showLocation ? 'open' : ''}`}>
               <div className="nav-link-item" onClick={() => setShowLocation(!showLocation)}>
                 LOCATION <span className="arrow">▾</span>
